@@ -14,7 +14,6 @@ In order to run smoothly through the overall procedure you should meet the follo
 - Sequence list and experimental conditions
 - Extraction procedure and corresponding volumes, cell counts
 
-
 ### Quick view
 
 1. Setup R-project and copy MTXQC-files^[Check for the latest release: github.com/ChrisZasa/fluffy-adventure] 
@@ -30,19 +29,19 @@ In order to run smoothly through the overall procedure you should meet the follo
 
 ### Input files derived from a single Maui-Project{#container}
 
-#### Input-Folder: gc 
+1. Input-Folder: gc 
 
 - Alcane_intensities.csv (Diagnostics/Export Alcane intensities)
 - InternalStandard.csv ^[see more details below]
 - MassSum-73.csv (Diagnostics/QC Mass Sum Export for mass 73)
 - PeakDensities-Chroma.csv (Diagnostics/ExportPeakDensities)
 
-#### Input-Folder: quant
+2. Input-Folder: quant
 
 - ManualQuantTable.tsv - rename it - e.g., e18125cz.tsv ^[Location: Maui-project/export/QM-AbsoluteQuantification/...] ^[C://Users/User-name/MauiProjects/...]
 - quantMassAreasMatrix.csv (Quantification export of samplesPeakGroups)
 
-#### Input-Folder: inc
+3. Input-Folder: inc
 
 - DataMatrix.csv (Export \% Label of pSIRM-samplesPeakGroups)
 - pSIRM_SpectraData.csv (pSIRM Spectra Export)^[Requires the selection of Natural_MIDs.txt]

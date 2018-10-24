@@ -14,7 +14,7 @@
   
   
   <meta property="og:description" content="This is the start of the official MTXQCvX2 manual." />
-  
+  <meta name="github-repo" content="chriszasa/MTXQC_documentation" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MTXQCvX2 documentation" />
@@ -79,11 +79,7 @@
 <li class="chapter" data-level="4" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i><b>4</b> Workflows for MTXQCvX2</a><ul>
 <li class="chapter" data-level="4.1" data-path="workflows.html"><a href="workflows.html#maui"><i class="fa fa-check"></i><b>4.1</b> Maui</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="workflows.html"><a href="workflows.html#quick-view"><i class="fa fa-check"></i><b>4.1.1</b> Quick view</a></li>
-<li class="chapter" data-level="4.1.2" data-path="workflows.html"><a href="workflows.html#container"><i class="fa fa-check"></i><b>4.1.2</b> Input files derived from a single Maui-Project</a><ul>
-<li class="chapter" data-level="4.1.2.1" data-path="workflows.html"><a href="workflows.html#input-folder-gc"><i class="fa fa-check"></i><b>4.1.2.1</b> Input-Folder: gc</a></li>
-<li class="chapter" data-level="4.1.2.2" data-path="workflows.html"><a href="workflows.html#input-folder-quant"><i class="fa fa-check"></i><b>4.1.2.2</b> Input-Folder: quant</a></li>
-<li class="chapter" data-level="4.1.2.3" data-path="workflows.html"><a href="workflows.html#input-folder-inc"><i class="fa fa-check"></i><b>4.1.2.3</b> Input-Folder: inc</a></li>
-</ul></li>
+<li class="chapter" data-level="4.1.2" data-path="workflows.html"><a href="workflows.html#container"><i class="fa fa-check"></i><b>4.1.2</b> Input files derived from a single Maui-Project</a></li>
 <li class="chapter" data-level="4.1.3" data-path="workflows.html"><a href="workflows.html#multiple-maui-projects"><i class="fa fa-check"></i><b>4.1.3</b> Multiple MAUI-projects</a></li>
 <li class="chapter" data-level="4.1.4" data-path="workflows.html"><a href="workflows.html#annotation-file"><i class="fa fa-check"></i><b>4.1.4</b> Annotation-file</a></li>
 <li class="chapter" data-level="4.1.5" data-path="workflows.html"><a href="workflows.html#sample_extracts-file"><i class="fa fa-check"></i><b>4.1.5</b> Sample_extracts-file</a></li>
@@ -174,29 +170,29 @@
 </div>
 <div id="container" class="section level3">
 <h3><span class="header-section-number">4.1.2</span> Input files derived from a single Maui-Project</h3>
-<div id="input-folder-gc" class="section level4">
-<h4><span class="header-section-number">4.1.2.1</span> Input-Folder: gc</h4>
+<ol style="list-style-type: decimal">
+<li>Input-Folder: gc</li>
+</ol>
 <ul>
 <li>Alcane_intensities.csv (Diagnostics/Export Alcane intensities)</li>
 <li>InternalStandard.csv<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></li>
 <li>MassSum-73.csv (Diagnostics/QC Mass Sum Export for mass 73)</li>
 <li>PeakDensities-Chroma.csv (Diagnostics/ExportPeakDensities)</li>
 </ul>
-</div>
-<div id="input-folder-quant" class="section level4">
-<h4><span class="header-section-number">4.1.2.2</span> Input-Folder: quant</h4>
+<ol start="2" style="list-style-type: decimal">
+<li>Input-Folder: quant</li>
+</ol>
 <ul>
 <li>ManualQuantTable.tsv - rename it - e.g., e18125cz.tsv<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
 <li>quantMassAreasMatrix.csv (Quantification export of samplesPeakGroups)</li>
 </ul>
-</div>
-<div id="input-folder-inc" class="section level4">
-<h4><span class="header-section-number">4.1.2.3</span> Input-Folder: inc</h4>
+<ol start="3" style="list-style-type: decimal">
+<li>Input-Folder: inc</li>
+</ol>
 <ul>
 <li>DataMatrix.csv (Export % Label of pSIRM-samplesPeakGroups)</li>
 <li>pSIRM_SpectraData.csv (pSIRM Spectra Export)<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></li>
 </ul>
-</div>
 </div>
 <div id="multiple-maui-projects" class="section level3">
 <h3><span class="header-section-number">4.1.3</span> Multiple MAUI-projects</h3>
