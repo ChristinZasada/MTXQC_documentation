@@ -1,0 +1,22 @@
+# Configuration of MTXQCvX2{#config}
+
+Herein explained are the customizable tables of the MTXQCvX2 universe.
+
+## conversion_metabolite.csv
+
+### Metabolic profile
+
+### Defintion of intermediates
+
+### Declaration of standards
+
+#### Internal standard
+
+#### Alkanes
+
+### quant1-values.csv
+
+### incorporation_calc.csv
+
+
+

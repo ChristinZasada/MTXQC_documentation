@@ -1,0 +1,31 @@
+--- 
+title: "MTXQCvX2 documentation"
+author: "Christin Zasada"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is the start of the official MTXQCvX2 manual."
+---
+
+# Welcome
+
+This documentation introduced to you how to use MTXQCvX2 in order to assess the quality of your GC-MS derived data, perform the determination of calibration curves and absolute quantification. It furthermore provides you two normalisation strategies and the calculation of quantities in, e.g., pmol/1e+6 cells or pmol/mg tissue.
+
+MTXQCvX2 does also enable the calculation of stable isotopic incorporation and the evaluation of the underlying data, the mass isotopomer distributions (MIDs). 
+
+The tool has been set up to support the in-lab developed workflow for quantitative metabolomics experiments using the in-house developed software Maui for the annotation of data. MTXQCvX2 bridges the gap between quality control and first data post-processing / analysis of GC-MS derived data (MTXQCvX2_part1, MTXQCvX2_part2).
+
+Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).
+
+Both workflows are introduced in the distinct chapters including their required input parameter (chapter \@ref(workflows)). Technical relevant information are summarised in chapter \@ref(tables).
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

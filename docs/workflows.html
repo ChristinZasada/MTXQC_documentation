@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MTXQCvX2 documentation</title>
+  <meta name="description" content="This is the start of the official MTXQCvX2 manual.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="MTXQCvX2 documentation" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the start of the official MTXQCvX2 manual." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MTXQCvX2 documentation" />
+  
+  <meta name="twitter:description" content="This is the start of the official MTXQCvX2 manual." />
+  
+
+<meta name="author" content="Christin Zasada">
+
+
+<meta name="date" content="2018-10-24">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="universe.html">
+<link rel="next" href="config.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The MTXQC documentation</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="universe.html"><a href="universe.html"><i class="fa fa-check"></i><b>3</b> MTXQCvX2 modules</a><ul>
+<li class="chapter" data-level="3.1" data-path="universe.html"><a href="universe.html#mtxqcvx_init.rmd"><i class="fa fa-check"></i><b>3.1</b> MTXQCvX_init.Rmd</a></li>
+<li class="chapter" data-level="3.2" data-path="universe.html"><a href="universe.html#mtxqcvx_experimentalsetup.rmd"><i class="fa fa-check"></i><b>3.2</b> MTXQCvX_experimentalSetup.Rmd</a></li>
+<li class="chapter" data-level="3.3" data-path="universe.html"><a href="universe.html#mtxqcvx_part1"><i class="fa fa-check"></i><b>3.3</b> MTXQCvX_part1</a></li>
+<li class="chapter" data-level="3.4" data-path="universe.html"><a href="universe.html#mtxqcvx_part2---post-processing"><i class="fa fa-check"></i><b>3.4</b> MTXQCvX_part2 - Post-processing</a></li>
+<li class="chapter" data-level="3.5" data-path="universe.html"><a href="universe.html#mtxqcvx_part3---manualvalidation"><i class="fa fa-check"></i><b>3.5</b> MTXQCvX_part3 - ManualValidation</a></li>
+<li class="chapter" data-level="3.6" data-path="universe.html"><a href="universe.html#mtxqcvx_part4---metmax-parser"><i class="fa fa-check"></i><b>3.6</b> MTXQCvX_part4 - Metmax parser</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="workflows.html"><a href="workflows.html"><i class="fa fa-check"></i><b>4</b> Workflows for MTXQCvX2</a><ul>
+<li class="chapter" data-level="4.1" data-path="workflows.html"><a href="workflows.html#maui"><i class="fa fa-check"></i><b>4.1</b> Maui</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="workflows.html"><a href="workflows.html#quick-view"><i class="fa fa-check"></i><b>4.1.1</b> Quick view</a></li>
+<li class="chapter" data-level="4.1.2" data-path="workflows.html"><a href="workflows.html#container"><i class="fa fa-check"></i><b>4.1.2</b> Input files derived from a single Maui-Project</a><ul>
+<li class="chapter" data-level="4.1.2.1" data-path="workflows.html"><a href="workflows.html#input-folder-gc"><i class="fa fa-check"></i><b>4.1.2.1</b> Input-Folder: gc</a></li>
+<li class="chapter" data-level="4.1.2.2" data-path="workflows.html"><a href="workflows.html#input-folder-quant"><i class="fa fa-check"></i><b>4.1.2.2</b> Input-Folder: quant</a></li>
+<li class="chapter" data-level="4.1.2.3" data-path="workflows.html"><a href="workflows.html#input-folder-inc"><i class="fa fa-check"></i><b>4.1.2.3</b> Input-Folder: inc</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1.3" data-path="workflows.html"><a href="workflows.html#multiple-maui-projects"><i class="fa fa-check"></i><b>4.1.3</b> Multiple MAUI-projects</a></li>
+<li class="chapter" data-level="4.1.4" data-path="workflows.html"><a href="workflows.html#annotation-file"><i class="fa fa-check"></i><b>4.1.4</b> Annotation-file</a></li>
+<li class="chapter" data-level="4.1.5" data-path="workflows.html"><a href="workflows.html#sample_extracts-file"><i class="fa fa-check"></i><b>4.1.5</b> Sample_extracts-file</a></li>
+<li class="chapter" data-level="4.1.6" data-path="workflows.html"><a href="workflows.html#internal-standard"><i class="fa fa-check"></i><b>4.1.6</b> Internal Standard</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="config.html"><a href="config.html"><i class="fa fa-check"></i><b>5</b> Configuration of MTXQCvX2</a><ul>
+<li class="chapter" data-level="5.1" data-path="config.html"><a href="config.html#conversion_metabolite.csv"><i class="fa fa-check"></i><b>5.1</b> conversion_metabolite.csv</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="config.html"><a href="config.html#metabolic-profile"><i class="fa fa-check"></i><b>5.1.1</b> Metabolic profile</a></li>
+<li class="chapter" data-level="5.1.2" data-path="config.html"><a href="config.html#defintion-of-intermediates"><i class="fa fa-check"></i><b>5.1.2</b> Defintion of intermediates</a></li>
+<li class="chapter" data-level="5.1.3" data-path="config.html"><a href="config.html#declaration-of-standards"><i class="fa fa-check"></i><b>5.1.3</b> Declaration of standards</a><ul>
+<li class="chapter" data-level="5.1.3.1" data-path="config.html"><a href="config.html#internal-standard-1"><i class="fa fa-check"></i><b>5.1.3.1</b> Internal standard</a></li>
+<li class="chapter" data-level="5.1.3.2" data-path="config.html"><a href="config.html#alkanes"><i class="fa fa-check"></i><b>5.1.3.2</b> Alkanes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.1.4" data-path="config.html"><a href="config.html#quant1-values.csv"><i class="fa fa-check"></i><b>5.1.4</b> quant1-values.csv</a></li>
+<li class="chapter" data-level="5.1.5" data-path="config.html"><a href="config.html#incorporation_calc.csv"><i class="fa fa-check"></i><b>5.1.5</b> incorporation_calc.csv</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="protocols.html"><a href="protocols.html"><i class="fa fa-check"></i><b>6</b> Protocols</a><ul>
+<li class="chapter" data-level="6.1" data-path="protocols.html"><a href="protocols.html#sample-extraction"><i class="fa fa-check"></i><b>6.1</b> Sample extraction</a></li>
+<li class="chapter" data-level="6.2" data-path="protocols.html"><a href="protocols.html#sample-derivatisation"><i class="fa fa-check"></i><b>6.2</b> Sample derivatisation</a></li>
+<li class="chapter" data-level="6.3" data-path="protocols.html"><a href="protocols.html#gc-ms-measurement"><i class="fa fa-check"></i><b>6.3</b> GC-MS measurement</a></li>
+<li class="chapter" data-level="6.4" data-path="protocols.html"><a href="protocols.html#data-processing"><i class="fa fa-check"></i><b>6.4</b> Data processing</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="protocols.html"><a href="protocols.html#processing-for-maui-annotation"><i class="fa fa-check"></i><b>6.4.1</b> Processing for Maui annotation</a><ul>
+<li class="chapter" data-level="6.4.1.1" data-path="protocols.html"><a href="protocols.html#resampling"><i class="fa fa-check"></i><b>6.4.1.1</b> Resampling</a></li>
+<li class="chapter" data-level="6.4.1.2" data-path="protocols.html"><a href="protocols.html#combo-export"><i class="fa fa-check"></i><b>6.4.1.2</b> Combo-export</a></li>
+<li class="chapter" data-level="6.4.1.3" data-path="protocols.html"><a href="protocols.html#maui-quantification-masses"><i class="fa fa-check"></i><b>6.4.1.3</b> Maui quantification masses</a></li>
+<li class="chapter" data-level="6.4.1.4" data-path="protocols.html"><a href="protocols.html#maui-psirm"><i class="fa fa-check"></i><b>6.4.1.4</b> MAUI pSIRM</a></li>
+<li class="chapter" data-level="6.4.1.5" data-path="protocols.html"><a href="protocols.html#maui-exports"><i class="fa fa-check"></i><b>6.4.1.5</b> Maui exports</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4.2" data-path="protocols.html"><a href="protocols.html#processing-for-metmax-data-extraction"><i class="fa fa-check"></i><b>6.4.2</b> Processing for Metmax data extraction</a><ul>
+<li class="chapter" data-level="6.4.2.1" data-path="protocols.html"><a href="protocols.html#resampling-1"><i class="fa fa-check"></i><b>6.4.2.1</b> Resampling</a></li>
+<li class="chapter" data-level="6.4.2.2" data-path="protocols.html"><a href="protocols.html#d-basic"><i class="fa fa-check"></i><b>6.4.2.2</b> 1D-basic</a></li>
+<li class="chapter" data-level="6.4.2.3" data-path="protocols.html"><a href="protocols.html#reference-search"><i class="fa fa-check"></i><b>6.4.2.3</b> Reference search</a></li>
+<li class="chapter" data-level="6.4.2.4" data-path="protocols.html"><a href="protocols.html#export-for-metmax"><i class="fa fa-check"></i><b>6.4.2.4</b> Export for Metmax</a></li>
+<li class="chapter" data-level="6.4.2.5" data-path="protocols.html"><a href="protocols.html#data-extraction"><i class="fa fa-check"></i><b>6.4.2.5</b> Data extraction</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i><b>7</b> I dont know</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MTXQCvX2 documentation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="workflows" class="section level1">
+<h1><span class="header-section-number">Chapter4</span> Workflows for MTXQCvX2</h1>
+<div id="maui" class="section level2">
+<h2><span class="header-section-number">4.1</span> Maui</h2>
+<p>The following article describes briefly how to use MTXQCvX2 in case you used Maui for the annotation of your metabolomics project. It does not matter if you have performed an experiment including stable isotopes or if you just aim for the quantification of a few intermediates.</p>
+<p>A summary of the general workflow is shown below, followed by more detailed instructions explaining required input files. Check out the notes for hints and suggestions.</p>
+<p>In order to run smoothly through the overall procedure you should meet the following prerequisites:</p>
+<ul>
+<li>A succesfull Maui project</li>
+<li>Exported all required container (see <a href="workflows.html#container">4.1.2</a>)</li>
+<li>Sequence list and experimental conditions</li>
+<li>Extraction procedure and corresponding volumes, cell counts</li>
+</ul>
+<div id="quick-view" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Quick view</h3>
+<ol style="list-style-type: decimal">
+<li>Setup R-project and copy MTXQC-files<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
+<li>Knit with parameter:$MTXQC_init.Rmd</li>
+<li>Copy input files</li>
+<li>Create annotation.csv and sample_extracts.csv files</li>
+<li>Define the internal standard<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></li>
+<li>Knit with parameter: MTXQC_ExperimentalSetup.Rmd$</li>
+<li>Knit with parameter: MTXQC_part1.Rmd</li>
+<li>Knit with parameter: MTXQC_part2.Rmd</li>
+<li>If required - proceed with ManualValidation</li>
+</ol>
+</div>
+<div id="container" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Input files derived from a single Maui-Project</h3>
+<div id="input-folder-gc" class="section level4">
+<h4><span class="header-section-number">4.1.2.1</span> Input-Folder: gc</h4>
+<ul>
+<li>Alcane_intensities.csv (Diagnostics/Export Alcane intensities)</li>
+<li>InternalStandard.csv<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></li>
+<li>MassSum-73.csv (Diagnostics/QC Mass Sum Export for mass 73)</li>
+<li>PeakDensities-Chroma.csv (Diagnostics/ExportPeakDensities)</li>
+</ul>
+</div>
+<div id="input-folder-quant" class="section level4">
+<h4><span class="header-section-number">4.1.2.2</span> Input-Folder: quant</h4>
+<ul>
+<li>ManualQuantTable.tsv - rename it - e.g., e18125cz.tsv<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
+<li>quantMassAreasMatrix.csv (Quantification export of samplesPeakGroups)</li>
+</ul>
+</div>
+<div id="input-folder-inc" class="section level4">
+<h4><span class="header-section-number">4.1.2.3</span> Input-Folder: inc</h4>
+<ul>
+<li>DataMatrix.csv (Export % Label of pSIRM-samplesPeakGroups)</li>
+<li>pSIRM_SpectraData.csv (pSIRM Spectra Export)<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></li>
+</ul>
+</div>
+</div>
+<div id="multiple-maui-projects" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Multiple MAUI-projects</h3>
+<p>Certain circumstances might require the combination of multiple MAUI-projects into one MTXQC-project. This might be the case when you run the same samples in split and splitless or your experimental setup has been measured in multiple batches in order to avoid derivatisation effects.</p>
+<ol style="list-style-type: decimal">
+<li>Create in the MTXQC-project folder a new folder, e.g., raw-data</li>
+<li>Create subfolder for each MAUI-run</li>
+<li>Copy the required files into each subfolder</li>
+<li>Update the parameter of combine-sets.R file<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a></li>
+<li>Execute the script</li>
+<li>Merged files have been generated and copied into input-folder</li>
+<li>Copy the renamed tsv-files separately into input/quant/…</li>
+</ol>
+</div>
+<div id="annotation-file" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Annotation-file</h3>
+<p>The annotation file relate file names with experimental conditions or specify quantification standards in your batch. Two columns - <strong>File and Type</strong> are obligatory and in the case of absence MTXQCvX_part1 stops and shows an error message.</p>
+<ol style="list-style-type: decimal">
+<li>Copy first row of quantMassAreaMatrix.csv file</li>
+<li>Paste &amp; transpose the content into a new Excel-File</li>
+<li>Rename Metabolite into File</li>
+<li>Remove QuantMasses (last entry of the column)</li>
+<li>Add column Type and specify either as sample or addQ1_dilution<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a></li>
+<li>Add further columns specifying your experimental conditions, e.g., Cellline and Treatment …<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a></li>
+<li>Save as csv-file (folder: input/…)</li>
+</ol>
+</div>
+<div id="sample_extracts-file" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Sample_extracts-file</h3>
+<p>The sample_extracts.csv file helps to determine correct absolute quantities in the manner of pmol/1e+6 cells or pmol/mg tissue.</p>
+<p>Two columns are obligatory and have to be included: <strong>Extract_vol</strong> and <strong>Unit</strong><a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a>. Please specify for each experimental condition that differs in extracted quantities. Column names of the experimental conditions have to match with the annotation file. Otherwise MTXQCvX2_part1 stops processing and throws an error message in the report. An example file can be modified and reused<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a>. Save the created file as csv-file into the input folder as well.</p>
+</div>
+<div id="internal-standard" class="section level3">
+<h3><span class="header-section-number">4.1.6</span> Internal Standard</h3>
+<p>MTXQCvX2 allows the specification of project-specific internal standards. Corresponding compounds have to be marked as an internal standard in the conversion_metabolite.csv file<a href="#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a>.</p>
+<p>Peak areas for the defined compound are either generated by the export of cinAcidPeakGroups container in Maui, or could be extracted from the samplePeakGroups.csv file. Peak areas should be copied into a new csv-file and named InternalStandard. CinAcid-derived exported file shou be renamed, respectively.</p>
+<p>The defined internal standards are listed with their complete name in the MTXQC report.</p>
+<!-- ## Metmax -->
+<!-- This document describes how to use MTXQCvX2^[Check for the latest release: github.com/ChrisZasa/fluffy-adventure] in combination with metmax^[http://gmd.mpimp-golm.mpg.de/apps/metmax/default.htm].  -->
+<!-- Historically, MTXQCvX2 has been developed and optimized for Maui-derived input files. The MTXQCvX2-part4 functions as a converter of metmax-derived files in order to create suitable input formats for MTXQCvX-part1. This module could also be used to convert tables derived from other programs as long as they are confirm with the herein described tables. Mandatory columns are referenced in the text.  -->
+<!-- The general workflow of the NMTXQCvX2 project is briefly shown below in **quick view**. More detailed instructions are summarised in the following paragraphs. For more detailed explanations about the individual input parameter for each module of MTXQCvX2 please proceed to read the documentation about the individual modules and their knitting parameter^[`vignettes/MTXQCvX2_ParamDefinition`]. The relation of knitting parameter, input and output files are described in each section.    -->
+<!-- ### Quick view -->
+<!-- 1. Setup R-project and copy MTXQC-files -->
+<!-- 2. Knit with parameter: `MTXQC_init.Rmd` -->
+<!-- 3. Copy input files  -->
+<!-- 4. Create annotation.csv and sample_extracts.csv files^[Details further down this document] -->
+<!-- 5. Update metabolite names in `conversion_metabolite.csv`^[Column: Metabolite_manual] -->
+<!-- 6. Define the internal standard and/or alkanes^[Also in conversion_metabolite.csv; see below paragraph Standards] -->
+<!-- 7. Knit with parameter: `MTXQC_ExperimentalSetup.Rmd` -->
+<!-- 8. Knit with parameter: `MTXQC_part4.Rmd` -->
+<!-- 9. Knit with parameter: `MTXQC_part1.Rmd` -->
+<!-- 10. Knit with parameter: `MTXQC_part2.Rmd` -->
+<!-- 11. If required - proceed with MTXQC_part3 - ManualValidation^[See `vignettes/MTXQCvX2_part3`] -->
+<!-- ### Input files derived from a ChromaToF/Metmax-Project -->
+<!-- If you need an introduction about how to use metmax have a look at the separate documentation^[`vignettes/Metmax_intro.csv`]. -->
+<!-- #### Quantification - PeakAreas.csv^[Required for: all parameter, just not `calculation stable isotope incorporation`]  -->
+<!-- You need a file containing all extracted peak areas for each metabolite and file^[Tools/Options/Retention analysis, Parameter: Area]. The header of metmax-extracted files looks like shown below (see table 1). Please, remember to delete the second header row, representing the column loads for each file before saving as csv-file. Otherwise you end up with weird imported dataframes in R.  -->
+<!-- Quantification masses have to be updated while processing in ChromaToF prior the export of the data e.g., with a reference search^[See `vignette/ReferenceSearch`] or using statistical compare. pSIRM experiments require the definition of pTop5 masses^[Extended list of quant masses considering isotope incorporation] instead of top5 masses in the reference in order to take into account the shift of intensities induced by the application of stable isotopes^[Mandatory columns: name, mass, files]  -->
+<!-- ```{r metmax_header, results='asis', echo=FALSE} -->
+<!-- df = data.frame(name = c("Lac", "Pyr", "Cit"), mass = c(219, 174, 273), ri = c(1051, 1042, 1805), row.load = c(0.76, 0.65, 0.99), file_1 = c(15423, 56978, 1326), file_2 = c(135444, 46888, 23321), file_x = c(465486, 4354544, 132121)) -->
+<!-- knitr::kable(df, caption = c("Example metmax-extracted file containing peak areas.")) -->
+<!-- ``` -->
+<!-- MTXQCvX_part4 takes care of the formatting and correct column names of the peak areas file and saves it^[`input/quant/quantMassAreasMatrix.csv`].  MTXQCvX_part4 generates also the file PeakDensities-Chroma.csv^[`input/gc/PeakDensities-Chroma.csv`], in case you have selected the option to include sum of area normalisation while knitting this module. -->
+<!-- #### Isotope incorporation - MIDs.csv^[Required for `calculation isotope incorporation`]  -->
+<!-- In order to determine the incorporation of stable isotopes MTXQCvX2 requires as an input the mass isotopomer distributions (MIDs) for each intermediate and measurement^[Tools/Options/Isotope concentrator; Parameter: IntensityOfMass]. Fragments for each intermediate have to be pre-defined in metmax at Tools/Options/metabolite masses. They can be imported^[`inst/template_files/MetMax_MIDs.txt`] or manually specified each by each. An example of the metmax output is shown in table 2. The output has to be saved as csv-file, including the deletion of the partial row `column.load`, respectively^[Mandatory columns: name, mass, files]. -->
+<!-- ```{r metmax_header_mid, results='asis', echo=FALSE} -->
+<!-- df2 = data.frame(name = c("Lac", "Lac", "Lac","Lac", "Lac"),  -->
+<!--                 mass = c(219, 220, 221, 222, 223),  -->
+<!--                 ri = rep(1051, 5),  -->
+<!--                 row.load = rep(0.85, 5),  -->
+<!--                 file_1 = c(31026, 3607, 1222, 188,0), -->
+<!--                 file_2 = c(5165829,662277,111481,1003494,33542), -->
+<!--                 file_x = c(5829,277,81,10023,342)) -->
+<!-- knitr::kable(df2, caption = "Example metmax-extracted file containing MIDs.") -->
+<!-- ``` -->
+<!-- MTXQCvX_part4 calculates the stable isotope incorporation and exports DataMatrix.csv as well as pSIRM_SpectraData.csv^[`input/inc/DataMatrix` & `pSIRM_SpectraData.csv`]. The mathematics behind are outlined in [@Pietzke2014]  -->
+<!-- **Important**: Extracted MIDs have to match with defined mass couples for each metabolite in MTXQCvX2^[`config_mtx/incorpo_calc_masses.csv`]. Please refer for more details to `vignettes/config_mtx-files`. -->
+<!-- #### Derivatisation efficiency - mz73.csv^[Required for: `sum of area normalisation`] -->
+<!-- The extraction of intensities for the ion $m/z$ 73 works analogous to the extraction of MIDs^[Tools/Options/Isotope concentrator; Parameter: IntensityOfMass]. Mass ranges have to be defined for each intermediate for the mass 73 by defining starting and end mass with 73. MTXQCvX_part4 generates the file MassSum-73.csv^[`input/gc/MassSum-73.csv`]. Check `inst\template_files\` for reference. Hopefully soon a new metmax button extracting specific intensities across the batch. -->
+<!-- ### Further required input-files -->
+<!-- #### Annotation-file -->
+<!-- The annotation file relate file names with experimental conditions or specify quantification standards in your batch.  -->
+<!-- Two columns - **File and Type** are obligatory and in the case of absence MTXQCvX_part1 stops and shows an error message. -->
+<!-- 1. Copy first row of `quantMassAreaMatrix.csv` file -->
+<!-- 2. Paste & transpose the content into a new Excel-File, first column -->
+<!-- 3. Rename Metabolite -> File -->
+<!-- 4. Remove all other entries than file names (e.g., mass, ri) -->
+<!-- 5. Add column Type and specify either as sample or addQ1_dilution^[Additional quantification standards included in your setup, see for further details `vignettes/additionalQuant`] -->
+<!-- 6. Add further columns specifying your experimental conditions, e.g., Cellline and Treatment ...^[Optimum: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES] -->
+<!-- 7. Save as csv-file^[`input/Annotation.csv`] -->
+<!-- #### Sample_extracts-file -->
+<!-- The sample_extracts.csv file helps to determine correct absolute quantities in the manner of pmol/1e+6 cells or pmol/mg tissue. Two columns are obligatory and have to be included: **Extract_vol** and **Unit**^[Unit = [count, mg, ul]]. Please specify for each experimental condition that differs in extracted quantities. Column names of the experimental conditions have to match with the annotation file. Otherwise MTXQCvX2_part1 stops processing and throws an error message in the report. An example file can be modified and reused^[`inst/template_files/...`]. Save the created file as csv-file into the input folder as well^[`input/Sample_extracts.csv`]. -->
+<!-- #### conversion_metabolite.csv -  Metabolite_manual -->
+<!-- Prior the analysis you need to match the names of your intermediates with the conversion_metabolite.csv file.  -->
+<!-- You need to add the corresponding name for each intermediate in the column Metabolite_manual. General suggestion for naming conventions in ChromaToF: Metabolite_Derivate, optional in case of main- (MP) and byproducts (BP) Metabolite_Derivate_MP/BP. An example for both: Lactic acid_(2TMS) or Glucose_(1MEOX)(5TMS)_MP. -->
+<!-- Missing intermediate can be added to this list. If you want to do so, please consultate the `vignette/config_mtx` first and follow the corresponding instructions how to extend conversion_metabolite.csv. -->
+<!-- #### conversion_metabolite.csv - Standards -->
+<!-- MTXQCvX2 allows the specification of project-specific internal standards. Corresponding compounds have to be marked as an internal standard in the conversion_metabolite.csv file^[`config_mtx/conversion_metabolites.csv`, column Standard == InternalStandard]. Accordingly, MTXQCvX+part4 extracts peak areas from peakarea-file and generates InternalStandard.csv^[`input/gc/InternalStandard.csv`]. -->
+<!-- In the same way alkanes are be defined in conversion_metabolite.csv. Each alkane has to be flag tagged with Alk in the column Standard^[`config_mtx/conversion_metabolites.csv`, column Standard == Alk]. This gives you the opportunity to implement customizes mixtures of alkanes in order to determine the retention index. The in-lab approach considers nine alkanes from c10 to c36. MTXQCvX_part4 recognises the flag tag and generates based on peakarea-file Alcane_intensities.csv^[`input/gc/Alcane_intensities.csv`, (it should be alkane, I know, but Maui doesn't...)]. -->
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Check for the latest release: github.com/ChrisZasa/fluffy-adventure<a href="workflows.html#fnref1">↩</a></p></li>
+<li id="fn2"><p>see below InternalStandard<a href="workflows.html#fnref2">↩</a></p></li>
+<li id="fn3"><p>see more details below<a href="workflows.html#fnref3">↩</a></p></li>
+<li id="fn4"><p>Location: Maui-project/export/QM-AbsoluteQuantification/…<a href="workflows.html#fnref4">↩</a></p></li>
+<li id="fn5"><p>C://Users/User-name/MauiProjects/…<a href="workflows.html#fnref5">↩</a></p></li>
+<li id="fn6"><p>Requires the selection of Natural_MIDs.txt<a href="workflows.html#fnref6">↩</a></p></li>
+<li id="fn7"><p>inst/template_files/…<a href="workflows.html#fnref7">↩</a></p></li>
+<li id="fn8"><p>additional quantification standards included in your setup, see for further details vignettes/additionalQuant<a href="workflows.html#fnref8">↩</a></p></li>
+<li id="fn9"><p>optimal: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES<a href="workflows.html#fnref9">↩</a></p></li>
+<li id="fn10"><p>Define: count, mg or ul<a href="workflows.html#fnref10">↩</a></p></li>
+<li id="fn11"><p>inst/template_files/…<a href="workflows.html#fnref11">↩</a></p></li>
+<li id="fn12"><p>config_mtx/conversion_metabolites.csv, column Standard == InternalStandard<a href="workflows.html#fnref12">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="universe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="config.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["MTXQC_documentation.pdf", "MTXQC_documentation.epub"],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>

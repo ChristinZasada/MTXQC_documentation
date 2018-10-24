@@ -1,0 +1,45 @@
+# Protocols
+
+## Sample extraction
+
+
+
+
+## Sample derivatisation
+
+
+
+
+## GC-MS measurement
+
+
+
+
+## Data processing
+
+
+### Processing for Maui annotation
+
+#### Resampling
+
+#### Combo-export
+
+#### Maui quantification masses
+
+#### MAUI pSIRM
+
+#### Maui exports
+
+
+### Processing for Metmax data extraction
+
+#### Resampling
+
+#### 1D-basic
+
+#### Reference search
+
+#### Export for Metmax
+
+#### Data extraction
+
