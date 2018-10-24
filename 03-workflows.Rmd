@@ -171,7 +171,7 @@ Two columns - **File and Type** are obligatory and in the case of absence MTXQCv
 2. Paste & transpose the content into a new Excel-File, first column
 3. Rename Metabolite -> File
 4. Remove all other entries than file names (e.g., mass, ri)
-5. Add column Type and specify either as sample or addQ1_dilution^[Additional quantification standards included in your setup, see for further details `vignettes/additionalQuant`]
+5. Add column Type and specify either as sample or addQ1_dilution^[Additional quantification standards included in your setup, see for further details in chapter \ref@FAQ]
 6. Add further columns specifying your experimental conditions, e.g., Cellline and Treatment ...^[Optimum: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES]
 7. Save as csv-file^[`input/Annotation.csv`]
 
