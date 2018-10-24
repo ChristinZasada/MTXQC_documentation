@@ -4,7 +4,7 @@ Herein explained are the customizable tables of the MTXQCvX2 universe.
 
 ## conversion_metabolite.csv
 
-```{r con_se, include=FALSE}
+```{r con_se, echo=TRUE}
 
 data = read.csv("config_mtx/conversion_metabolite.csv", TRUE, sep = ";")
 colnames(data)
