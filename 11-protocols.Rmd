@@ -1,0 +1,62 @@
+# Protocols
+
+## Sample extraction
+
+
+
+
+## Sample derivatisation
+
+
+
+
+## GC-MS measurement
+
+
+
+
+## Data processing
+
+
+### Processing for Maui annotation
+
+#### Resampling
+
+#### Combo-export
+
+#### Maui quantification masses
+
+#### MAUI pSIRM
+
+#### Maui exports{#mauiexport}
+
+1. Input-Folder: gc 
+
+- Alcane_intensities.csv (Diagnostics/Export Alcane intensities)
+- InternalStandard.csv ^[see more details below]
+- MassSum-73.csv (Diagnostics/QC Mass Sum Export for mass 73)
+- PeakDensities-Chroma.csv (Diagnostics/ExportPeakDensities)
+
+2. Input-Folder: quant
+
+- ManualQuantTable.tsv - **rename it** - e.g., e18125cz.tsv ^[Location: Maui-project/export/QM-AbsoluteQuantification/...] ^[C://Users/User-name/MauiProjects/...]
+- quantMassAreasMatrix.csv (Quantification export of samplesPeakGroups)
+
+3. Input-Folder: inc
+
+- DataMatrix.csv (Export \% Label of pSIRM-samplesPeakGroups)
+- pSIRM_SpectraData.csv (pSIRM Spectra Export)^[Requires the selection of Natural_MIDs.txt]
+
+
+### Processing for Metmax data extraction
+
+#### Resampling
+
+#### 1D-basic
+
+#### Reference search
+
+#### Export for Metmax
+
+#### Data extraction
+

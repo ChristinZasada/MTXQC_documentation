@@ -1,15 +1,3 @@
-# MTXQCvX2 modules{#universe}
+# MTXQCvX2_init{#init}
 
-Here is a review of existing modules
-
-## MTXQCvX_init.Rmd
-
-## MTXQCvX_experimentalSetup.Rmd
-
-## MTXQCvX_part1
-
-## MTXQCvX_part2 - Post-processing
-
-## MTXQCvX_part3 - ManualValidation
-
-## MTXQCvX_part4 - Metmax parser
+MTXQCvX2_init.Rmd - why and how to use it. Advantages of the project folder.
