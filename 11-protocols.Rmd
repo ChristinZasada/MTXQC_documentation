@@ -1,8 +1,41 @@
 # Protocols
 
 ## Sample extraction
+### Cell extracts
 
+Materials:
 
+- cell culture dishes (10 cm)
+- 50 \% MeOH plus 2 ug/ul cinnamic acid, ice-cold
+- chloroform
+- 15 ml falcon tubes
+- cell lifter
+
+Procedure:
+
+- prepare cell culture dishes accordingly to your experimental conditions
+- discard media / buffer
+- add immediately 5 ml MeOH
+- detach cells using cell lifter
+- collect and transfer cell extract into 15 ml falcon
+- add 1 ml chloroform
+- incube for 30 - 60 min at cold temperature on rotary or thermo shaker
+- centrifuge at max speed for 10 min
+- collect polar and lipid phases
+- dry under vacuum
+
+In order to generate technical backups:
+
+- resuspend dried extracts in 600 ul 20 \% MeOH
+- shake at cold temperature on thermo shaker for 30 min
+- split volumes into equal parts in fresh eppendorf tubes
+- dry under vacuum
+
+Suggested cell density: $2-3e+6$ cells / extract.
+
+### Tissue samples
+
+### Blood samples
 
 
 ## Sample derivatisation

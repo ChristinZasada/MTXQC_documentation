@@ -1,4 +1,3 @@
 # Introduction {#intro}
 
-
 Experimental and mathematical concepts have been introduced for the pulsed stable isotope resolved metabolomics (pSIRM) approach in [@Pietzke2014].

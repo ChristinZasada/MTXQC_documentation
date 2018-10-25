@@ -27,7 +27,6 @@ The general workflow of the NMTXQCvX2 project is briefly shown below in **quick 
 10. Knit with parameter: `MTXQC_part2.Rmd`
 11. If required - proceed with `MTXQC_part3.Rmd` - ManualValidation
 
-
 ## Required input files derived from a ChromaToF/Metmax
 
 If you need an introduction about how to use metmax - have a look at the separate documentation `Metmax_intro`.
@@ -82,4 +81,3 @@ In the same way alkanes are be defined in conversion_metabolite.csv. Each alkane
 MTXQCvX_part4 recognises the flag tag and generates based on peakarea-file `Alcane_intensities.csv` and saves it at `psirm_glucose/input/gc/`^[It should be al_k_ane, I know, but Maui doesn't...].
 
 The in-lab approach considers nine alkanes from c10 to c36. Standard annotation includes an hashtag, e.g., #c10. If you use this annotation even Metmax would be able to determine the retention index.  
-

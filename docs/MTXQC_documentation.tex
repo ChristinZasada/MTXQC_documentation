@@ -183,36 +183,26 @@ Experimental and mathematical concepts have been introduced for the
 pulsed stable isotope resolved metabolomics (pSIRM) approach in
 \citep{Pietzke2014}.
 
-\chapter{MTXQCvX2\_init}\label{init}
-
-MTXQCvX2\_init.Rmd - why and how to use it. Advantages of the project
-folder.
-
 \chapter{Workflow for Maui-annotation proejcts}\label{maui}
+
+\section{Read this in case}\label{read-this-in-case}
+
+\begin{itemize}
+\tightlist
+\item
+  you have run a succesfull Maui project
+\item
+  exported all required container (see \ref{container})
+\item
+  you have a copy of sequence list and experimental conditions
+\item
+  you know the extraction procedure
+\end{itemize}
 
 The following article describes briefly how to use MTXQCvX2 in case you
 used Maui for the annotation of your metabolomics project. It does not
 matter if you have performed an experiment including stable isotopes or
 if you just aim for the quantification of a few intermediates.
-
-A summary of the general workflow is shown below, followed by more
-detailed instructions explaining required input files. Check out the
-notes for hints and suggestions.
-
-In order to run smoothly through the overall procedure you should meet
-the following prerequisites:
-
-\begin{itemize}
-\tightlist
-\item
-  A succesfull Maui project
-\item
-  Exported all required container (see \ref{container})
-\item
-  Sequence list and experimental conditions
-\item
-  Extraction procedure and corresponding volumes, cell counts
-\end{itemize}
 
 \section{Quick view}\label{quick-view}
 
@@ -220,16 +210,16 @@ the following prerequisites:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Setup R-project and copy MTXQC-files\footnote{Check for the latest
-    release: github.com/ChrisZasa/fluffy-adventure}
+  Setup a new R-project and copy MTXQC-files
 \item
   Knit with parameter: \texttt{MTXQC\_init.Rmd}
 \item
-  Copy input files and rename ManualQuantTable.tsv
+  Copy input files and rename ManualQuantTable.tsv (e18205cz.tsv)
 \item
   Create annotation.csv and sample\_extracts.csv files
 \item
-  Define the internal standard\footnote{see below InternalStandard}
+  Define the internal extraction standard\footnote{see below
+    InternalStandard}
 \item
   Knit with parameter: \texttt{MTXQC\_ExperimentalSetup.Rmd}
 \item
@@ -302,7 +292,7 @@ A quick way to generate an annotation file is described below:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Copy the first row / header of quantMassAreaMatrix.csv file
+  Copy the first row / header of \texttt{quantMassAreaMatrix.csv} file
 \item
   Paste \& transpose the content into a new Excel-File into column A
 \item
@@ -324,9 +314,9 @@ A quick way to generate an annotation file is described below:
 
 \section{Sample\_extracts-file}\label{sample_extracts-file}
 
-The sample\_extracts.csv file helps to determine correct absolute
-quantities in the manner of pmol/1e+6 cells or pmol/mg tissue in the
-\texttt{CalculationFileData.csv}.
+The \texttt{sample\_extracts.csv} file helps to determine correct
+absolute quantities in the manner of pmol/1e+6 cells or pmol/mg tissue
+in the \texttt{CalculationFileData.csv}.
 
 This file requires two obligatory columns and have to be included:
 \textbf{Extract\_vol} and \textbf{Unit}\footnote{Define: count, mg or ul}.
@@ -559,11 +549,16 @@ The in-lab approach considers nine alkanes from c10 to c36. Standard
 annotation includes an hashtag, e.g., \#c10. If you use this annotation
 even Metmax would be able to determine the retention index.
 
-\chapter{MTXQCvX\_experimentalSetup.Rmd}\label{mtxqcvx_experimentalsetup.rmd}
+\chapter{MTXQCvX2\_init}\label{init}
 
-\chapter{MTXQCvX\_part1.Rmd}\label{mtxqcvx_part1.rmd}
+MTXQCvX2\_init.Rmd - why and how to use it. Advantages of the project
+folder.
 
-\chapter{MTXQCvX\_part2.Rmd}\label{mtxqcvx_part2.rmd}
+\chapter{MTXQCvX\_experimentalSetup.Rmd}\label{ExpSetup}
+
+\chapter{MTXQCvX\_part1.Rmd}\label{part1}
+
+\chapter{MTXQCvX\_part2.Rmd}\label{part2}
 
 \chapter{MTXQCvX\_part3.Rmd}\label{mtxqcvx_part3.rmd}
 
@@ -722,6 +717,71 @@ Herein explained are the customizable tables of the MTXQCvX2 universe.
 \chapter{Protocols}\label{protocols}
 
 \section{Sample extraction}\label{sample-extraction}
+
+\subsection{Cell extracts}\label{cell-extracts}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  cell culture dishes (10 cm)
+\item
+  50 \% MeOH plus 2 ug/ul cinnamic acid, ice-cold
+\item
+  chloroform
+\item
+  15 ml falcon tubes
+\item
+  cell lifter
+\end{itemize}
+
+Procedure:
+
+\begin{itemize}
+\tightlist
+\item
+  prepare cell culture dishes accordingly to your experimental
+  conditions
+\item
+  discard media / buffer
+\item
+  add immediately 5 ml MeOH
+\item
+  detach cells using cell lifter
+\item
+  collect and transfer cell extract into 15 ml falcon
+\item
+  add 1 ml chloroform
+\item
+  incube for 30 - 60 min at cold temperature on rotary or thermo shaker
+\item
+  centrifuge at max speed for 10 min
+\item
+  collect polar and lipid phases
+\item
+  dry under vacuum
+\end{itemize}
+
+In order to generate technical backups:
+
+\begin{itemize}
+\tightlist
+\item
+  resuspend dried extracts in 600 ul 20 \% MeOH
+\item
+  shake at cold temperature on thermo shaker for 30 min
+\item
+  split volumes into equal parts in fresh eppendorf tubes
+\item
+  dry under vacuum
+\end{itemize}
+
+Suggested cell density: \(2-3e+6\) cells / extract.
+
+\subsection{Tissue samples}\label{tissue-samples}
+
+\subsection{Blood samples}\label{blood-samples}
 
 \section{Sample derivatisation}\label{sample-derivatisation}
 
