@@ -176,22 +176,159 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="header">
-<h1 class="title">MTXQCvX2 documentation</h1>
-<h4 class="author"><em>Christin Zasada</em></h4>
-<h4 class="date"><em>2018-10-25</em></h4>
+<div id="input-files-1" class="section level2">
+<h2><span class="header-section-number">10.2</span> Input files</h2>
+<div id="quantification---peakareas.csv" class="section level3">
+<h3><span class="header-section-number">10.2.1</span> Quantification - PeakAreas.csv<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></h3>
+<p>In order to perform absolute quantification of</p>
+<p>You need a file containing all extracted peak areas for each metabolite and file<a href="#fn17" class="footnoteRef" id="fnref17"><sup>17</sup></a>. The header of metmax-extracted files looks like shown below (see table 1). Please, remember to delete the second header row, representing the column loads for each file before saving as csv-file. Otherwise you end up with weird imported dataframes in R. Quantification masses have to be updated while processing in ChromaToF prior the export of the data e.g., with a reference search<a href="#fn18" class="footnoteRef" id="fnref18"><sup>18</sup></a> or using statistical compare. pSIRM experiments require the definition of pTop5 masses<a href="#fn19" class="footnoteRef" id="fnref19"><sup>19</sup></a> instead of top5 masses in the reference in order to take into account the shift of intensities induced by the application of stable isotopes<a href="#fn20" class="footnoteRef" id="fnref20"><sup>20</sup></a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="right">mass</th>
+<th align="right">ri</th>
+<th align="right">row.load</th>
+<th align="right">file_1</th>
+<th align="right">file_2</th>
+<th align="right">file_x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Lac</td>
+<td align="right">219</td>
+<td align="right">1051</td>
+<td align="right">0.76</td>
+<td align="right">15423</td>
+<td align="right">135444</td>
+<td align="right">465486</td>
+</tr>
+<tr class="even">
+<td align="left">Pyr</td>
+<td align="right">174</td>
+<td align="right">1042</td>
+<td align="right">0.65</td>
+<td align="right">56978</td>
+<td align="right">46888</td>
+<td align="right">4354544</td>
+</tr>
+<tr class="odd">
+<td align="left">Cit</td>
+<td align="right">273</td>
+<td align="right">1805</td>
+<td align="right">0.99</td>
+<td align="right">1326</td>
+<td align="right">23321</td>
+<td align="right">132121</td>
+</tr>
+</tbody>
+</table>
+<p>MTXQCvX_part4 takes care of the formatting and correct column names of the peak areas file and saves it<a href="#fn21" class="footnoteRef" id="fnref21"><sup>21</sup></a>. MTXQCvX_part4 generates also the file PeakDensities-Chroma.csv<a href="#fn22" class="footnoteRef" id="fnref22"><sup>22</sup></a>, in case you have selected the option to include sum of area normalisation while knitting this module.</p>
 </div>
-<div id="welcome" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
-<p>This documentation introduced to you how to use MTXQCvX2 in order to assess the quality of your GC-MS derived data, perform the determination of calibration curves and absolute quantification. It furthermore provides you two normalisation strategies and the calculation of quantities in, e.g., pmol/1e+6 cells or pmol/mg tissue.</p>
-<p>MTXQCvX2 does also enable the calculation of stable isotopic incorporation and the evaluation of the underlying data, the mass isotopomer distributions (MIDs).</p>
-<p>The tool has been set up to support the in-lab developed workflow for quantitative metabolomics experiments using the in-house developed software Maui for the annotation of data. MTXQCvX2 bridges the gap between quality control and first data post-processing / analysis of GC-MS derived data (MTXQCvX2_part1, MTXQCvX2_part2).</p>
-<p>Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).</p>
-<p>Both workflows are introduced in the distinct chapters including their required input parameter (chapter <a href="#workflows"><strong>??</strong></a>). Technical relevant information are summarised in chapter <a href="#tables"><strong>??</strong></a>.</p>
+<div id="isotope-incorporation---mids.csv" class="section level3">
+<h3><span class="header-section-number">10.2.2</span> Isotope incorporation - MIDs.csv<a href="#fn23" class="footnoteRef" id="fnref23"><sup>23</sup></a></h3>
+<p>In order to determine the incorporation of stable isotopes MTXQCvX2 requires as an input the mass isotopomer distributions (MIDs) for each intermediate and measurement<a href="#fn24" class="footnoteRef" id="fnref24"><sup>24</sup></a>. Fragments for each intermediate have to be pre-defined in metmax at Tools/Options/metabolite masses. They can be imported<a href="#fn25" class="footnoteRef" id="fnref25"><sup>25</sup></a> or manually specified each by each. An example of the metmax output is shown in table 2. The output has to be saved as csv-file, including the deletion of the partial row <code>column.load</code>, respectively<a href="#fn26" class="footnoteRef" id="fnref26"><sup>26</sup></a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">name</th>
+<th align="right">mass</th>
+<th align="right">ri</th>
+<th align="right">row.load</th>
+<th align="right">file_1</th>
+<th align="right">file_2</th>
+<th align="right">file_x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Lac</td>
+<td align="right">219</td>
+<td align="right">1051</td>
+<td align="right">0.85</td>
+<td align="right">31026</td>
+<td align="right">5165829</td>
+<td align="right">5829</td>
+</tr>
+<tr class="even">
+<td align="left">Lac</td>
+<td align="right">220</td>
+<td align="right">1051</td>
+<td align="right">0.85</td>
+<td align="right">3607</td>
+<td align="right">662277</td>
+<td align="right">277</td>
+</tr>
+<tr class="odd">
+<td align="left">Lac</td>
+<td align="right">221</td>
+<td align="right">1051</td>
+<td align="right">0.85</td>
+<td align="right">1222</td>
+<td align="right">111481</td>
+<td align="right">81</td>
+</tr>
+<tr class="even">
+<td align="left">Lac</td>
+<td align="right">222</td>
+<td align="right">1051</td>
+<td align="right">0.85</td>
+<td align="right">188</td>
+<td align="right">1003494</td>
+<td align="right">10023</td>
+</tr>
+<tr class="odd">
+<td align="left">Lac</td>
+<td align="right">223</td>
+<td align="right">1051</td>
+<td align="right">0.85</td>
+<td align="right">0</td>
+<td align="right">33542</td>
+<td align="right">342</td>
+</tr>
+</tbody>
+</table>
+<p>MTXQCvX_part4 calculates the stable isotope incorporation and exports DataMatrix.csv as well as pSIRM_SpectraData.csv<a href="#fn27" class="footnoteRef" id="fnref27"><sup>27</sup></a>. The mathematics behind are outlined in <span class="citation">(Pietzke et al. <a href="#ref-Pietzke2014">2014</a>)</span></p>
+<p><strong>Important</strong>: Extracted MIDs have to match with defined mass couples for each metabolite in MTXQCvX2<a href="#fn28" class="footnoteRef" id="fnref28"><sup>28</sup></a>. Please refer for more details to <code>vignettes/config_mtx-files</code>.</p>
+</div>
+<div id="derivatisation-efficiency---mz73.csv" class="section level3">
+<h3><span class="header-section-number">10.2.3</span> Derivatisation efficiency - mz73.csv<a href="#fn29" class="footnoteRef" id="fnref29"><sup>29</sup></a></h3>
+<p>The extraction of intensities for the ion <span class="math inline">\(m/z\)</span> 73 works analogous to the extraction of MIDs<a href="#fn30" class="footnoteRef" id="fnref30"><sup>30</sup></a>. Mass ranges have to be defined for each intermediate for the mass 73 by defining starting and end mass with 73. MTXQCvX_part4 generates the file MassSum-73.csv<a href="#fn31" class="footnoteRef" id="fnref31"><sup>31</sup></a>. Check <code>inst\template_files\</code> for reference. Hopefully soon a new metmax button extracting specific intensities across the batch.</p>
 
 </div>
+</div>
+<!-- </div> -->
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Pietzke2014">
+<p>Pietzke, Matthias, Christin Zasada, Susann Mudrich, and Stefan Kempa. 2014. “Decoding the Dynamics of Cellular Metabolism and the Action of 3-Bromopyruvate and 2-Deoxyglucose Using Pulsed Stable Isotope-Resolved Metabolomics.” <em>Cancer &amp; Metabolism</em> 2 (1): 9. doi:<a href="https://doi.org/10.1186/2049-3002-2-9">10.1186/2049-3002-2-9</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="16">
+<li id="fn16"><p>Required for: all parameter, just not <code>calculation stable isotope incorporation</code><a href="10-2-input-files-1.html#fnref16">↩</a></p></li>
+<li id="fn17"><p>Tools/Options/Retention analysis, Parameter: Area<a href="10-2-input-files-1.html#fnref17">↩</a></p></li>
+<li id="fn18"><p>See <code>vignette/ReferenceSearch</code><a href="10-2-input-files-1.html#fnref18">↩</a></p></li>
+<li id="fn19"><p>Extended list of quant masses considering isotope incorporation<a href="10-2-input-files-1.html#fnref19">↩</a></p></li>
+<li id="fn20"><p>Mandatory columns: name, mass, files<a href="10-2-input-files-1.html#fnref20">↩</a></p></li>
+<li id="fn21"><p><code>input/quant/quantMassAreasMatrix.csv</code><a href="10-2-input-files-1.html#fnref21">↩</a></p></li>
+<li id="fn22"><p><code>input/gc/PeakDensities-Chroma.csv</code><a href="10-2-input-files-1.html#fnref22">↩</a></p></li>
+<li id="fn23"><p>Required for <code>calculation isotope incorporation</code><a href="10-2-input-files-1.html#fnref23">↩</a></p></li>
+<li id="fn24"><p>Tools/Options/Isotope concentrator; Parameter: IntensityOfMass<a href="10-2-input-files-1.html#fnref24">↩</a></p></li>
+<li id="fn25"><p><code>inst/template_files/MetMax_MIDs.txt</code><a href="10-2-input-files-1.html#fnref25">↩</a></p></li>
+<li id="fn26"><p>Mandatory columns: name, mass, files<a href="10-2-input-files-1.html#fnref26">↩</a></p></li>
+<li id="fn27"><p><code>input/inc/DataMatrix</code> &amp; <code>pSIRM_SpectraData.csv</code><a href="10-2-input-files-1.html#fnref27">↩</a></p></li>
+<li id="fn28"><p><code>config_mtx/incorpo_calc_masses.csv</code><a href="10-2-input-files-1.html#fnref28">↩</a></p></li>
+<li id="fn29"><p>Required for: <code>sum of area normalisation</code><a href="10-2-input-files-1.html#fnref29">↩</a></p></li>
+<li id="fn30"><p>Tools/Options/Isotope concentrator; Parameter: IntensityOfMass<a href="10-2-input-files-1.html#fnref30">↩</a></p></li>
+<li id="fn31"><p><code>input/gc/MassSum-73.csv</code><a href="10-2-input-files-1.html#fnref31">↩</a></p></li>
+</ol>
+</div>
 <p style="text-align: center;">
-<a href="2-intro.html"><button class="btn btn-default">Next</button></a>
+<a href="10-1-this-section-explains.html"><button class="btn btn-default">Previous</button></a>
+<a href="11-config.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>

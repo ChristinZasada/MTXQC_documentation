@@ -26,7 +26,7 @@ Quantification masses have to be updated while processing in ChromaToF prior the
 
 df = data.frame(name = c("Lac", "Pyr", "Cit"), mass = c(219, 174, 273), ri = c(1051, 1042, 1805), row.load = c(0.76, 0.65, 0.99), file_1 = c(15423, 56978, 1326), file_2 = c(135444, 46888, 23321), file_x = c(465486, 4354544, 132121))
 
-knitr::kable(df, caption = c("Example metmax-extracted file containing peak areas."))
+knitr::kable(df)
 
 
 ```
@@ -49,7 +49,7 @@ df2 = data.frame(name = c("Lac", "Lac", "Lac","Lac", "Lac"),
                 file_2 = c(5165829,662277,111481,1003494,33542),
                 file_x = c(5829,277,81,10023,342))
 
-knitr::kable(df2, caption = "Example metmax-extracted file containing MIDs.")
+knitr::kable(df2)
 
 
 ```

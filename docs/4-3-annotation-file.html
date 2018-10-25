@@ -176,22 +176,30 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="header">
-<h1 class="title">MTXQCvX2 documentation</h1>
-<h4 class="author"><em>Christin Zasada</em></h4>
-<h4 class="date"><em>2018-10-25</em></h4>
+<div id="annotation-file" class="section level2">
+<h2><span class="header-section-number">4.3</span> Annotation-file</h2>
+<p>The annotation file relate file names with experimental conditions or specify quantification standards in your batch. Two columns - <strong>File and Type</strong> - are obligatory and have to be present in the annotation file. In the case of absence MTXQCvX_part1 stops processing and shows an error message.</p>
+<p>A quick way to generate an annotation file is described below:</p>
+<ol style="list-style-type: decimal">
+<li>Copy the first row / header of quantMassAreaMatrix.csv file</li>
+<li>Paste &amp; transpose the content into a new Excel-File into column A</li>
+<li>Change Metabolite to File</li>
+<li>Remove the entry QuantMasses at the very end of the column A</li>
+<li>Add the column Type and specify each file either as sample or addQ1_dilution<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></li>
+<li>Add more columns specifying your experimental conditions, e.g., Cellline and Treatment …<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></li>
+<li>Save the content as <code>csv-file</code> in the <code>psirm_glucose/input/...</code></li>
+</ol>
 </div>
-<div id="welcome" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
-<p>This documentation introduced to you how to use MTXQCvX2 in order to assess the quality of your GC-MS derived data, perform the determination of calibration curves and absolute quantification. It furthermore provides you two normalisation strategies and the calculation of quantities in, e.g., pmol/1e+6 cells or pmol/mg tissue.</p>
-<p>MTXQCvX2 does also enable the calculation of stable isotopic incorporation and the evaluation of the underlying data, the mass isotopomer distributions (MIDs).</p>
-<p>The tool has been set up to support the in-lab developed workflow for quantitative metabolomics experiments using the in-house developed software Maui for the annotation of data. MTXQCvX2 bridges the gap between quality control and first data post-processing / analysis of GC-MS derived data (MTXQCvX2_part1, MTXQCvX2_part2).</p>
-<p>Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).</p>
-<p>Both workflows are introduced in the distinct chapters including their required input parameter (chapter <a href="#workflows"><strong>??</strong></a>). Technical relevant information are summarised in chapter <a href="#tables"><strong>??</strong></a>.</p>
-
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>see for further details additionalQuant<a href="4-3-annotation-file.html#fnref4">↩</a></p></li>
+<li id="fn5"><p>optimal: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES<a href="4-3-annotation-file.html#fnref5">↩</a></p></li>
+</ol>
 </div>
 <p style="text-align: center;">
-<a href="2-intro.html"><button class="btn btn-default">Next</button></a>
+<a href="4-2-input-files.html"><button class="btn btn-default">Previous</button></a>
+<a href="4-4-sample-extracts-file.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>

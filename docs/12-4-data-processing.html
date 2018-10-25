@@ -176,22 +176,82 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="header">
-<h1 class="title">MTXQCvX2 documentation</h1>
-<h4 class="author"><em>Christin Zasada</em></h4>
-<h4 class="date"><em>2018-10-25</em></h4>
+<div id="data-processing" class="section level2">
+<h2><span class="header-section-number">12.4</span> Data processing</h2>
+<div id="processing-for-maui-annotation" class="section level3">
+<h3><span class="header-section-number">12.4.1</span> Processing for Maui annotation</h3>
+<div id="resampling" class="section level4">
+<h4><span class="header-section-number">12.4.1.1</span> Resampling</h4>
 </div>
-<div id="welcome" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
-<p>This documentation introduced to you how to use MTXQCvX2 in order to assess the quality of your GC-MS derived data, perform the determination of calibration curves and absolute quantification. It furthermore provides you two normalisation strategies and the calculation of quantities in, e.g., pmol/1e+6 cells or pmol/mg tissue.</p>
-<p>MTXQCvX2 does also enable the calculation of stable isotopic incorporation and the evaluation of the underlying data, the mass isotopomer distributions (MIDs).</p>
-<p>The tool has been set up to support the in-lab developed workflow for quantitative metabolomics experiments using the in-house developed software Maui for the annotation of data. MTXQCvX2 bridges the gap between quality control and first data post-processing / analysis of GC-MS derived data (MTXQCvX2_part1, MTXQCvX2_part2).</p>
-<p>Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).</p>
-<p>Both workflows are introduced in the distinct chapters including their required input parameter (chapter <a href="#workflows"><strong>??</strong></a>). Technical relevant information are summarised in chapter <a href="#tables"><strong>??</strong></a>.</p>
+<div id="combo-export" class="section level4">
+<h4><span class="header-section-number">12.4.1.2</span> Combo-export</h4>
+</div>
+<div id="maui-quantification-masses" class="section level4">
+<h4><span class="header-section-number">12.4.1.3</span> Maui quantification masses</h4>
+</div>
+<div id="maui-psirm" class="section level4">
+<h4><span class="header-section-number">12.4.1.4</span> MAUI pSIRM</h4>
+</div>
+<div id="mauiexport" class="section level4">
+<h4><span class="header-section-number">12.4.1.5</span> Maui exports</h4>
+<ol style="list-style-type: decimal">
+<li>Input-Folder: gc</li>
+</ol>
+<ul>
+<li>Alcane_intensities.csv (Diagnostics/Export Alcane intensities)</li>
+<li>InternalStandard.csv<a href="#fn32" class="footnoteRef" id="fnref32"><sup>32</sup></a></li>
+<li>MassSum-73.csv (Diagnostics/QC Mass Sum Export for mass 73)</li>
+<li>PeakDensities-Chroma.csv (Diagnostics/ExportPeakDensities)</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Input-Folder: quant</li>
+</ol>
+<ul>
+<li>ManualQuantTable.tsv - <strong>rename it</strong> - e.g., e18125cz.tsv<a href="#fn33" class="footnoteRef" id="fnref33"><sup>33</sup></a><a href="#fn34" class="footnoteRef" id="fnref34"><sup>34</sup></a></li>
+<li>quantMassAreasMatrix.csv (Quantification export of samplesPeakGroups)</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Input-Folder: inc</li>
+</ol>
+<ul>
+<li>DataMatrix.csv (Export % Label of pSIRM-samplesPeakGroups)</li>
+<li>pSIRM_SpectraData.csv (pSIRM Spectra Export)<a href="#fn35" class="footnoteRef" id="fnref35"><sup>35</sup></a></li>
+</ul>
+</div>
+</div>
+<div id="processing-for-metmax-data-extraction" class="section level3">
+<h3><span class="header-section-number">12.4.2</span> Processing for Metmax data extraction</h3>
+<div id="resampling-1" class="section level4">
+<h4><span class="header-section-number">12.4.2.1</span> Resampling</h4>
+</div>
+<div id="d-basic" class="section level4">
+<h4><span class="header-section-number">12.4.2.2</span> 1D-basic</h4>
+</div>
+<div id="reference-search" class="section level4">
+<h4><span class="header-section-number">12.4.2.3</span> Reference search</h4>
+</div>
+<div id="export-for-metmax" class="section level4">
+<h4><span class="header-section-number">12.4.2.4</span> Export for Metmax</h4>
+</div>
+<div id="data-extraction" class="section level4">
+<h4><span class="header-section-number">12.4.2.5</span> Data extraction</h4>
 
 </div>
+</div>
+</div>
+<!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="32">
+<li id="fn32"><p>see more details below<a href="12-4-data-processing.html#fnref32">↩</a></p></li>
+<li id="fn33"><p>Location: Maui-project/export/QM-AbsoluteQuantification/…<a href="12-4-data-processing.html#fnref33">↩</a></p></li>
+<li id="fn34"><p>C://Users/User-name/MauiProjects/…<a href="12-4-data-processing.html#fnref34">↩</a></p></li>
+<li id="fn35"><p>Requires the selection of Natural_MIDs.txt<a href="12-4-data-processing.html#fnref35">↩</a></p></li>
+</ol>
+</div>
 <p style="text-align: center;">
-<a href="2-intro.html"><button class="btn btn-default">Next</button></a>
+<a href="12-3-gc-ms-measurement.html"><button class="btn btn-default">Previous</button></a>
+<a href="13-FAQ.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>

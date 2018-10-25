@@ -1,54 +1,45 @@
 <!DOCTYPE html>
-<html >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MTXQCvX2 documentation</title>
-  <meta name="description" content="This is the start of the official MTXQCvX2 manual.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
-
-  <meta property="og:title" content="MTXQCvX2 documentation" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="This is the start of the official MTXQCvX2 manual." />
-  <meta name="github-repo" content="chriszasa/MTXQC_documentation" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MTXQCvX2 documentation" />
-  
-  <meta name="twitter:description" content="This is the start of the official MTXQCvX2 manual." />
-  
-
-<meta name="author" content="Christin Zasada">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="MTXQCvX2 documentation" />
+<meta property="og:type" content="book" />
 
 
-<meta name="date" content="2018-10-25">
+<meta property="og:description" content="This is the start of the official MTXQCvX2 manual." />
+<meta name="github-repo" content="chriszasa/MTXQC_documentation" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  
-  
-<link rel="prev" href="FAQ.html">
+<meta name="author" content="Christin Zasada" />
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<meta name="date" content="2018-10-25" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="This is the start of the official MTXQCvX2 manual.">
+
+<title>MTXQCvX2 documentation</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
 
 
-
-
-
-
-
-
-
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
@@ -86,121 +77,105 @@ code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Ann
 code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">The MTXQC documentation</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="universe.html"><a href="universe.html"><i class="fa fa-check"></i><b>3</b> MTXQCvX2_init</a><ul>
-<li class="chapter" data-level="3.1" data-path="universe.html"><a href="universe.html#mtxqcvx_init.rmd"><i class="fa fa-check"></i><b>3.1</b> MTXQCvX_init.Rmd</a></li>
-<li class="chapter" data-level="3.2" data-path="universe.html"><a href="universe.html#mtxqcvx_experimentalsetup.rmd"><i class="fa fa-check"></i><b>3.2</b> MTXQCvX_experimentalSetup.Rmd</a></li>
-<li class="chapter" data-level="3.3" data-path="universe.html"><a href="universe.html#mtxqcvx_part1"><i class="fa fa-check"></i><b>3.3</b> MTXQCvX_part1</a></li>
-<li class="chapter" data-level="3.4" data-path="universe.html"><a href="universe.html#mtxqcvx_part2---post-processing"><i class="fa fa-check"></i><b>3.4</b> MTXQCvX_part2 - Post-processing</a></li>
-<li class="chapter" data-level="3.5" data-path="universe.html"><a href="universe.html#mtxqcvx_part3---manualvalidation"><i class="fa fa-check"></i><b>3.5</b> MTXQCvX_part3 - ManualValidation</a></li>
-<li class="chapter" data-level="3.6" data-path="universe.html"><a href="universe.html#mtxqcvx_part4---metmax-parser"><i class="fa fa-check"></i><b>3.6</b> MTXQCvX_part4 - Metmax parser</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#welcome"><span class="toc-section-number">1</span> Welcome</a></li>
+<li><a href="2-intro.html#intro"><span class="toc-section-number">2</span> Introduction</a></li>
+<li><a href="3-init.html#init"><span class="toc-section-number">3</span> MTXQCvX2_init</a></li>
+<li class="has-sub"><a href="4-maui.html#maui"><span class="toc-section-number">4</span> Workflow for Maui-annotation proejcts</a><ul>
+<li><a href="4-1-quick-view.html#quick-view"><span class="toc-section-number">4.1</span> Quick view</a></li>
+<li><a href="4-2-input-files.html#input-files"><span class="toc-section-number">4.2</span> Input files</a></li>
+<li><a href="4-3-annotation-file.html#annotation-file"><span class="toc-section-number">4.3</span> Annotation-file</a></li>
+<li><a href="4-4-sample-extracts-file.html#sample_extracts-file"><span class="toc-section-number">4.4</span> Sample_extracts-file</a></li>
+<li><a href="4-5-internal-standard.html#internal-standard"><span class="toc-section-number">4.5</span> Internal Standard</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="maui.html"><a href="maui.html"><i class="fa fa-check"></i><b>4</b> Workflow for Maui-annotation proejcts</a><ul>
-<li class="chapter" data-level="4.1" data-path="maui.html"><a href="maui.html#quick-view"><i class="fa fa-check"></i><b>4.1</b> Quick view</a></li>
-<li class="chapter" data-level="4.2" data-path="maui.html"><a href="maui.html#input-files"><i class="fa fa-check"></i><b>4.2</b> Input files</a></li>
-<li class="chapter" data-level="4.3" data-path="maui.html"><a href="maui.html#annotation-file"><i class="fa fa-check"></i><b>4.3</b> Annotation-file</a></li>
-<li class="chapter" data-level="4.4" data-path="maui.html"><a href="maui.html#sample_extracts-file"><i class="fa fa-check"></i><b>4.4</b> Sample_extracts-file</a></li>
-<li class="chapter" data-level="4.5" data-path="maui.html"><a href="maui.html#internal-standard"><i class="fa fa-check"></i><b>4.5</b> Internal Standard</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="metmax.html"><a href="metmax.html"><i class="fa fa-check"></i><b>5</b> Workflow for Metmax-extracted projects</a><ul>
-<li class="chapter" data-level="5.1" data-path="metmax.html"><a href="metmax.html#you-want-to-follow-this"><i class="fa fa-check"></i><b>5.1</b> You want to follow this …</a></li>
-<li class="chapter" data-level="5.2" data-path="metmax.html"><a href="metmax.html#introduction"><i class="fa fa-check"></i><b>5.2</b> Introduction</a></li>
-<li class="chapter" data-level="5.3" data-path="metmax.html"><a href="metmax.html#quick-view-1"><i class="fa fa-check"></i><b>5.3</b> Quick view</a></li>
-<li class="chapter" data-level="5.4" data-path="metmax.html"><a href="metmax.html#required-input-files-derived-from-a-chromatofmetmax"><i class="fa fa-check"></i><b>5.4</b> Required input files derived from a ChromaToF/Metmax</a></li>
-<li class="chapter" data-level="5.5" data-path="metmax.html"><a href="metmax.html#annotation-file-1"><i class="fa fa-check"></i><b>5.5</b> Annotation-file</a></li>
-<li class="chapter" data-level="5.6" data-path="metmax.html"><a href="metmax.html#sample_extracts-file-1"><i class="fa fa-check"></i><b>5.6</b> Sample_extracts-file</a></li>
-<li class="chapter" data-level="5.7" data-path="metmax.html"><a href="metmax.html#conversion_metabolite.csv"><i class="fa fa-check"></i><b>5.7</b> Conversion_metabolite.csv</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="metmax.html"><a href="metmax.html#match-your-annotation-with-library-names"><i class="fa fa-check"></i><b>5.7.1</b> Match your annotation with library names</a></li>
-<li class="chapter" data-level="5.7.2" data-path="metmax.html"><a href="metmax.html#define-your-internal-standards-and-alkanes"><i class="fa fa-check"></i><b>5.7.2</b> Define your internal standards and alkanes</a></li>
+<li class="has-sub"><a href="5-metmax.html#metmax"><span class="toc-section-number">5</span> Workflow for Metmax-extracted projects</a><ul>
+<li><a href="5-1-you-want-to-follow-this.html#you-want-to-follow-this"><span class="toc-section-number">5.1</span> You want to follow this …</a></li>
+<li><a href="5-2-introduction.html#introduction"><span class="toc-section-number">5.2</span> Introduction</a></li>
+<li><a href="5-3-quick-view-1.html#quick-view-1"><span class="toc-section-number">5.3</span> Quick view</a></li>
+<li><a href="5-4-required-input-files-derived-from-a-chromatofmetmax.html#required-input-files-derived-from-a-chromatofmetmax"><span class="toc-section-number">5.4</span> Required input files derived from a ChromaToF/Metmax</a></li>
+<li><a href="5-5-annotation-file-1.html#annotation-file-1"><span class="toc-section-number">5.5</span> Annotation-file</a></li>
+<li><a href="5-6-sample-extracts-file-1.html#sample_extracts-file-1"><span class="toc-section-number">5.6</span> Sample_extracts-file</a></li>
+<li class="has-sub"><a href="5-7-conversion-metabolite-csv.html#conversion_metabolite.csv"><span class="toc-section-number">5.7</span> Conversion_metabolite.csv</a><ul>
+<li><a href="5-7-conversion-metabolite-csv.html#match-your-annotation-with-library-names"><span class="toc-section-number">5.7.1</span> Match your annotation with library names</a></li>
+<li><a href="5-7-conversion-metabolite-csv.html#define-your-internal-standards-and-alkanes"><span class="toc-section-number">5.7.2</span> Define your internal standards and alkanes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="mtxqcvx-experimentalsetup-rmd-1.html"><a href="mtxqcvx-experimentalsetup-rmd-1.html"><i class="fa fa-check"></i><b>6</b> MTXQCvX_experimentalSetup.Rmd</a></li>
-<li class="chapter" data-level="7" data-path="mtxqcvx-part1-rmd.html"><a href="mtxqcvx-part1-rmd.html"><i class="fa fa-check"></i><b>7</b> MTXQCvX_part1.Rmd</a></li>
-<li class="chapter" data-level="8" data-path="mtxqcvx-part2-rmd.html"><a href="mtxqcvx-part2-rmd.html"><i class="fa fa-check"></i><b>8</b> MTXQCvX_part2.Rmd</a></li>
-<li class="chapter" data-level="9" data-path="mtxqcvx-part3-rmd.html"><a href="mtxqcvx-part3-rmd.html"><i class="fa fa-check"></i><b>9</b> MTXQCvX_part3.Rmd</a></li>
-<li class="chapter" data-level="10" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html"><i class="fa fa-check"></i><b>10</b> MTXQCvX_part4.Rmd - Metmax parser</a><ul>
-<li class="chapter" data-level="10.1" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#this-section-explains"><i class="fa fa-check"></i><b>10.1</b> This section explains …</a></li>
-<li class="chapter" data-level="10.2" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#input-files-1"><i class="fa fa-check"></i><b>10.2</b> Input files</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#quantification---peakareas.csv"><i class="fa fa-check"></i><b>10.2.1</b> Quantification - PeakAreas.csv</a></li>
-<li class="chapter" data-level="10.2.2" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#isotope-incorporation---mids.csv"><i class="fa fa-check"></i><b>10.2.2</b> Isotope incorporation - MIDs.csv</a></li>
-<li class="chapter" data-level="10.2.3" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#derivatisation-efficiency---mz73.csv"><i class="fa fa-check"></i><b>10.2.3</b> Derivatisation efficiency - mz73.csv</a></li>
+<li><a href="6-mtxqcvx-experimentalsetup-rmd.html#mtxqcvx_experimentalsetup.rmd"><span class="toc-section-number">6</span> MTXQCvX_experimentalSetup.Rmd</a></li>
+<li><a href="7-mtxqcvx-part1-rmd.html#mtxqcvx_part1.rmd"><span class="toc-section-number">7</span> MTXQCvX_part1.Rmd</a></li>
+<li><a href="8-mtxqcvx-part2-rmd.html#mtxqcvx_part2.rmd"><span class="toc-section-number">8</span> MTXQCvX_part2.Rmd</a></li>
+<li><a href="9-mtxqcvx-part3-rmd.html#mtxqcvx_part3.rmd"><span class="toc-section-number">9</span> MTXQCvX_part3.Rmd</a></li>
+<li class="has-sub"><a href="10-mtxqcvx-part4-rmd-metmax-parser.html#mtxqcvx_part4.rmd---metmax-parser"><span class="toc-section-number">10</span> MTXQCvX_part4.Rmd - Metmax parser</a><ul>
+<li><a href="10-1-this-section-explains.html#this-section-explains"><span class="toc-section-number">10.1</span> This section explains …</a></li>
+<li class="has-sub"><a href="10-2-input-files-1.html#input-files-1"><span class="toc-section-number">10.2</span> Input files</a><ul>
+<li><a href="10-2-input-files-1.html#quantification---peakareas.csv"><span class="toc-section-number">10.2.1</span> Quantification - PeakAreas.csv</a></li>
+<li><a href="10-2-input-files-1.html#isotope-incorporation---mids.csv"><span class="toc-section-number">10.2.2</span> Isotope incorporation - MIDs.csv</a></li>
+<li><a href="10-2-input-files-1.html#derivatisation-efficiency---mz73.csv"><span class="toc-section-number">10.2.3</span> Derivatisation efficiency - mz73.csv</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="config.html"><a href="config.html"><i class="fa fa-check"></i><b>11</b> Configuration of MTXQCvX2</a><ul>
-<li class="chapter" data-level="11.1" data-path="config.html"><a href="config.html#conversion_metabolite.csv-1"><i class="fa fa-check"></i><b>11.1</b> conversion_metabolite.csv</a></li>
-<li class="chapter" data-level="11.2" data-path="config.html"><a href="config.html#metabolic-profile"><i class="fa fa-check"></i><b>11.2</b> Metabolic profile</a></li>
-<li class="chapter" data-level="11.3" data-path="config.html"><a href="config.html#defintion-of-intermediates"><i class="fa fa-check"></i><b>11.3</b> Defintion of intermediates</a></li>
-<li class="chapter" data-level="11.4" data-path="config.html"><a href="config.html#declaration-of-standards"><i class="fa fa-check"></i><b>11.4</b> Declaration of standards</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="config.html"><a href="config.html#internal-standard-1"><i class="fa fa-check"></i><b>11.4.1</b> Internal standard</a></li>
-<li class="chapter" data-level="11.4.2" data-path="config.html"><a href="config.html#alkanes"><i class="fa fa-check"></i><b>11.4.2</b> Alkanes</a></li>
-<li class="chapter" data-level="11.4.3" data-path="config.html"><a href="config.html#quant1-values.csv"><i class="fa fa-check"></i><b>11.4.3</b> quant1-values.csv</a></li>
-<li class="chapter" data-level="11.4.4" data-path="config.html"><a href="config.html#incorporation_calc.csv"><i class="fa fa-check"></i><b>11.4.4</b> incorporation_calc.csv</a></li>
+<li class="has-sub"><a href="11-config.html#config"><span class="toc-section-number">11</span> Configuration of MTXQCvX2</a><ul>
+<li><a href="11-1-conversion-metabolite-csv-1.html#conversion_metabolite.csv-1"><span class="toc-section-number">11.1</span> conversion_metabolite.csv</a></li>
+<li><a href="11-2-metabolic-profile.html#metabolic-profile"><span class="toc-section-number">11.2</span> Metabolic profile</a></li>
+<li><a href="11-3-defintion-of-intermediates.html#defintion-of-intermediates"><span class="toc-section-number">11.3</span> Defintion of intermediates</a></li>
+<li class="has-sub"><a href="11-4-declaration-of-standards.html#declaration-of-standards"><span class="toc-section-number">11.4</span> Declaration of standards</a><ul>
+<li><a href="11-4-declaration-of-standards.html#internal-standard-1"><span class="toc-section-number">11.4.1</span> Internal standard</a></li>
+<li><a href="11-4-declaration-of-standards.html#alkanes"><span class="toc-section-number">11.4.2</span> Alkanes</a></li>
+<li><a href="11-4-declaration-of-standards.html#quant1-values.csv"><span class="toc-section-number">11.4.3</span> quant1-values.csv</a></li>
+<li><a href="11-4-declaration-of-standards.html#incorporation_calc.csv"><span class="toc-section-number">11.4.4</span> incorporation_calc.csv</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="protocols.html"><a href="protocols.html"><i class="fa fa-check"></i><b>12</b> Protocols</a><ul>
-<li class="chapter" data-level="12.1" data-path="protocols.html"><a href="protocols.html#sample-extraction"><i class="fa fa-check"></i><b>12.1</b> Sample extraction</a></li>
-<li class="chapter" data-level="12.2" data-path="protocols.html"><a href="protocols.html#sample-derivatisation"><i class="fa fa-check"></i><b>12.2</b> Sample derivatisation</a></li>
-<li class="chapter" data-level="12.3" data-path="protocols.html"><a href="protocols.html#gc-ms-measurement"><i class="fa fa-check"></i><b>12.3</b> GC-MS measurement</a></li>
-<li class="chapter" data-level="12.4" data-path="protocols.html"><a href="protocols.html#data-processing"><i class="fa fa-check"></i><b>12.4</b> Data processing</a><ul>
-<li class="chapter" data-level="12.4.1" data-path="protocols.html"><a href="protocols.html#processing-for-maui-annotation"><i class="fa fa-check"></i><b>12.4.1</b> Processing for Maui annotation</a><ul>
-<li class="chapter" data-level="12.4.1.1" data-path="protocols.html"><a href="protocols.html#resampling"><i class="fa fa-check"></i><b>12.4.1.1</b> Resampling</a></li>
-<li class="chapter" data-level="12.4.1.2" data-path="protocols.html"><a href="protocols.html#combo-export"><i class="fa fa-check"></i><b>12.4.1.2</b> Combo-export</a></li>
-<li class="chapter" data-level="12.4.1.3" data-path="protocols.html"><a href="protocols.html#maui-quantification-masses"><i class="fa fa-check"></i><b>12.4.1.3</b> Maui quantification masses</a></li>
-<li class="chapter" data-level="12.4.1.4" data-path="protocols.html"><a href="protocols.html#maui-psirm"><i class="fa fa-check"></i><b>12.4.1.4</b> MAUI pSIRM</a></li>
-<li class="chapter" data-level="12.4.1.5" data-path="protocols.html"><a href="protocols.html#mauiexport"><i class="fa fa-check"></i><b>12.4.1.5</b> Maui exports</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4.2" data-path="protocols.html"><a href="protocols.html#processing-for-metmax-data-extraction"><i class="fa fa-check"></i><b>12.4.2</b> Processing for Metmax data extraction</a><ul>
-<li class="chapter" data-level="12.4.2.1" data-path="protocols.html"><a href="protocols.html#resampling-1"><i class="fa fa-check"></i><b>12.4.2.1</b> Resampling</a></li>
-<li class="chapter" data-level="12.4.2.2" data-path="protocols.html"><a href="protocols.html#d-basic"><i class="fa fa-check"></i><b>12.4.2.2</b> 1D-basic</a></li>
-<li class="chapter" data-level="12.4.2.3" data-path="protocols.html"><a href="protocols.html#reference-search"><i class="fa fa-check"></i><b>12.4.2.3</b> Reference search</a></li>
-<li class="chapter" data-level="12.4.2.4" data-path="protocols.html"><a href="protocols.html#export-for-metmax"><i class="fa fa-check"></i><b>12.4.2.4</b> Export for Metmax</a></li>
-<li class="chapter" data-level="12.4.2.5" data-path="protocols.html"><a href="protocols.html#data-extraction"><i class="fa fa-check"></i><b>12.4.2.5</b> Data extraction</a></li>
+<li class="has-sub"><a href="12-protocols.html#protocols"><span class="toc-section-number">12</span> Protocols</a><ul>
+<li><a href="12-1-sample-extraction.html#sample-extraction"><span class="toc-section-number">12.1</span> Sample extraction</a></li>
+<li><a href="12-2-sample-derivatisation.html#sample-derivatisation"><span class="toc-section-number">12.2</span> Sample derivatisation</a></li>
+<li><a href="12-3-gc-ms-measurement.html#gc-ms-measurement"><span class="toc-section-number">12.3</span> GC-MS measurement</a></li>
+<li class="has-sub"><a href="12-4-data-processing.html#data-processing"><span class="toc-section-number">12.4</span> Data processing</a><ul>
+<li><a href="12-4-data-processing.html#processing-for-maui-annotation"><span class="toc-section-number">12.4.1</span> Processing for Maui annotation</a></li>
+<li><a href="12-4-data-processing.html#processing-for-metmax-data-extraction"><span class="toc-section-number">12.4.2</span> Processing for Metmax data extraction</a></li>
 </ul></li>
 </ul></li>
+<li class="has-sub"><a href="13-FAQ.html#FAQ"><span class="toc-section-number">13</span> Frequently Asked Questions</a><ul>
+<li><a href="13-1-what-are-additional-quantification-standards.html#what-are-additional-quantification-standards"><span class="toc-section-number">13.1</span> What are additional quantification standards</a></li>
+<li><a href="13-2-how-do-i-extend-conversion-metabolite-csv.html#how-do-i-extend-conversion_metabolite.csv"><span class="toc-section-number">13.2</span> How do I extend conversion_metabolite.csv</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="FAQ.html"><a href="FAQ.html"><i class="fa fa-check"></i><b>13</b> Frequently Asked Questions</a><ul>
-<li class="chapter" data-level="13.1" data-path="FAQ.html"><a href="FAQ.html#what-are-additional-quantification-standards"><i class="fa fa-check"></i><b>13.1</b> What are additional quantification standards</a></li>
-<li class="chapter" data-level="13.2" data-path="FAQ.html"><a href="FAQ.html#how-do-i-extend-conversion_metabolite.csv"><i class="fa fa-check"></i><b>13.2</b> How do I extend conversion_metabolite.csv</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
+<li><a href="references.html#references">References</a></li>
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MTXQCvX2 documentation</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
 
@@ -250,67 +225,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
-            </section>
+<p style="text-align: center;">
+<a href="13-2-how-do-i-extend-conversion-metabolite-csv.html"><button class="btn btn-default">Previous</button></a>
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="FAQ.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-    </div>
-  </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+</div>
+
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"google": false,
-"linkedin": false,
-"weibo": false,
-"instapper": false,
-"vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"download": ["MTXQC_documentation.pdf", "MTXQC_documentation.epub"],
-"toc": {
-"collapse": "section",
-"scroll_highlight": true
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
-
 </html>

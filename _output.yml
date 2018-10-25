@@ -17,5 +17,4 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
-#bookdown::html_book: default
- # theme: paper
+bookdown::html_book: default

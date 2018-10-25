@@ -176,22 +176,34 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="header">
-<h1 class="title">MTXQCvX2 documentation</h1>
-<h4 class="author"><em>Christin Zasada</em></h4>
-<h4 class="date"><em>2018-10-25</em></h4>
+<div id="quick-view-1" class="section level2">
+<h2><span class="header-section-number">5.3</span> Quick view</h2>
+<ol style="list-style-type: decimal">
+<li>Generate input files: run <code>MTXQC_part4.Rmd</code><a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a></li>
+<li>Setup R-project and copy MTXQC-files</li>
+<li>Knit with parameter: <code>MTXQC_init.Rmd</code></li>
+<li>Copy input files into corresponding folders</li>
+<li>Create annotation.csv and sample_extracts.csv files<a href="#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a></li>
+<li>Update metabolite names in <code>conversion_metabolite.csv</code><a href="#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a></li>
+<li>Define the internal standard and/or alkanes<a href="#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a></li>
+<li>Knit with parameter: <code>MTXQC_ExperimentalSetup.Rmd</code></li>
+<li>Knit with parameter: <code>MTXQC_part1.Rmd</code></li>
+<li>Knit with parameter: <code>MTXQC_part2.Rmd</code></li>
+<li>If required - proceed with <code>MTXQC_part3.Rmd</code> - ManualValidation</li>
+</ol>
 </div>
-<div id="welcome" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
-<p>This documentation introduced to you how to use MTXQCvX2 in order to assess the quality of your GC-MS derived data, perform the determination of calibration curves and absolute quantification. It furthermore provides you two normalisation strategies and the calculation of quantities in, e.g., pmol/1e+6 cells or pmol/mg tissue.</p>
-<p>MTXQCvX2 does also enable the calculation of stable isotopic incorporation and the evaluation of the underlying data, the mass isotopomer distributions (MIDs).</p>
-<p>The tool has been set up to support the in-lab developed workflow for quantitative metabolomics experiments using the in-house developed software Maui for the annotation of data. MTXQCvX2 bridges the gap between quality control and first data post-processing / analysis of GC-MS derived data (MTXQCvX2_part1, MTXQCvX2_part2).</p>
-<p>Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).</p>
-<p>Both workflows are introduced in the distinct chapters including their required input parameter (chapter <a href="#workflows"><strong>??</strong></a>). Technical relevant information are summarised in chapter <a href="#tables"><strong>??</strong></a>.</p>
-
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>read here the instructions<a href="5-3-quick-view-1.html#fnref8">↩</a></p></li>
+<li id="fn9"><p>Details further down this document<a href="5-3-quick-view-1.html#fnref9">↩</a></p></li>
+<li id="fn10"><p>Column: Metabolite_manual<a href="5-3-quick-view-1.html#fnref10">↩</a></p></li>
+<li id="fn11"><p>Also in conversion_metabolite.csv; see below paragraph Standards<a href="5-3-quick-view-1.html#fnref11">↩</a></p></li>
+</ol>
 </div>
 <p style="text-align: center;">
-<a href="2-intro.html"><button class="btn btn-default">Next</button></a>
+<a href="5-2-introduction.html"><button class="btn btn-default">Previous</button></a>
+<a href="5-4-required-input-files-derived-from-a-chromatofmetmax.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>
