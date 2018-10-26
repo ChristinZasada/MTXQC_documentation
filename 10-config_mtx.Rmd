@@ -2,29 +2,33 @@
 
 Herein explained are the customizable tables of the MTXQCvX2 universe.
 
-## conversion_metabolite.csv
+## File: `conversion_metabolite.csv`
 
 ```{r con_se, echo=TRUE}
-
 data = read.csv("config_mtx/conversion_metabolite.csv", TRUE, sep = ";")
 colnames(data)
-
 ```
 
 
-## Metabolic profile
 
-## Defintion of intermediates
 
-## Declaration of standards
+### Definition of standards
 
-### Internal standard
+### Adding further intermediates
 
-### Alkanes
 
-### quant1-values.csv
+## File: Metabolic profile
 
-### incorporation_calc.csv
+## File: `quant1-values.csv`
+
+```{r quant1, echo=TRUE}
+
+data = read.csv("config_mtx/quant1_values.csv", TRUE)
+head(data)
+
+```
+
+## File: `incorporation_calc.csv`
 
 
 

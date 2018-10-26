@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="metmax.html">
+<link rel="prev" href="protocols-gc-tof-ms-measurement.html">
+<link rel="next" href="metmaxexport.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -203,86 +203,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="maui" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Workflow for Maui-annotation proejcts</h1>
-<div id="read-this-in-case" class="section level2">
-<h2><span class="header-section-number">3.1</span> Read this in case</h2>
+<div id="mauiproc" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> Data processing - MAUI</h1>
+<div id="processing-in-chromatof" class="section level2">
+<h2><span class="header-section-number">14.1</span> Processing In ChromaToF</h2>
+<p>Create a new folder in ChromaToF Pegasus Acquired Samples and import your files. The processing of files for Maui-assisted annotation is a two step process. Therefore two data processing methods have to be set up and applied to all files.</p>
+<div id="resampling" class="section level3">
+<h3><span class="header-section-number">14.1.1</span> Resampling</h3>
+<p>Resampling is commonly applied and results into a data transformation enabling an improved detection of low abundant peaks and a reduction of noise. (Maybe include an example?)</p>
+<p>The processing methods requires to tick <code>Export of ...</code>. Subsequently, you are asked to define an output folder and the following paramter:</p>
 <ul>
-<li>you have run a Maui project</li>
-<li>exported all required container (see <a href="#container"><strong>??</strong></a>)</li>
-<li>you have a copy of sequence list and experimental conditions</li>
-<li>you know the extraction procedure</li>
+<li>Reduction rate: 4</li>
+<li>Beginning to end of the file</li>
+<li><code>.peg</code>-files</li>
 </ul>
-<p>The following article describes briefly how to use MTXQCvX2 in case you used Maui for the annotation of your metabolomics project. It does not matter if you have performed an experiment including stable isotopes or if you just aim for the quantification of a few intermediates.</p>
 </div>
-<div id="quick-view" class="section level2">
-<h2><span class="header-section-number">3.2</span> Quick view</h2>
+<div id="combo-export-.cdf-.csv" class="section level3">
+<h3><span class="header-section-number">14.1.2</span> Combo-export (<code>.cdf</code> &amp; <code>.csv</code>)</h3>
+<p>Re-import the generated <code>.peg</code>-files into a subfolder and apply the following data processing method.</p>
+<p>Activate the box <code>asddasd</code> and define for both file types the following parameter.</p>
+<p><code>.cdf</code>-file:</p>
+<ul>
+<li>export directory</li>
+<li></li>
+</ul>
+<p><code>.csv</code>-file:</p>
+<ul>
+<li>export directory</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="maui-notes" class="section level2">
+<h2><span class="header-section-number">14.2</span> Maui notes</h2>
+</div>
+<div id="mauiexport" class="section level2">
+<h2><span class="header-section-number">14.3</span> Maui exports</h2>
+<p>With initiation of a project folder via <code>MTXQCvX2_init.Rmd</code> you created an <code>input</code>-folder containing three subfolders: <code>gc</code>, <code>inc</code>, <code>quant</code>. In the following all files that should be exported and copied into these folders are described in detail.</p>
+<div id="inputgc..." class="section level3">
+<h3><span class="header-section-number">14.3.1</span> <code>input/gc/...</code></h3>
+<p>Four input files are exported in order to assess the quality of the GC-MS performance of the run. The menue <code>Diagnostics</code> is selectable via right click on your Maui project name. Only the cinnamic acid peak areas are exported via the function <code>Export Quantification</code> with right click on the actual container.</p>
+<p>Exported Files:</p>
+<ul>
+<li><code>Alcane_intensities.csv</code> - Diagnostics/Export Alcane intensities</li>
+<li><code>InternalStandard.csv</code> - cinAcid container, Export quantification, rename!</li>
+<li><code>MassSum-73.csv</code> - Diagnostics/QC Mass Sum Export; enter: 73 for m/z 73</li>
+<li><code>PeakDensities-Chroma.csv</code> - Diagnostics/ExportPeakDensities</li>
+</ul>
+</div>
+<div id="inputquant..." class="section level3">
+<h3><span class="header-section-number">14.3.2</span> <code>input/quant/...</code></h3>
+<p>Only one container has to be exported and contains the peak areas of each metabolite and measurement. Keep in mind that you should have uploaded <code>pTop5 mass list</code> for the correct determination of peak areas in case of labeling with stable isotopes.</p>
+<p>A further note - Maui performs absolute quantification and stores values in the <code>samplePeakGroups-QMQ</code> container. These quantities are determined by polynominal regression, and not linear regression.</p>
+<p>The file <code>ManualQuantTable.tsv</code> is automatically generated by Maui during processing the absolute quantification.</p>
+<p>Exported Files:</p>
+<ul>
+<li><code>ManualQuantTable.tsv</code> - location: <code>Maui-project/export/QM-AbsoluteQuantification/...</code><a href="#fn31" class="footnoteRef" id="fnref31"><sup>31</sup></a></li>
+<li><code>quantMassAreasMatrix.csv</code> - Quantification export of the container <code>samplesPeakGroups</code></li>
+</ul>
+</div>
+<div id="inputinc..." class="section level3">
+<h3><span class="header-section-number">14.3.3</span> <code>input/inc/...</code></h3>
+<p>This exports are only required in case of an experiment including the application of stable isotopes. It´s this the case you should have performed two things:</p>
 <ol style="list-style-type: decimal">
-<li>Setup a new R-project and copy MTXQC template files and folders</li>
-<li>Knit with parameter: <code>MTXQC_init.Rmd</code> and create project folder, e.g., <code>psirm_glucose</code></li>
-<li>Copy input files and rename <code>ManualQuantTable.tsv</code> (e18205cz.tsv)</li>
-<li>Create <code>annotation.csv</code> and <code>sample_extracts.csv</code> files</li>
-<li>Define the internal extraction standard</li>
-<li>Knit with parameter: <code>MTXQC_ExperimentalSetup.Rmd</code></li>
-<li>Knit with parameter: <code>MTXQC_part1.Rmd</code></li>
-<li>Knit with parameter: <code>MTXQC_part2.Rmd</code></li>
-<li>If required, proceed with <code>MTXQC_part3.Rmd</code> for ManualValidation</li>
+<li>Used the optional upload of <code>pTop5 mass list</code></li>
+<li>Go through the pSIRM workflow in Maui</li>
 </ol>
-</div>
-<div id="input-files" class="section level2">
-<h2><span class="header-section-number">3.3</span> Input files</h2>
-<p>Three different kind of export functions have been implemented in Maui. These functions provide the export of the actual data into <code>.csv</code> or <code>.tsv</code> files that are directly usable as input files for MTXQCvX2. Please refer to section <a href="mauiproc.html#mauiexport">14.3</a> how you perform the export and which containers have to be exported using what export function and where to copy them in <code>psirm_glucose/input/</code>.</p>
-<p>Certain circumstances might wish you to combine <em>multiple MAUI-projects</em> into one MTXQC-project. This might be the case when you run the same samples in split and splitless mode on the machine or your experimental setup has been measured in multiple batches in order to avoid derivatisation effects.</p>
-<p>It is highly recommended to combine the input files derived from a different Maui projects beforehand the analysis. In that way you have only to work with a single file <code>CalculationFileData.csv</code><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> containing all data of the your experiment.</p>
-<p>The herein described process provides a quick way how to combine the exported files from different Maui projects. The script <code>combine-sets.R</code><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> automatically saves all combined files into the correct <code>input</code> folder. Just update the folder and subfolder names. All the rest has been taken care of for you.</p>
-<ol style="list-style-type: decimal">
-<li>Create in the MTXQC-project folder (e.g., <code>psirm_glucose/</code>) a new folder called <code>raw-data</code></li>
-<li>Create a subfolder for each Maui-project in <code>psirm_glucose/raw_data/...</code></li>
-<li>Copy into this folder all your Maui-derived input files altogether</li>
-<li>Update the parameter of <code>combine-sets.R</code>, meaning folder name definitions, file</li>
-<li>Execute the R script</li>
-<li>Merged files have been generated and copied into the corresponding folder: <code>psirm_glucose/input-folder/gc/...</code> or <code>psirm_glucose/input-folder/inc/...</code></li>
-<li>Copy the renamed <code>ManualQuantTable.tsv</code> files of each Maui project into <code>psirm_glucose/input/quant/...</code></li>
-</ol>
-</div>
-<div id="annotation-file" class="section level2">
-<h2><span class="header-section-number">3.4</span> Annotation-file</h2>
-<p>The annotation file relate file names with experimental conditions or specify quantification standards in your batch. Two columns - <strong>File and Type</strong> - are obligatory and have to be present in the annotation file. In the case of their absence <code>MTXQCvX_part1.Rmd</code> stops processing and shows an error message.</p>
-<p>A quick way to generate an annotation file is described below:</p>
-<ol style="list-style-type: decimal">
-<li>Copy the first row / header of <code>quantMassAreaMatrix.csv</code> file</li>
-<li>Paste &amp; transpose the content into a new Excel-File into column A</li>
-<li>Change the first entry: Metabolite -&gt; File</li>
-<li>Remove the entry QuantMasses at the very end of the column A</li>
-<li>Add the column Type and specify each file either as <strong>sample</strong> or <strong>addQ1_dilution</strong><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a></li>
-<li>Add more columns specifying your experimental conditions, e.g., Cellline and Treatment<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></li>
-<li>Save the content as <code>csv-file</code> in the <code>psirm_glucose/input/...</code></li>
-</ol>
-</div>
-<div id="sample_extracts-file" class="section level2">
-<h2><span class="header-section-number">3.5</span> Sample_extracts-file</h2>
-<p>The <code>sample_extracts.csv</code> file is required in order to determine automatically absolute quantities in the manner of pmol/1e+6 cells or pmol/mg tissue in the <code>CalculationFileData.csv</code>.</p>
-<p>This file requires two obligatory columns - <strong>Extract_vol</strong> and <strong>Unit</strong><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. Please specify for each experimental condition the amount of extracted cells (count), tissue (mg) or volume of blood/plasme (ul) in the unit shown in the brackets.<br />
-The names of the columns of the experimental conditions have to match up with the annotation file. Save the file in the folder <code>psirm_glucose/input/...</code>.</p>
-<p>If the defined experimental conditions do not match up with the annotation <code>MTXQCvX2_part1.Rmd</code> exit data processing. A template file is saved for review and usage at <code>inst/template_files/...</code></p>
-</div>
-<div id="internal-standard" class="section level2">
-<h2><span class="header-section-number">3.6</span> Internal Standard</h2>
-<p>MTXQCvX2 allows the specification of project-specific internal extraction standards. The only thing you need to do is to define the corresponding compounds as an internal standard in the <code>conversion_metabolite.csv</code> file. To do so, add <code>InternalStandard</code> to the compound in last column <code>Standard</code>.</p>
-<p>For an classical pSIRM experiment in the Kempa lab we are using cinnamic acid. The evaluation of this compound has been integrated in Maui. Peak areas of cinnamic acid are exported from a distinct container called <code>cinAcid</code>. The exported file has to be renamed to <code>InternalStandard.csv</code> though and moved to <code>psirm_glucose/input/gc/...</code>.</p>
-<p>If you have used a different compound as an internal extraction standard you might need to extract the peak areas of this compound from the Maui export file <code>quantPeakAreasMatrix.csv</code> file and save it in the folder <code>psirm_glucose/input/gc/InternalStandard.csv</code>, respectively. Prerequisite - you have annotated the compound in Maui.</p>
-<p>The report of <code>MTXQCvX2_part1.Rmd</code> includes the defined internal standard for each project in a message.</p>
+<p>Exported Files:</p>
+<ul>
+<li><code>DataMatrix.csv</code> - Export % Label of container <code>pSIRM-samplesPeakGroups</code></li>
+<li><code>pSIRM_SpectraData.csv</code> - pSIRM Spectra Export of container <code>pSIRM-samplesPeakGroups</code><a href="#fn32" class="footnoteRef" id="fnref32"><sup>32</sup></a></li>
+</ul>
 
+</div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>stored in <code>psirm_glucose/output/quant/...</code><a href="maui.html#fnref1">↩</a></p></li>
-<li id="fn2"><p>inst/template_files/…<a href="maui.html#fnref2">↩</a></p></li>
-<li id="fn3"><p>see for further details additionalQuant<a href="maui.html#fnref3">↩</a></p></li>
-<li id="fn4"><p>optimal: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES<a href="maui.html#fnref4">↩</a></p></li>
-<li id="fn5"><p>Define: count, mg or ul<a href="maui.html#fnref5">↩</a></p></li>
+<ol start="31">
+<li id="fn31"><p>Don´t forget to rename it - e.g., e17123cz<a href="mauiproc.html#fnref31">↩</a></p></li>
+<li id="fn32"><p>Requires the selection of Natural_MIDs.txt<a href="mauiproc.html#fnref32">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -290,8 +290,8 @@ The names of the columns of the experimental conditions have to match up with th
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="metmax.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="protocols-gc-tof-ms-measurement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="metmaxexport.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
