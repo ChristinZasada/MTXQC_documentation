@@ -1,0 +1,6 @@
+Column name,Description,Value
+Lettercode,Short name of metabolite,Cit
+Batch_Id,Batch-Id,e18274ba
+Metabolite,Library name of metabolite,Citric acid_(4TMS)_MP_RI:1814_IDENT:B+D
+Par,Parameter,R2_cal
+Val,Value of the parameter for corresponding metabolite,0.996053496

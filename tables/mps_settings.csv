@@ -1,0 +1,27 @@
+Parameter,Value
+Runtime (min),40
+GC Cool down time (min),3
+Cryo Timeout (min),15
+Syringe,10ulALX
+Sandwhich,No Sandwhich
+Inj. Volume (uL),0.8
+Air Volume below (uL),1
+Inj. Speed (uL/s),20
+Fill Volume (uL),4
+Fill Strokes for Sample,6
+Fill Speed (uL/s),1
+Eject Speed (uL/s),20
+Viscosity Delay (s),1
+Pre Inj. Delay (s),0
+Post Inj. Delay (s),0
+Inj. Penetration (mm),30
+Sample Tray Type,VT98
+Vial Penetration (mm),32
+Wash1 Preclean,2
+Wash1 Postclean,3
+Wash1 Preclean,2
+Wash1 Postclean,3
+Sample (4.0 uL),0
+Rinse Fill speed (uL/s),1
+Viscosity Delay (s),1
+Eject Speed (uL/s),20

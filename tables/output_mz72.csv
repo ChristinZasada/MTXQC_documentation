@@ -1,0 +1,8 @@
+Column name,Description,Value
+File,File name,e18274ba_17.cdf
+Batch_Id,Batch-ID,e18274ba
+mean_73,Mean value of the sum of m/z 73 intensities per file,16314646.1
+sd_73,Standard deviation of the mean of the sum of m/z 73 intensities per file,143890119.5
+n_peaks,Number of intensities used for statistics,600
+sum_area,Sum of all m/z intensities,6777312761
+ratio_total,Ratio of sum_area in relation to the sum of all annotated peak areas,0.002407244

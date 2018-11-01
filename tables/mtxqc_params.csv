@@ -1,0 +1,14 @@
+Parameter,Description,Value
+inputformat,Format of input files,maui
+ann,File name of the annotation file,annotation.csv
+sample_ext,"File name of the file containing cell counts or extracted tissue weight, volumes of blood",Sample_extracts.csv
+instd,Internal extraction standard present,TRUE
+addQ,Additional quantification standards measured?,no
+addQ_Int,Integration of additional quantification standards in all batches of the MTXQC project,no
+substr,Applied stable isotopes,glc
+quant_vol,Dried volume of polar phase of quantification standards in uL,500
+backups,Preparation of technical aliquots,2
+samples,Origin of samples,cell extracts
+subf,subfolder or project folder,psirm_glucose/
+data,Nature of the experiment,pSIRM
+quant,Version of quantification standards,Quant1_v4

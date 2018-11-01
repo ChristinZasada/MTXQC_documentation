@@ -1,0 +1,22 @@
+Column name,Description,Value
+Metabolite,Full library name of the metabolite,Alanine_(3TMS)_MP_RI:1367_IDENT:B+C
+Batch_Id,Batch-Id,e18274ba
+File,File name,e18274ba_53.cdf
+QuantMasses,Defined quantification masses,110.0 133.0 114.0 100.0 188.0 190.0 
+PeakArea,Sum of peak areas based on defined QuantMasses,12710956
+Type,Kind of sample,sample
+Metabolite_manual,Manual defined metabolite name,#Alanine (3TMS)
+Metabolite_short,Short version of metabolite name,Alanine_(3TMS)
+Lettercode,Lettercode version of metabolite name,Ala_3TMS
+Q1_value,Quantity in the quantification standard Q1:1 if included in pmol,x
+Mass_Pos,m/z value that should be evaluated in case of the application of isotopes,190
+SE_sel,Intermediate used for evaluation of MIDs if present,x
+Q_sel,Intermediate used for absolute quantification if Q1:1 present,x
+nopsirm,If exclusivly used for quantification purposes only,
+Standards,,
+Origin,Quantification standard,Qstd
+adj_r_squared,Adjusted Rsquare value of linear regression of the calibration curve,0.997002799
+slope,Slope of the calibration curve determined by linear regression,0.000578604
+intercept,Intercept of the calibration curve determined by linear regression,-898.3400476
+calc_curve,Calibration curve available for absolute quantification,yes_cal
+islinear,Evaluation of peak area in relation to linear range of the calibration curve,linear

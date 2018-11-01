@@ -1,0 +1,8 @@
+Column name,Description,Value
+Letter_Derivate,Derivate definition,Ala
+Lettercode,Lettercode name of metabolite,Ala_3TMS
+Pathway,Ass.pathway,aa
+Pathway.1,Ass. pathway - ordered for heatmap,5-aa
+Met_pathway,Ass. pathway - ordered for heatmap incl. Lettercode,5-aa_Ala_3TMS
+Subs_class,Substance class,aa
+Met_class,Substance class incl. Lettercode,aa_Ala_3TMS

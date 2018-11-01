@@ -1,0 +1,44 @@
+Column name,Class,Description,Value
+Batch_Id,AnnExp,Batch-Id extracted from file name,e18274ba
+CL,AnnExp,Experimental parameter,BE(2)-C
+Cond,AnnExp,Experimental parameter,Control
+File,AnnExp,File name,e18274ba_25.cdf
+Standards,AnnExp,"Defined as standard (InternalStandard, Alk)",
+Time,AnnExp,Experimental parameter,0
+Type,AnnExp,Type of measurement,sample
+Extract_vol,AnnExtract,"Defined extractes in count, mg or uL defined in Unit",3290000
+Unit,AnnExtract,Defined unit for corresponding Extract_vol,count
+Lettercode,AnnMet,Lettercode version of metabolite name,Glyc3P
+Metabolite,AnnMet,Library name,Glycerol-3-phosphate_(4TMS)_MP_RI:1756_IDENT:B+C
+Metabolite_manual,AnnMet,Manual defined metabolite name,#Glycerol-3-phosphate (4TMS)
+Metabolite_short,AnnMet,Short version of library name,Glycerol-3-phosphate_(4TMS)
+absconc,CalCurve,Absolute quantity in pmol,24061.77157
+adj_r_squared,CalCurve,Adjusted Rsquare value of calibration curve,0.999667641
+calc_curve,CalCurve,Relation of peak area to calibration curve,yes_cal
+intercept,CalCurve,Intercept of calibration curve,234.0083706
+islinear,CalCurve,Classification of peak area,linear
+Origin,CalCurve,Source of Quant1:1 value,Qstd
+Q1_value,CalCurve,Quantity defined in Q1:1 standard,x
+slope,CalCurve,Slope of calibration curve,0.000821689
+corr_absconc,ExtrFactor,Corrected absolute quantities by extraction factor,16041.18105
+extr_fac,ExtrFactor,Extraction factor derived from MTXQC_params,0.666666667
+Mass_Pos,MTXQCsettings,m/z-value (m_inc) used for determination of stable isotope incorporation,359
+nopsirm,MTXQCsettings,Exclusivly used for absolute quantification,
+Q_sel,MTXQCsettings,Used for absolute quantification,x
+QuantMasses,MTXQCsettings,Defined quantification masses,101.0 299.0 133.0 357.0 103.0 359.0 
+SE_sel,MTXQCsettings,Evaluation of MIDs if available,x
+IntStd_eval,Norm_InternalStd,Evaluation of internal extraction standard,within
+IntStd_fac,Norm_InternalStd,Normalisation factor based on internal extraction standard,1.090830836
+area_fac,Norm_SumOfArea ,Normalisation factor for sum of area normalisation,0.507591279
+sum_area,Norm_SumOfArea ,Sum of all peak areas of the file,17466093782
+Conc_microM,Quantities,Quantities in (micromolar) only determined for extracted volumes,NA
+Conc_pmio,Quantities,Quantities in (pmol),4875.73892
+IntStd_Conc,Quantities,Quantities in (pmol) after normalisation with internal standard factor,14705.47084
+IntStd_Conc_microM,Quantities,Quantities in (micromolar) after normalisation with internal standard factor: only for volumes,NA
+IntStd_Conc_pmio,Quantities,Quantities in (pmol/unit) after normalisation with internal standard factor,4469.747976
+IntStd_sumA_Conc,Quantities,Quantities in (pmol) after normalisation with internal standard factor and sum of area normalisation,28971.0865
+IntStd_sumA_Conc_pmio,Quantities,Quantities in (pmol/per unit) after normalisation with internal standard factor and sum of area normalisation,8805.801367
+PeakArea,Quantities,Determined peak area based on QuantMasses,28998527
+sumA_Conc,Quantities,Quantities in (pmol) after sum of area normalisation,31602.5545
+sumA_Conc_microM,Quantities,Quantities in (micromolar) after sum of area normalisation,NA
+sumA_Conc_pmio,Quantities,Quantities in (pmol/per unit) after sum of area normalisation,9605.639664

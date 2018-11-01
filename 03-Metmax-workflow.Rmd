@@ -1,0 +1,86 @@
+# Workflow for Metmax-extracted projects{#wf:metmax}
+
+## You want to follow this ...
+
+- in case you have measured samples and quantification standards by GC-MS
+- performed the annotation of intermediates in ChromaToF or vendor software
+- exported all information into `.txt` files
+- used metmax to extract peak areas / mass isotopomer distributions (MIDs)
+ 
+## Introduction
+
+This document describes how to use MTXQCvX2 in combination with metmax^[http://gmd.mpimp-golm.mpg.de/apps/metmax/default.htm].
+
+Historically, MTXQCvX2 has been developed and optimized for Maui-derived input files. The `MTXQCvX2-part4.Rmd` functions as a converter of metmax-derived files in order to create suitable input formats for `MTXQCvX-part1.Rmd`. 
+
+This module could also be used to convert tables derived from other programs as long as they are stick with the herein described table formats. Mandatory columns are referenced in the text for each kind of input file.
+
+The general workflow of the NMTXQCvX2 project is briefly shown below in quick view. More detailed instructions are summarised in the following paragraphs. 
+
+For more detailed explanations about the individual input parameter for each module of MTXQCvX2 please proceed to read the documentation about the individual modules and their knitting parameter. The relation of knitting parameter, input and output files are described in each section.
+
+## Quick view
+
+1. Generate input files: run `MTXQC_part4.Rmd`^[read here the instructions]
+2. Setup R-project and copy MTXQC-files
+3. Knit with parameter: `MTXQC_init.Rmd`
+4. Copy input files into corresponding folders
+5. Create annotation.csv and sample_extracts.csv files^[Details further down this document]
+6. Update metabolite names in `conversion_metabolite.csv`^[Column: Metabolite_manual]
+7. Define the internal standard and/or alkanes^[Also in conversion_metabolite.csv; see below paragraph Standards]
+8. Knit with parameter: `MTXQC_ExperimentalSetup.Rmd`
+9. Knit with parameter: `MTXQC_part1.Rmd`
+10. Knit with parameter: `MTXQC_part2.Rmd`
+11. If required - proceed with `MTXQC_part3.Rmd` for ManualValidation
+
+## Input files
+
+If you need an introduction about how to use metmax - have a look at the separate documentation `Metmax_intro`.
+
+The chapter \@ref(part4) `MTXQCvX_part4` explains in detail how to use this module to generate suitable input files. 
+
+## Annotation-file
+
+The annotation file relate file names with experimental conditions or specify quantification standards in your batch. Two columns - **File and Type** - are obligatory and have to be present in the annotation file. In the case of their absence `MTXQCvX_part1.Rmd` stops processing and shows an error message.
+
+A quick way to generate an annotation file is described below:
+
+1. Copy all file names from a file of your choice
+2. Paste & transpose the content into a new Excel-File into column A
+3. Call column A -> File
+4. Optional: Remove any non-file name entry in this column
+5. Add the column Type and specify each file either as **sample**, **Q1_diluation**, ,**addQ1_dilution**^[see for further details additionalQuant]
+6. Add more columns specifying your experimental conditions, e.g., Cellline and Treatment^[optimal: two-three parameter, max: four parameter. Consider possible combinations, e.g., HCT116-control, HCT116-BPTES]
+7. Save the content as `csv-file` in the `psirm_glucose/input/...`
+
+## Sample_extracts-file
+
+The `sample_extracts.csv` file is required in order to determine automatically absolute quantities in the manner of pmol/1e+6 cells or pmol/mg tissue in the `CalculationFileData.csv`.
+
+This file requires two obligatory columns - **Extract_vol** and **Unit**^[Define: count, mg or ul]. Please specify for each experimental condition the amount of extracted cells (count), tissue (mg) or volume of blood/plasme (ul) in the unit shown in the brackets.  
+The names of the columns of the experimental conditions have to match up with the annotation file. Save the file in the folder `psirm_glucose/input/...`. 
+
+If the defined experimental conditions do not match up with the annotation `MTXQCvX2_part1.Rmd` exit data processing. A template file is saved for review and usage at `inst/template_files/...`
+
+## Update metabolite names in `conversion_metabolite.csv` 
+
+The file `conversion_metabolite.csv`, saved in `config_mtx/`, serves as a kind of translational table. It defines alternative version of metabolite library names that come in handy to plot data using shorter metabolite names. This file is also used to define settings and standard classifications. Detailed information for each column of the file are shown here: REF
+
+### Match your annotation with library names
+
+Prior the analysis you need to match the names of your intermediates with the conversion_metabolite.csv file. You need to update or add the corresponding name for each intermediate in the column **Metabolite_manual**.
+
+General suggestion for naming conventions in ChromaToF: Metabolite_Derivate, e.g., Lactic acid_(2TMS). In case of the presence of main- (MP) and byproducts (BP) use: Metabolite_Derivate_MP/BP, e.g., Glucose_(1MEOX)(5TMS)_MP.
+
+If you have annotated intermediates that are not included so far in this table please follow the instructions how to extend `conversion_metabolite.csv`.REF
+
+### Define your internal standards and alkanes
+
+MTXQCvX2 allows the specification of project-specific internal standards. Corresponding compounds have to be marked as an internal standard in `conversion_metabolite.csv` by adding the tag **InternalStandard** in the column Standard. 
+
+If you check the box - InternalStandard in the parameter selection for `MTXQCvX2_part4.Rmd` the module searches in your input file for peak areas of the defined standard and extracts the information. It also generates the file `InternalStandard.csv` and stores it at `psirm_glucose/input/gc/...`.
+
+In the same way alkanes are defined in `conversion_metabolite.csv`. Each alkane has to be flag tagged with **Alk** in the column Standard. This gives you the opportunity to implement customized mixtures of alkanes in order to determine the retention index. 
+`MTXQCvX_part4.Rmd` recognises the flag tag and generates `Alcane_intensities.csv` based on your input file containing peak areas and saves it in `psirm_glucose/input/gc/...`^[It should be al**k**ane, I know, but Maui doesn't, unfortunately...].
+
+The in-lab protocol considers nine alkanes from c10 to c36. Standard annotation includes an hashtag, e.g., #c10. If you use this annotation even Metmax would be able to determine the retention index.  

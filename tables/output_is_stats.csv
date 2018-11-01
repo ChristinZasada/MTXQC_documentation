@@ -1,0 +1,9 @@
+Column name,Description,Value
+File,File name,e18274ba_17.cdf
+PeakArea,Peak area of internal extraction standard,89308492
+Batch_Id,Batch-Id,e18274ba
+IntStd_fac,Normalisation factor,0.837457514
+IntStd_eval,Evaluation regarding QC,within
+n_batch,Number of annotated intermediates,54
+mean_batch,Mean value of internal standard peak area across the batch,106642415.3
+sd_batch,Standard deviation of the peak area across the batch of the internal extraction standard,36710894.86

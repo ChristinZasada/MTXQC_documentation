@@ -1,0 +1,27 @@
+Part,Parameter,Value
+System,Runtime,40 min
+System,GC Cool down time,3 min
+System,Cryo Timeout,15 min
+MPS - Liquid Injection,Syringe,10ulALX
+MPS - Liquid Injection,Sandwhich,No Sandwhich
+MPS - Liquid Injection,Inj. Volume (uL),0.8
+MPS - Liquid Injection,Air Volume below (uL),1
+MPS - Liquid Injection,Inj. Speed (uL/s),20
+MPS - Liquid Injection,Fill Volume (uL),4
+MPS - Liquid Injection,Fill Strokes for Sample,6
+MPS - Liquid Injection,Fill Speed (uL/s),1
+MPS - Liquid Injection,Eject Speed (uL/s),20
+MPS - Liquid Injection,Viscosity Delay (s),1
+MPS - Liquid Injection,Pre Inj. Delay (s),0
+MPS - Liquid Injection,Post Inj. Delay (s),0
+MPS - Liquid Injection,Inj. Penetration (mm),30
+MPS - Liquid Injection,Sample Tray Type,VT98
+MPS - Liquid Injection,Vial Penetration (mm),32
+MPS - Rinse,Wash1 Preclean,2
+MPS - Rinse,Wash1 Postclean,3
+MPS - Rinse,Wash1 Preclean,2
+MPS - Rinse,Wash1 Postclean,3
+MPS - Rinse,Sample (4.0 uL),0
+MPS - Rinse,Rinse Fill speed (uL/s),1
+MPS - Rinse,Viscosity Delay (s),1
+MPS - Rinse,Eject Speed (uL/s),20

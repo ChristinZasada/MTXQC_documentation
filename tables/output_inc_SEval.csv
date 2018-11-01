@@ -1,0 +1,7 @@
+Column name,Description,Value
+Lettercode,Lettercode name of metabolite,Cit
+Batch_Id,Batch-Id,e18274ba
+count_score,Evaluation of MID,goodQ
+N_count,Number of evaluated MIDs,54
+sum_files,Number of detected MIDs,54
+prop,Proportion of MIDs for count_score level,1

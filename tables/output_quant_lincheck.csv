@@ -1,0 +1,8 @@
+Column name,Description,Value
+Lettercode,Short name of metabolite,3PGA
+islinear,Evaluation of peak area in relation to calibration curve if available,NaCal
+Batch_Id,Batch-Id,e18274ba
+Origin,Origin of Quant1:1-value,NA
+count,Number of peak areas,51
+sum_lin,Sum of peak area per islinear level,51
+prop,Fraction of count to sum_lin,1

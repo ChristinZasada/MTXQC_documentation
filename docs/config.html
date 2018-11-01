@@ -25,15 +25,15 @@
 <meta name="author" content="Christin Zasada">
 
 
-<meta name="date" content="2018-10-26">
+<meta name="date" content="2018-11-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="mtxqcvx-part4-rmd-metmax-parser.html">
-<link rel="next" href="protocols-sample-extraction.html">
+<link rel="prev" href="universe.html">
+<link rel="next" href="psirm.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -105,84 +105,134 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="maui.html"><a href="maui.html"><i class="fa fa-check"></i><b>3</b> Workflow for Maui-annotation proejcts</a><ul>
-<li class="chapter" data-level="3.1" data-path="maui.html"><a href="maui.html#read-this-in-case"><i class="fa fa-check"></i><b>3.1</b> Read this in case</a></li>
-<li class="chapter" data-level="3.2" data-path="maui.html"><a href="maui.html#quick-view"><i class="fa fa-check"></i><b>3.2</b> Quick view</a></li>
-<li class="chapter" data-level="3.3" data-path="maui.html"><a href="maui.html#input-files"><i class="fa fa-check"></i><b>3.3</b> Input files</a></li>
-<li class="chapter" data-level="3.4" data-path="maui.html"><a href="maui.html#annotation-file"><i class="fa fa-check"></i><b>3.4</b> Annotation-file</a></li>
-<li class="chapter" data-level="3.5" data-path="maui.html"><a href="maui.html#sample_extracts-file"><i class="fa fa-check"></i><b>3.5</b> Sample_extracts-file</a></li>
-<li class="chapter" data-level="3.6" data-path="maui.html"><a href="maui.html#internal-standard"><i class="fa fa-check"></i><b>3.6</b> Internal Standard</a></li>
+<li class="chapter" data-level="3" data-path="wf-maui.html"><a href="wf-maui.html"><i class="fa fa-check"></i><b>3</b> Workflow for Maui-annotation projects</a><ul>
+<li class="chapter" data-level="3.1" data-path="wf-maui.html"><a href="wf-maui.html#read-this-in-case"><i class="fa fa-check"></i><b>3.1</b> Read this in case</a></li>
+<li class="chapter" data-level="3.2" data-path="wf-maui.html"><a href="wf-maui.html#quick-view"><i class="fa fa-check"></i><b>3.2</b> Quick view</a></li>
+<li class="chapter" data-level="3.3" data-path="wf-maui.html"><a href="wf-maui.html#input-files"><i class="fa fa-check"></i><b>3.3</b> Input files</a></li>
+<li class="chapter" data-level="3.4" data-path="wf-maui.html"><a href="wf-maui.html#annotation-file"><i class="fa fa-check"></i><b>3.4</b> Annotation-file</a></li>
+<li class="chapter" data-level="3.5" data-path="wf-maui.html"><a href="wf-maui.html#sample_extracts-file"><i class="fa fa-check"></i><b>3.5</b> Sample_extracts-file</a></li>
+<li class="chapter" data-level="3.6" data-path="wf-maui.html"><a href="wf-maui.html#internal-standard"><i class="fa fa-check"></i><b>3.6</b> Internal Standard</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="metmax.html"><a href="metmax.html"><i class="fa fa-check"></i><b>4</b> Workflow for Metmax-extracted projects</a><ul>
-<li class="chapter" data-level="4.1" data-path="metmax.html"><a href="metmax.html#you-want-to-follow-this"><i class="fa fa-check"></i><b>4.1</b> You want to follow this …</a></li>
-<li class="chapter" data-level="4.2" data-path="metmax.html"><a href="metmax.html#introduction"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
-<li class="chapter" data-level="4.3" data-path="metmax.html"><a href="metmax.html#quick-view-1"><i class="fa fa-check"></i><b>4.3</b> Quick view</a></li>
-<li class="chapter" data-level="4.4" data-path="metmax.html"><a href="metmax.html#input-files-1"><i class="fa fa-check"></i><b>4.4</b> Input files</a></li>
-<li class="chapter" data-level="4.5" data-path="metmax.html"><a href="metmax.html#annotation-file-1"><i class="fa fa-check"></i><b>4.5</b> Annotation-file</a></li>
-<li class="chapter" data-level="4.6" data-path="metmax.html"><a href="metmax.html#sample_extracts-file-1"><i class="fa fa-check"></i><b>4.6</b> Sample_extracts-file</a></li>
-<li class="chapter" data-level="4.7" data-path="metmax.html"><a href="metmax.html#update-metabolite-names-in-conversion_metabolite.csv"><i class="fa fa-check"></i><b>4.7</b> Update metabolite names in <code>conversion_metabolite.csv</code></a><ul>
-<li class="chapter" data-level="4.7.1" data-path="metmax.html"><a href="metmax.html#match-your-annotation-with-library-names"><i class="fa fa-check"></i><b>4.7.1</b> Match your annotation with library names</a></li>
-<li class="chapter" data-level="4.7.2" data-path="metmax.html"><a href="metmax.html#define-your-internal-standards-and-alkanes"><i class="fa fa-check"></i><b>4.7.2</b> Define your internal standards and alkanes</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="init.html"><a href="init.html"><i class="fa fa-check"></i><b>5</b> MTXQCvX2_init</a></li>
-<li class="chapter" data-level="6" data-path="ExpSetup.html"><a href="ExpSetup.html"><i class="fa fa-check"></i><b>6</b> MTXQCvX_experimentalSetup.Rmd</a></li>
-<li class="chapter" data-level="7" data-path="part1.html"><a href="part1.html"><i class="fa fa-check"></i><b>7</b> MTXQCvX_part1.Rmd</a></li>
-<li class="chapter" data-level="8" data-path="part2.html"><a href="part2.html"><i class="fa fa-check"></i><b>8</b> MTXQCvX_part2.Rmd</a></li>
-<li class="chapter" data-level="9" data-path="mtxqcvx-part3-rmd.html"><a href="mtxqcvx-part3-rmd.html"><i class="fa fa-check"></i><b>9</b> MTXQCvX_part3.Rmd</a></li>
-<li class="chapter" data-level="10" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html"><i class="fa fa-check"></i><b>10</b> MTXQCvX_part4.Rmd - Metmax parser</a><ul>
-<li class="chapter" data-level="10.1" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#this-section-explains"><i class="fa fa-check"></i><b>10.1</b> This section explains …</a></li>
-<li class="chapter" data-level="10.2" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#input-files-2"><i class="fa fa-check"></i><b>10.2</b> Input files</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#quantification---peakareas.csv"><i class="fa fa-check"></i><b>10.2.1</b> Quantification - PeakAreas.csv</a></li>
-<li class="chapter" data-level="10.2.2" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#isotope-incorporation---mids.csv"><i class="fa fa-check"></i><b>10.2.2</b> Isotope incorporation - MIDs.csv</a></li>
-<li class="chapter" data-level="10.2.3" data-path="mtxqcvx-part4-rmd-metmax-parser.html"><a href="mtxqcvx-part4-rmd-metmax-parser.html#derivatisation-efficiency---mz73.csv"><i class="fa fa-check"></i><b>10.2.3</b> Derivatisation efficiency - mz73.csv</a></li>
+<li class="chapter" data-level="4" data-path="wf-metmax.html"><a href="wf-metmax.html"><i class="fa fa-check"></i><b>4</b> Workflow for Metmax-extracted projects</a><ul>
+<li class="chapter" data-level="4.1" data-path="wf-metmax.html"><a href="wf-metmax.html#you-want-to-follow-this"><i class="fa fa-check"></i><b>4.1</b> You want to follow this …</a></li>
+<li class="chapter" data-level="4.2" data-path="wf-metmax.html"><a href="wf-metmax.html#introduction"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="wf-metmax.html"><a href="wf-metmax.html#quick-view-1"><i class="fa fa-check"></i><b>4.3</b> Quick view</a></li>
+<li class="chapter" data-level="4.4" data-path="wf-metmax.html"><a href="wf-metmax.html#input-files-1"><i class="fa fa-check"></i><b>4.4</b> Input files</a></li>
+<li class="chapter" data-level="4.5" data-path="wf-metmax.html"><a href="wf-metmax.html#annotation-file-1"><i class="fa fa-check"></i><b>4.5</b> Annotation-file</a></li>
+<li class="chapter" data-level="4.6" data-path="wf-metmax.html"><a href="wf-metmax.html#sample_extracts-file-1"><i class="fa fa-check"></i><b>4.6</b> Sample_extracts-file</a></li>
+<li class="chapter" data-level="4.7" data-path="wf-metmax.html"><a href="wf-metmax.html#update-metabolite-names-in-conversion_metabolite.csv"><i class="fa fa-check"></i><b>4.7</b> Update metabolite names in <code>conversion_metabolite.csv</code></a><ul>
+<li class="chapter" data-level="4.7.1" data-path="wf-metmax.html"><a href="wf-metmax.html#match-your-annotation-with-library-names"><i class="fa fa-check"></i><b>4.7.1</b> Match your annotation with library names</a></li>
+<li class="chapter" data-level="4.7.2" data-path="wf-metmax.html"><a href="wf-metmax.html#define-your-internal-standards-and-alkanes"><i class="fa fa-check"></i><b>4.7.2</b> Define your internal standards and alkanes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="config.html"><a href="config.html"><i class="fa fa-check"></i><b>11</b> Configuration of MTXQCvX2</a><ul>
-<li class="chapter" data-level="11.1" data-path="config.html"><a href="config.html#file-conversion_metabolite.csv"><i class="fa fa-check"></i><b>11.1</b> File: <code>conversion_metabolite.csv</code></a><ul>
-<li class="chapter" data-level="11.1.1" data-path="config.html"><a href="config.html#definition-of-standards"><i class="fa fa-check"></i><b>11.1.1</b> Definition of standards</a></li>
-<li class="chapter" data-level="11.1.2" data-path="config.html"><a href="config.html#adding-further-intermediates"><i class="fa fa-check"></i><b>11.1.2</b> Adding further intermediates</a></li>
+<li class="chapter" data-level="5" data-path="universe.html"><a href="universe.html"><i class="fa fa-check"></i><b>5</b> MTXQCvX2 Universe</a><ul>
+<li class="chapter" data-level="5.1" data-path="universe.html"><a href="universe.html#init"><i class="fa fa-check"></i><b>5.1</b> MTXQC_init.Rmd</a></li>
+<li class="chapter" data-level="5.2" data-path="universe.html"><a href="universe.html#expsetup"><i class="fa fa-check"></i><b>5.2</b> MTXQC_ExperimentalSetup</a></li>
+<li class="chapter" data-level="5.3" data-path="universe.html"><a href="universe.html#heart"><i class="fa fa-check"></i><b>5.3</b> MTXQC_part 1</a></li>
+<li class="chapter" data-level="5.4" data-path="universe.html"><a href="universe.html#postproc"><i class="fa fa-check"></i><b>5.4</b> MTXQC_part 2 - Post-Processing</a></li>
+<li class="chapter" data-level="5.5" data-path="universe.html"><a href="universe.html#manval"><i class="fa fa-check"></i><b>5.5</b> MTXQC_part 3 - Manual Validation</a></li>
+<li class="chapter" data-level="5.6" data-path="universe.html"><a href="universe.html#metmax"><i class="fa fa-check"></i><b>5.6</b> MTXQC_part 4 - Metmax integration</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="config.html"><a href="config.html#file-metabolic-profile"><i class="fa fa-check"></i><b>11.2</b> File: Metabolic profile</a></li>
-<li class="chapter" data-level="11.3" data-path="config.html"><a href="config.html#file-quant1-values.csv"><i class="fa fa-check"></i><b>11.3</b> File: <code>quant1-values.csv</code></a></li>
-<li class="chapter" data-level="11.4" data-path="config.html"><a href="config.html#file-incorporation_calc.csv"><i class="fa fa-check"></i><b>11.4</b> File: <code>incorporation_calc.csv</code></a></li>
+<li class="chapter" data-level="6" data-path="config.html"><a href="config.html"><i class="fa fa-check"></i><b>6</b> Configuration of MTXQCvX2</a><ul>
+<li class="chapter" data-level="6.1" data-path="config.html"><a href="config.html#conversion_metabolite.csv"><i class="fa fa-check"></i><b>6.1</b> <code>conversion_metabolite.csv</code></a></li>
+<li class="chapter" data-level="6.2" data-path="config.html"><a href="config.html#metabolic-profile"><i class="fa fa-check"></i><b>6.2</b> Metabolic profile</a></li>
+<li class="chapter" data-level="6.3" data-path="config.html"><a href="config.html#quant1-values.csv"><i class="fa fa-check"></i><b>6.3</b> <code>quant1-values.csv</code></a></li>
+<li class="chapter" data-level="6.4" data-path="config.html"><a href="config.html#incorporation_calc.csv-mid_backups.csv"><i class="fa fa-check"></i><b>6.4</b> <code>incorporation_calc.csv</code> &amp; <code>mid_backups.csv</code></a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="protocols-sample-extraction.html"><a href="protocols-sample-extraction.html"><i class="fa fa-check"></i><b>12</b> Protocols - Sample extraction</a><ul>
-<li class="chapter" data-level="12.1" data-path="protocols-sample-extraction.html"><a href="protocols-sample-extraction.html#cell-extracts"><i class="fa fa-check"></i><b>12.1</b> Cell extracts</a></li>
-<li class="chapter" data-level="12.2" data-path="protocols-sample-extraction.html"><a href="protocols-sample-extraction.html#tissue-samples"><i class="fa fa-check"></i><b>12.2</b> Tissue samples</a></li>
-<li class="chapter" data-level="12.3" data-path="protocols-sample-extraction.html"><a href="protocols-sample-extraction.html#blood-samples"><i class="fa fa-check"></i><b>12.3</b> Blood samples</a></li>
+<li class="chapter" data-level="7" data-path="psirm.html"><a href="psirm.html"><i class="fa fa-check"></i><b>7</b> pSIRM experiments</a><ul>
+<li class="chapter" data-level="7.1" data-path="psirm.html"><a href="psirm.html#experimental-design"><i class="fa fa-check"></i><b>7.1</b> Experimental design</a></li>
+<li class="chapter" data-level="7.2" data-path="psirm.html"><a href="psirm.html#experimental-procedures"><i class="fa fa-check"></i><b>7.2</b> Experimental procedures</a></li>
+<li class="chapter" data-level="7.3" data-path="psirm.html"><a href="psirm.html#protocol-psirm"><i class="fa fa-check"></i><b>7.3</b> Protocol pSIRM</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="psirm.html"><a href="psirm.html#psirm:adherent"><i class="fa fa-check"></i><b>7.3.1</b> Adherent cell cultures</a></li>
+<li class="chapter" data-level="7.3.2" data-path="psirm.html"><a href="psirm.html#psirm:suspension"><i class="fa fa-check"></i><b>7.3.2</b> Supension cell cultures</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="protocols-gc-tof-ms-measurement.html"><a href="protocols-gc-tof-ms-measurement.html"><i class="fa fa-check"></i><b>13</b> Protocols - GC-ToF-MS measurement</a><ul>
-<li class="chapter" data-level="13.1" data-path="protocols-gc-tof-ms-measurement.html"><a href="protocols-gc-tof-ms-measurement.html#sample-derivatisation"><i class="fa fa-check"></i><b>13.1</b> Sample derivatisation</a></li>
-<li class="chapter" data-level="13.2" data-path="protocols-gc-tof-ms-measurement.html"><a href="protocols-gc-tof-ms-measurement.html#gc-ms-measurement"><i class="fa fa-check"></i><b>13.2</b> GC-MS measurement</a></li>
+<li class="chapter" data-level="7.4" data-path="psirm.html"><a href="psirm.html#hints-notes"><i class="fa fa-check"></i><b>7.4</b> Hints &amp; notes</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="mauiproc.html"><a href="mauiproc.html"><i class="fa fa-check"></i><b>14</b> Data processing - MAUI</a><ul>
-<li class="chapter" data-level="14.1" data-path="mauiproc.html"><a href="mauiproc.html#processing-in-chromatof"><i class="fa fa-check"></i><b>14.1</b> Processing In ChromaToF</a><ul>
-<li class="chapter" data-level="14.1.1" data-path="mauiproc.html"><a href="mauiproc.html#resampling"><i class="fa fa-check"></i><b>14.1.1</b> Resampling</a></li>
-<li class="chapter" data-level="14.1.2" data-path="mauiproc.html"><a href="mauiproc.html#combo-export-.cdf-.csv"><i class="fa fa-check"></i><b>14.1.2</b> Combo-export (<code>.cdf</code> &amp; <code>.csv</code>)</a></li>
+<li class="chapter" data-level="8" data-path="protocols.html"><a href="protocols.html"><i class="fa fa-check"></i><b>8</b> Experimental Protocols</a><ul>
+<li class="chapter" data-level="8.1" data-path="protocols.html"><a href="protocols.html#extraction"><i class="fa fa-check"></i><b>8.1</b> Metabolomics sample extraction</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="protocols.html"><a href="protocols.html#cell-culture-experiments"><i class="fa fa-check"></i><b>8.1.1</b> Cell culture experiments</a><ul>
+<li class="chapter" data-level="8.1.1.1" data-path="protocols.html"><a href="protocols.html#ccextraction_meoh"><i class="fa fa-check"></i><b>8.1.1.1</b> Cell extracts in MeOH</a></li>
+<li class="chapter" data-level="8.1.1.2" data-path="protocols.html"><a href="protocols.html#ccextraction_susp"><i class="fa fa-check"></i><b>8.1.1.2</b> Cell pellets</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="mauiproc.html"><a href="mauiproc.html#maui-notes"><i class="fa fa-check"></i><b>14.2</b> Maui notes</a></li>
-<li class="chapter" data-level="14.3" data-path="mauiproc.html"><a href="mauiproc.html#mauiexport"><i class="fa fa-check"></i><b>14.3</b> Maui exports</a><ul>
-<li class="chapter" data-level="14.3.1" data-path="mauiproc.html"><a href="mauiproc.html#inputgc..."><i class="fa fa-check"></i><b>14.3.1</b> <code>input/gc/...</code></a></li>
-<li class="chapter" data-level="14.3.2" data-path="mauiproc.html"><a href="mauiproc.html#inputquant..."><i class="fa fa-check"></i><b>14.3.2</b> <code>input/quant/...</code></a></li>
-<li class="chapter" data-level="14.3.3" data-path="mauiproc.html"><a href="mauiproc.html#inputinc..."><i class="fa fa-check"></i><b>14.3.3</b> <code>input/inc/...</code></a></li>
+<li class="chapter" data-level="8.1.2" data-path="protocols.html"><a href="protocols.html#tissue-samples"><i class="fa fa-check"></i><b>8.1.2</b> Tissue samples</a></li>
+<li class="chapter" data-level="8.1.3" data-path="protocols.html"><a href="protocols.html#blood-samples"><i class="fa fa-check"></i><b>8.1.3</b> Blood samples</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="protocols.html"><a href="protocols.html#sample-derivatisation"><i class="fa fa-check"></i><b>8.2</b> Sample derivatisation</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="protocols.html"><a href="protocols.html#standard-protocol"><i class="fa fa-check"></i><b>8.2.1</b> Standard protocol</a></li>
+<li class="chapter" data-level="8.2.2" data-path="protocols.html"><a href="protocols.html#specific-protocols"><i class="fa fa-check"></i><b>8.2.2</b> Specific protocols</a><ul>
+<li class="chapter" data-level="8.2.2.1" data-path="protocols.html"><a href="protocols.html#andrash"><i class="fa fa-check"></i><b>8.2.2.1</b> Andrash</a></li>
+<li class="chapter" data-level="8.2.2.2" data-path="protocols.html"><a href="protocols.html#fabian"><i class="fa fa-check"></i><b>8.2.2.2</b> Fabian</a></li>
+<li class="chapter" data-level="8.2.2.3" data-path="protocols.html"><a href="protocols.html#henning"><i class="fa fa-check"></i><b>8.2.2.3</b> Henning</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="metmaxexport.html"><a href="metmaxexport.html"><i class="fa fa-check"></i><b>15</b> Data Processing - Metmax</a><ul>
-<li class="chapter" data-level="15.1" data-path="metmaxexport.html"><a href="metmaxexport.html#resampling-1"><i class="fa fa-check"></i><b>15.1</b> Resampling</a></li>
-<li class="chapter" data-level="15.2" data-path="metmaxexport.html"><a href="metmaxexport.html#d-basic"><i class="fa fa-check"></i><b>15.2</b> 1D-basic</a></li>
-<li class="chapter" data-level="15.3" data-path="metmaxexport.html"><a href="metmaxexport.html#reference-search"><i class="fa fa-check"></i><b>15.3</b> Reference search</a></li>
-<li class="chapter" data-level="15.4" data-path="metmaxexport.html"><a href="metmaxexport.html#export-for-metmax"><i class="fa fa-check"></i><b>15.4</b> Export for Metmax</a></li>
-<li class="chapter" data-level="15.5" data-path="metmaxexport.html"><a href="metmaxexport.html#data-extraction-with-metmax"><i class="fa fa-check"></i><b>15.5</b> Data extraction with Metmax</a><ul>
-<li class="chapter" data-level="15.5.1" data-path="metmaxexport.html"><a href="metmaxexport.html#peak-areas"><i class="fa fa-check"></i><b>15.5.1</b> Peak areas</a></li>
-<li class="chapter" data-level="15.5.2" data-path="metmaxexport.html"><a href="metmaxexport.html#mids"><i class="fa fa-check"></i><b>15.5.2</b> MIDs</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="proc-maui.html"><a href="proc-maui.html"><i class="fa fa-check"></i><b>9</b> Data processing - MAUI</a><ul>
+<li class="chapter" data-level="9.1" data-path="proc-maui.html"><a href="proc-maui.html#processing-in-chromatof"><i class="fa fa-check"></i><b>9.1</b> Processing In ChromaToF</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="proc-maui.html"><a href="proc-maui.html#resampling"><i class="fa fa-check"></i><b>9.1.1</b> Resampling</a></li>
+<li class="chapter" data-level="9.1.2" data-path="proc-maui.html"><a href="proc-maui.html#combo-export-.cdf-.csv"><i class="fa fa-check"></i><b>9.1.2</b> Combo-export (<code>.cdf</code> &amp; <code>.csv</code>)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="proc-maui.html"><a href="proc-maui.html#maui-notes"><i class="fa fa-check"></i><b>9.2</b> Maui notes</a></li>
+<li class="chapter" data-level="9.3" data-path="proc-maui.html"><a href="proc-maui.html#mauiexport"><i class="fa fa-check"></i><b>9.3</b> Maui exports</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="proc-maui.html"><a href="proc-maui.html#inputgc..."><i class="fa fa-check"></i><b>9.3.1</b> <code>input/gc/...</code></a></li>
+<li class="chapter" data-level="9.3.2" data-path="proc-maui.html"><a href="proc-maui.html#inputquant..."><i class="fa fa-check"></i><b>9.3.2</b> <code>input/quant/...</code></a></li>
+<li class="chapter" data-level="9.3.3" data-path="proc-maui.html"><a href="proc-maui.html#inputinc..."><i class="fa fa-check"></i><b>9.3.3</b> <code>input/inc/...</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="proc-metmax.html"><a href="proc-metmax.html"><i class="fa fa-check"></i><b>10</b> Data Processing - Metmax</a><ul>
+<li class="chapter" data-level="10.1" data-path="proc-metmax.html"><a href="proc-metmax.html#resampling-1"><i class="fa fa-check"></i><b>10.1</b> Resampling</a></li>
+<li class="chapter" data-level="10.2" data-path="proc-metmax.html"><a href="proc-metmax.html#d-basic"><i class="fa fa-check"></i><b>10.2</b> 1D-basic</a></li>
+<li class="chapter" data-level="10.3" data-path="proc-metmax.html"><a href="proc-metmax.html#reference-search"><i class="fa fa-check"></i><b>10.3</b> Reference search</a></li>
+<li class="chapter" data-level="10.4" data-path="proc-metmax.html"><a href="proc-metmax.html#export-for-metmax"><i class="fa fa-check"></i><b>10.4</b> Export for Metmax</a></li>
+<li class="chapter" data-level="10.5" data-path="proc-metmax.html"><a href="proc-metmax.html#data-extraction-with-metmax"><i class="fa fa-check"></i><b>10.5</b> Data extraction with Metmax</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="proc-metmax.html"><a href="proc-metmax.html#peak-areas"><i class="fa fa-check"></i><b>10.5.1</b> Peak areas</a></li>
+<li class="chapter" data-level="10.5.2" data-path="proc-metmax.html"><a href="proc-metmax.html#mids"><i class="fa fa-check"></i><b>10.5.2</b> MIDs</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="mm.html"><a href="mm.html"><i class="fa fa-check"></i><b>11</b> Solutions and Materials</a><ul>
+<li class="chapter" data-level="11.1" data-path="mm.html"><a href="mm.html#solutions"><i class="fa fa-check"></i><b>11.1</b> Solutions</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="mm.html"><a href="mm.html#washingbuffer"><i class="fa fa-check"></i><b>11.1.1</b> Label buffer</a></li>
+<li class="chapter" data-level="11.1.2" data-path="mm.html"><a href="mm.html#mcw"><i class="fa fa-check"></i><b>11.1.2</b> MCW</a></li>
+<li class="chapter" data-level="11.1.3" data-path="mm.html"><a href="mm.html#alkanemix"><i class="fa fa-check"></i><b>11.1.3</b> Alkane-Mix</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="mm.html"><a href="mm.html#materials"><i class="fa fa-check"></i><b>11.2</b> Materials</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="output.html"><a href="output.html"><i class="fa fa-check"></i><b>12</b> Output tables</a><ul>
+<li class="chapter" data-level="12.1" data-path="output.html"><a href="output.html#o_project"><i class="fa fa-check"></i><b>12.1</b> Project-files</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="output.html"><a href="output.html#mtxqc_params.csv"><i class="fa fa-check"></i><b>12.1.1</b> <code>MTXQC_params.csv</code></a></li>
+<li class="chapter" data-level="12.1.2" data-path="output.html"><a href="output.html#maui_params.csv"><i class="fa fa-check"></i><b>12.1.2</b> <code>Maui_params.csv</code></a></li>
+<li class="chapter" data-level="12.1.3" data-path="output.html"><a href="output.html#metmax_params.csv"><i class="fa fa-check"></i><b>12.1.3</b> <code>Metmax_params.csv</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="output.html"><a href="output.html#outputgc..."><i class="fa fa-check"></i><b>12.2</b> <code id="o_gc">output/gc/...</code></a><ul>
+<li class="chapter" data-level="12.2.1" data-path="output.html"><a href="output.html#hm_gc_values.csv-qcmetric_xy.csv"><i class="fa fa-check"></i><b>12.2.1</b> <code>HM_GC_values.csv</code> &amp; <code>qcmetric_xy.csv</code></a></li>
+<li class="chapter" data-level="12.2.2" data-path="output.html"><a href="output.html#intstandard_normfactors.csv-intstandard_stats.csv"><i class="fa fa-check"></i><b>12.2.2</b> <code>IntStandard_normfactors.csv</code> &amp; <code>IntStandard_stats.csv</code></a></li>
+<li class="chapter" data-level="12.2.3" data-path="output.html"><a href="output.html#min_annotation.csv-sumarea_stats.csv"><i class="fa fa-check"></i><b>12.2.3</b> <code>Min_Annotation.csv</code> &amp; <code>SumArea_stats.csv</code></a></li>
+<li class="chapter" data-level="12.2.4" data-path="output.html"><a href="output.html#mz73_data.csv"><i class="fa fa-check"></i><b>12.2.4</b> <code>mz73_data.csv</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="output.html"><a href="output.html#outputquant...o_quant"><i class="fa fa-check"></i><b>12.3</b> <code>output/quant/...</code>{o_quant}</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="output.html"><a href="output.html#calcheck_linearity.csv"><i class="fa fa-check"></i><b>12.3.1</b> <code>calcheck_linearity.csv</code></a></li>
+<li class="chapter" data-level="12.3.2" data-path="output.html"><a href="output.html#calculationfiledata.csv"><i class="fa fa-check"></i><b>12.3.2</b> <code>CalculationFileData.csv</code></a></li>
+<li class="chapter" data-level="12.3.3" data-path="output.html"><a href="output.html#heatmap_quant_ptop5.csv"><i class="fa fa-check"></i><b>12.3.3</b> <code>HeatMap_Quant_pTop5.csv</code></a></li>
+<li class="chapter" data-level="12.3.4" data-path="output.html"><a href="output.html#ptop5_calibration_samples_lincheck.csv"><i class="fa fa-check"></i><b>12.3.4</b> <code>pTop5_Calibration_Samples_lincheck.csv</code></a></li>
+<li class="chapter" data-level="12.3.5" data-path="output.html"><a href="output.html#top5_calibrationinfo_unique.csv"><i class="fa fa-check"></i><b>12.3.5</b> <code>top5_CalibrationInfo_unique.csv</code></a></li>
+<li class="chapter" data-level="12.3.6" data-path="output.html"><a href="output.html#top5_qmqcurveinfo.csv"><i class="fa fa-check"></i><b>12.3.6</b> <code>top5_QMQcurveInfo.csv</code></a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="output.html"><a href="output.html#outputinc..."><i class="fa fa-check"></i><b>12.4</b> <code id="o_inc">output/inc/...</code></a><ul>
+<li class="chapter" data-level="12.4.1" data-path="output.html"><a href="output.html#heatmap_incorporation.csv"><i class="fa fa-check"></i><b>12.4.1</b> <code>HeatMap_Incorporation.csv</code></a></li>
+<li class="chapter" data-level="12.4.2" data-path="output.html"><a href="output.html#se_calculation_nascore.csv"><i class="fa fa-check"></i><b>12.4.2</b> <code>SE_calculation_NAscore.csv</code></a></li>
+<li class="chapter" data-level="12.4.3" data-path="output.html"><a href="output.html#se_classification.csv"><i class="fa fa-check"></i><b>12.4.3</b> <code>SE_classification.csv</code></a></li>
+<li class="chapter" data-level="12.4.4" data-path="output.html"><a href="output.html#se_validation.csv"><i class="fa fa-check"></i><b>12.4.4</b> <code>SE_validation.csv</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="FAQ.html"><a href="FAQ.html"><i class="fa fa-check"></i><b>13</b> Frequently Asked Questions</a><ul>
+<li class="chapter" data-level="13.1" data-path="FAQ.html"><a href="FAQ.html#what-are-additional-quantification-standards"><i class="fa fa-check"></i><b>13.1</b> What are additional quantification standards</a></li>
+<li class="chapter" data-level="13.2" data-path="FAQ.html"><a href="FAQ.html#how-do-i-extend-conversion_metabolite.csv"><i class="fa fa-check"></i><b>13.2</b> How do I extend conversion_metabolite.csv</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="gcms.html"><a href="gcms.html"><i class="fa fa-check"></i><b>14</b> GC-MS settings</a><ul>
+<li class="chapter" data-level="14.0.1" data-path="gcms.html"><a href="gcms.html#autosampler-settings"><i class="fa fa-check"></i><b>14.0.1</b> Autosampler settings</a></li>
+<li class="chapter" data-level="14.0.2" data-path="gcms.html"><a href="gcms.html#gas-chromatography"><i class="fa fa-check"></i><b>14.0.2</b> Gas chromatography</a></li>
+<li class="chapter" data-level="14.0.3" data-path="gcms.html"><a href="gcms.html#mass-spectrometer-settings"><i class="fa fa-check"></i><b>14.0.3</b> Mass spectrometer settings</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="16" data-path="FAQ.html"><a href="FAQ.html"><i class="fa fa-check"></i><b>16</b> Frequently Asked Questions</a><ul>
-<li class="chapter" data-level="16.1" data-path="FAQ.html"><a href="FAQ.html#what-are-additional-quantification-standards"><i class="fa fa-check"></i><b>16.1</b> What are additional quantification standards</a></li>
-<li class="chapter" data-level="16.2" data-path="FAQ.html"><a href="FAQ.html#how-do-i-extend-conversion_metabolite.csv"><i class="fa fa-check"></i><b>16.2</b> How do I extend conversion_metabolite.csv</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -204,40 +254,219 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="config" class="section level1">
-<h1><span class="header-section-number">Chapter 11</span> Configuration of MTXQCvX2</h1>
+<h1><span class="header-section-number">Chapter 6</span> Configuration of MTXQCvX2</h1>
 <p>Herein explained are the customizable tables of the MTXQCvX2 universe.</p>
-<div id="file-conversion_metabolite.csv" class="section level2">
-<h2><span class="header-section-number">11.1</span> File: <code>conversion_metabolite.csv</code></h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;config_mtx/conversion_metabolite.csv&quot;</span>, <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;;&quot;</span>)
-<span class="kw">colnames</span>(data)</code></pre></div>
-<pre><code>##  [1] &quot;Metabolite_manual&quot; &quot;Metabolite&quot;        &quot;Metabolite_short&quot; 
-##  [4] &quot;Lettercode&quot;        &quot;Q1_value&quot;          &quot;Mass_Pos&quot;         
-##  [7] &quot;SE_sel&quot;            &quot;Q_sel&quot;             &quot;nopsirm&quot;          
-## [10] &quot;Standards&quot;</code></pre>
-<div id="definition-of-standards" class="section level3">
-<h3><span class="header-section-number">11.1.1</span> Definition of standards</h3>
+<div id="conversion_metabolite.csv" class="section level2">
+<h2><span class="header-section-number">6.1</span> <code>conversion_metabolite.csv</code></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;tables/config_conse.csv&quot;</span>, <span class="ot">TRUE</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(data, <span class="dt">bookstab =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column.name</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Metabolite_manual</td>
+<td align="left">Manual defined metabolite name</td>
+<td align="left">#Alanine (2TMS)</td>
+</tr>
+<tr class="even">
+<td align="left">Metabolite</td>
+<td align="left">Library name of the metabolite</td>
+<td align="left">Alanine_(2TMS)_BP_RI:1097_IDENT:B+C</td>
+</tr>
+<tr class="odd">
+<td align="left">Metabolite_short</td>
+<td align="left">Short version of library name of the metabolite</td>
+<td align="left">Alanine_(2TMS)</td>
+</tr>
+<tr class="even">
+<td align="left">Lettercode</td>
+<td align="left">Lettercode version of metabolite name</td>
+<td align="left">Ala_2TMS</td>
+</tr>
+<tr class="odd">
+<td align="left">Q1_value</td>
+<td align="left">Checked if quant1:1 value available</td>
+<td align="left">x</td>
+</tr>
+<tr class="even">
+<td align="left">Mass_Pos</td>
+<td align="left">m/z-value corresponding to m_inc</td>
+<td align="left">118</td>
+</tr>
+<tr class="odd">
+<td align="left">SE_sel</td>
+<td align="left">Evaluation of the MIDs</td>
+<td align="left">x</td>
+</tr>
+<tr class="even">
+<td align="left">Q_sel</td>
+<td align="left">Evaluation for absolute quantification</td>
+<td align="left">x</td>
+</tr>
+<tr class="odd">
+<td align="left">nopsirm</td>
+<td align="left">Exclusively for absolute quantification</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Standards</td>
+<td align="left">Defined as standard</td>
+<td align="left">InternalStandard, Alk</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="adding-further-intermediates" class="section level3">
-<h3><span class="header-section-number">11.1.2</span> Adding further intermediates</h3>
+<div id="metabolic-profile" class="section level2">
+<h2><span class="header-section-number">6.2</span> Metabolic profile</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;tables/config_metprofile.csv&quot;</span>, <span class="ot">TRUE</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(data, <span class="dt">bookstab =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column.name</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Letter_Derivate</td>
+<td align="left">Derivate definition</td>
+<td align="left">Ala</td>
+</tr>
+<tr class="even">
+<td align="left">Lettercode</td>
+<td align="left">Lettercode name of metabolite</td>
+<td align="left">Ala_3TMS</td>
+</tr>
+<tr class="odd">
+<td align="left">Pathway</td>
+<td align="left">Ass.pathway</td>
+<td align="left">aa</td>
+</tr>
+<tr class="even">
+<td align="left">Pathway.1</td>
+<td align="left">Ass. pathway - ordered for heatmap</td>
+<td align="left">5-aa</td>
+</tr>
+<tr class="odd">
+<td align="left">Met_pathway</td>
+<td align="left">Ass. pathway - ordered for heatmap incl. Lettercode</td>
+<td align="left">5-aa_Ala_3TMS</td>
+</tr>
+<tr class="even">
+<td align="left">Subs_class</td>
+<td align="left">Substance class</td>
+<td align="left">aa</td>
+</tr>
+<tr class="odd">
+<td align="left">Met_class</td>
+<td align="left">Substance class incl. Lettercode</td>
+<td align="left">aa_Ala_3TMS</td>
+</tr>
+</tbody>
+</table>
 </div>
+<div id="quant1-values.csv" class="section level2">
+<h2><span class="header-section-number">6.3</span> <code>quant1-values.csv</code></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;tables/config_quant1.csv&quot;</span>, <span class="ot">TRUE</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(data, <span class="dt">bookstab =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column.name</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Letter_Derivate</td>
+<td align="left">Derivate name of metabolite</td>
+<td align="left">3PGA</td>
+</tr>
+<tr class="even">
+<td align="left">Quant1_v4</td>
+<td align="left">Quantity in (pmol)</td>
+<td align="left">43480</td>
+</tr>
+<tr class="odd">
+<td align="left">Quant1_v3</td>
+<td align="left">Quantity in (pmol)</td>
+<td align="left">43480</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="file-metabolic-profile" class="section level2">
-<h2><span class="header-section-number">11.2</span> File: Metabolic profile</h2>
-</div>
-<div id="file-quant1-values.csv" class="section level2">
-<h2><span class="header-section-number">11.3</span> File: <code>quant1-values.csv</code></h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;config_mtx/quant1_values.csv&quot;</span>, <span class="ot">TRUE</span>)
-<span class="kw">head</span>(data)</code></pre></div>
-<pre><code>##   Letter_Derivate Quant1_v4 Quant1_v3
-## 1             2HG     57270     57270
-## 2             2OG     34220     34220
-## 3            3PGA     43480     43480
-## 4               A      7400      7400
-## 5       Adenosine     18710     18710
-## 6             Ala    134700    134700</code></pre>
-</div>
-<div id="file-incorporation_calc.csv" class="section level2">
-<h2><span class="header-section-number">11.4</span> File: <code>incorporation_calc.csv</code></h2>
+<div id="incorporation_calc.csv-mid_backups.csv" class="section level2">
+<h2><span class="header-section-number">6.4</span> <code>incorporation_calc.csv</code> &amp; <code>mid_backups.csv</code></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;tables/config_inccalc.csv&quot;</span>, <span class="ot">TRUE</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(data, <span class="dt">bookstab =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column.name</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Metabolite</td>
+<td align="left">Library name of metabolite</td>
+<td align="left">Alanine_(2TMS)_BP_RI:1097_IDENT:B+C</td>
+</tr>
+<tr class="even">
+<td align="left">Mass_mz</td>
+<td align="left">m/z-value</td>
+<td align="left">116, 118</td>
+</tr>
+<tr class="odd">
+<td align="left">LI_MID</td>
+<td align="left">Definition of mass level</td>
+<td align="left">m0, minc</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;tables/config_backup.csv&quot;</span>, <span class="ot">TRUE</span>)
+knitr<span class="op">::</span><span class="kw">kable</span>(data, <span class="dt">bookstab =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Column.name</th>
+<th align="left">Description</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Metabolite</td>
+<td align="left">Library name of metabolite</td>
+<td align="left">Alanine_ beta-_(3TMS)_MP_RI:1435_IDENT:A+D</td>
+</tr>
+<tr class="even">
+<td align="left">Mass.m.z.</td>
+<td align="left">m/z value</td>
+<td align="left">188</td>
+</tr>
+<tr class="odd">
+<td align="left">BackupPeakArea</td>
+<td align="left">Peak area of Backup MID</td>
+<td align="left">4960</td>
+</tr>
+<tr class="even">
+<td align="left">BackupMID</td>
+<td align="left">MID value for corresponding Mass.m.z.</td>
+<td align="left">0.8005</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -246,8 +475,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="mtxqcvx-part4-rmd-metmax-parser.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="protocols-sample-extraction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="universe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="psirm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

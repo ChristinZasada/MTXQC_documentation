@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="MTXQCvX2 documentation" />
+<meta property="og:type" content="book" />
+
+
+<meta property="og:description" content="This is the start of the official MTXQCvX2 manual." />
+<meta name="github-repo" content="chriszasa/MTXQC_documentation" />
+
+<meta name="author" content="Christin Zasada" />
+
+<meta name="date" content="2018-11-01" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="This is the start of the official MTXQCvX2 manual.">
+
+<title>MTXQCvX2 documentation</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#welcome"><span class="toc-section-number">1</span> Welcome</a></li>
+<li><a href="2-intro.html#intro"><span class="toc-section-number">2</span> Introduction</a></li>
+<li class="has-sub"><a href="3-wf-maui.html#wf:maui"><span class="toc-section-number">3</span> Workflow for Maui-annotation projects</a><ul>
+<li><a href="3-1-read-this-in-case.html#read-this-in-case"><span class="toc-section-number">3.1</span> Read this in case</a></li>
+<li><a href="3-2-quick-view.html#quick-view"><span class="toc-section-number">3.2</span> Quick view</a></li>
+<li><a href="3-3-input-files.html#input-files"><span class="toc-section-number">3.3</span> Input files</a></li>
+<li><a href="3-4-annotation-file.html#annotation-file"><span class="toc-section-number">3.4</span> Annotation-file</a></li>
+<li><a href="3-5-sample-extracts-file.html#sample_extracts-file"><span class="toc-section-number">3.5</span> Sample_extracts-file</a></li>
+<li><a href="3-6-internal-standard.html#internal-standard"><span class="toc-section-number">3.6</span> Internal Standard</a></li>
+</ul></li>
+<li class="has-sub"><a href="4-wf-metmax.html#wf:metmax"><span class="toc-section-number">4</span> Workflow for Metmax-extracted projects</a><ul>
+<li><a href="4-1-you-want-to-follow-this.html#you-want-to-follow-this"><span class="toc-section-number">4.1</span> You want to follow this …</a></li>
+<li><a href="4-2-introduction.html#introduction"><span class="toc-section-number">4.2</span> Introduction</a></li>
+<li><a href="4-3-quick-view-1.html#quick-view-1"><span class="toc-section-number">4.3</span> Quick view</a></li>
+<li><a href="4-4-input-files-1.html#input-files-1"><span class="toc-section-number">4.4</span> Input files</a></li>
+<li><a href="4-5-annotation-file-1.html#annotation-file-1"><span class="toc-section-number">4.5</span> Annotation-file</a></li>
+<li><a href="4-6-sample-extracts-file-1.html#sample_extracts-file-1"><span class="toc-section-number">4.6</span> Sample_extracts-file</a></li>
+<li class="has-sub"><a href="4-7-update-metabolite-names-in-conversion-metabolite-csv.html#update-metabolite-names-in-conversion_metabolite.csv"><span class="toc-section-number">4.7</span> Update metabolite names in <code>conversion_metabolite.csv</code></a><ul>
+<li><a href="4-7-update-metabolite-names-in-conversion-metabolite-csv.html#match-your-annotation-with-library-names"><span class="toc-section-number">4.7.1</span> Match your annotation with library names</a></li>
+<li><a href="4-7-update-metabolite-names-in-conversion-metabolite-csv.html#define-your-internal-standards-and-alkanes"><span class="toc-section-number">4.7.2</span> Define your internal standards and alkanes</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="5-universe.html#universe"><span class="toc-section-number">5</span> MTXQCvX2 Universe</a><ul>
+<li><a href="5-1-init.html#init"><span class="toc-section-number">5.1</span> MTXQC_init.Rmd</a></li>
+<li><a href="5-2-expsetup.html#expsetup"><span class="toc-section-number">5.2</span> MTXQC_ExperimentalSetup</a></li>
+<li><a href="5-3-heart.html#heart"><span class="toc-section-number">5.3</span> MTXQC_part 1</a></li>
+<li><a href="5-4-postproc.html#postproc"><span class="toc-section-number">5.4</span> MTXQC_part 2 - Post-Processing</a></li>
+<li><a href="5-5-manval.html#manval"><span class="toc-section-number">5.5</span> MTXQC_part 3 - Manual Validation</a></li>
+<li><a href="5-6-metmax.html#metmax"><span class="toc-section-number">5.6</span> MTXQC_part 4 - Metmax integration</a></li>
+</ul></li>
+<li class="has-sub"><a href="6-configuration-of-mtxqcvx2-config-mtx-.html#configuration-of-mtxqcvx2---config_mtx..."><span class="toc-section-number">6</span> Configuration of MTXQCvX2 - <code id="config">config_mtx/...</code></a><ul>
+<li><a href="6-1-conversion-metabolite-csv.html#conversion_metabolite.csv"><span class="toc-section-number">6.1</span> <code>conversion_metabolite.csv</code></a></li>
+<li><a href="6-2-letter-pathway-complete-csv.html#letter_pathway_complete.csv"><span class="toc-section-number">6.2</span> <code>letter_pathway_complete.csv</code></a></li>
+<li><a href="6-3-quant1-values-csv.html#quant1-values.csv"><span class="toc-section-number">6.3</span> <code>quant1-values.csv</code></a></li>
+<li><a href="6-4-incorporation-calc-csv-mid-backups-csv.html#incorporation_calc.csv-mid_backups.csv"><span class="toc-section-number">6.4</span> <code>incorporation_calc.csv</code> &amp; <code>mid_backups.csv</code></a></li>
+</ul></li>
+<li class="has-sub"><a href="7-psirm.html#psirm"><span class="toc-section-number">7</span> pSIRM experiments</a><ul>
+<li><a href="7-1-experimental-design.html#experimental-design"><span class="toc-section-number">7.1</span> Experimental design</a></li>
+<li><a href="7-2-experimental-procedures.html#experimental-procedures"><span class="toc-section-number">7.2</span> Experimental procedures</a></li>
+<li class="has-sub"><a href="7-3-protocol-psirm.html#protocol-psirm"><span class="toc-section-number">7.3</span> Protocol pSIRM</a><ul>
+<li><a href="7-3-protocol-psirm.html#psirm:adherent"><span class="toc-section-number">7.3.1</span> Adherent cell cultures</a></li>
+<li><a href="7-3-protocol-psirm.html#psirm:suspension"><span class="toc-section-number">7.3.2</span> Supension cell cultures</a></li>
+</ul></li>
+<li><a href="7-4-hints-notes.html#hints-notes"><span class="toc-section-number">7.4</span> Hints &amp; notes</a></li>
+</ul></li>
+<li class="has-sub"><a href="8-protocols.html#protocols"><span class="toc-section-number">8</span> Experimental Protocols</a><ul>
+<li class="has-sub"><a href="8-1-extraction.html#extraction"><span class="toc-section-number">8.1</span> Metabolomics sample extraction</a><ul>
+<li><a href="8-1-extraction.html#cell-culture-experiments"><span class="toc-section-number">8.1.1</span> Cell culture experiments</a></li>
+<li><a href="8-1-extraction.html#tissue-samples"><span class="toc-section-number">8.1.2</span> Tissue samples</a></li>
+<li><a href="8-1-extraction.html#blood-samples"><span class="toc-section-number">8.1.3</span> Blood samples</a></li>
+</ul></li>
+<li class="has-sub"><a href="8-2-sample-derivatisation.html#sample-derivatisation"><span class="toc-section-number">8.2</span> Sample derivatisation</a><ul>
+<li><a href="8-2-sample-derivatisation.html#standard-protocol"><span class="toc-section-number">8.2.1</span> Standard protocol</a></li>
+<li><a href="8-2-sample-derivatisation.html#specific-protocols"><span class="toc-section-number">8.2.2</span> Specific protocols</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="9-proc-maui.html#proc:maui"><span class="toc-section-number">9</span> Data processing - MAUI</a><ul>
+<li class="has-sub"><a href="9-1-processing-in-chromatof.html#processing-in-chromatof"><span class="toc-section-number">9.1</span> Processing In ChromaToF</a><ul>
+<li><a href="9-1-processing-in-chromatof.html#resampling"><span class="toc-section-number">9.1.1</span> Resampling</a></li>
+<li><a href="9-1-processing-in-chromatof.html#combo-export-.cdf-.csv"><span class="toc-section-number">9.1.2</span> Combo-export (<code>.cdf</code> &amp; <code>.csv</code>)</a></li>
+</ul></li>
+<li><a href="9-2-maui-notes.html#maui-notes"><span class="toc-section-number">9.2</span> Maui notes</a></li>
+<li class="has-sub"><a href="9-3-mauiexport.html#mauiexport"><span class="toc-section-number">9.3</span> Maui exports</a><ul>
+<li><a href="9-3-mauiexport.html#inputgc..."><span class="toc-section-number">9.3.1</span> <code>input/gc/...</code></a></li>
+<li><a href="9-3-mauiexport.html#inputquant..."><span class="toc-section-number">9.3.2</span> <code>input/quant/...</code></a></li>
+<li><a href="9-3-mauiexport.html#inputinc..."><span class="toc-section-number">9.3.3</span> <code>input/inc/...</code></a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="10-proc-metmax.html#proc:metmax"><span class="toc-section-number">10</span> Data Processing - Metmax</a><ul>
+<li><a href="10-1-resampling-1.html#resampling-1"><span class="toc-section-number">10.1</span> Resampling</a></li>
+<li><a href="10-2-d-basic.html#d-basic"><span class="toc-section-number">10.2</span> 1D-basic</a></li>
+<li><a href="10-3-reference-search.html#reference-search"><span class="toc-section-number">10.3</span> Reference search</a></li>
+<li><a href="10-4-export-for-metmax.html#export-for-metmax"><span class="toc-section-number">10.4</span> Export for Metmax</a></li>
+<li class="has-sub"><a href="10-5-data-extraction-with-metmax.html#data-extraction-with-metmax"><span class="toc-section-number">10.5</span> Data extraction with Metmax</a><ul>
+<li><a href="10-5-data-extraction-with-metmax.html#peak-areas"><span class="toc-section-number">10.5.1</span> Peak areas</a></li>
+<li><a href="10-5-data-extraction-with-metmax.html#mids"><span class="toc-section-number">10.5.2</span> MIDs</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="11-mm.html#mm"><span class="toc-section-number">11</span> Solutions and Materials</a><ul>
+<li class="has-sub"><a href="11-1-solutions.html#solutions"><span class="toc-section-number">11.1</span> Solutions</a><ul>
+<li><a href="11-1-solutions.html#washingbuffer"><span class="toc-section-number">11.1.1</span> Label buffer</a></li>
+<li><a href="11-1-solutions.html#mcw"><span class="toc-section-number">11.1.2</span> MCW</a></li>
+<li><a href="11-1-solutions.html#alkanemix"><span class="toc-section-number">11.1.3</span> Alkane-Mix</a></li>
+</ul></li>
+<li><a href="11-2-materials.html#materials"><span class="toc-section-number">11.2</span> Materials</a></li>
+</ul></li>
+<li class="has-sub"><a href="12-output.html#output"><span class="toc-section-number">12</span> Output tables</a><ul>
+<li class="has-sub"><a href="12-1-o-project.html#o_project"><span class="toc-section-number">12.1</span> Project-files</a><ul>
+<li><a href="12-1-o-project.html#mtxqc_params.csv"><span class="toc-section-number">12.1.1</span> <code>MTXQC_params.csv</code></a></li>
+<li><a href="12-1-o-project.html#maui_params.csv"><span class="toc-section-number">12.1.2</span> <code>Maui_params.csv</code></a></li>
+<li><a href="12-1-o-project.html#metmax_params.csv"><span class="toc-section-number">12.1.3</span> <code>Metmax_params.csv</code></a></li>
+</ul></li>
+<li class="has-sub"><a href="12-2-outputgc-.html#outputgc..."><span class="toc-section-number">12.2</span> <code id="o_gc">output/gc/...</code></a><ul>
+<li><a href="12-2-outputgc-.html#hm_gc_values.csv-qcmetric_xy.csv"><span class="toc-section-number">12.2.1</span> <code>HM_GC_values.csv</code> &amp; <code>qcmetric_xy.csv</code></a></li>
+<li><a href="12-2-outputgc-.html#intstandard_normfactors.csv-intstandard_stats.csv"><span class="toc-section-number">12.2.2</span> <code>IntStandard_normfactors.csv</code> &amp; <code>IntStandard_stats.csv</code></a></li>
+<li><a href="12-2-outputgc-.html#min_annotation.csv-sumarea_stats.csv"><span class="toc-section-number">12.2.3</span> <code>Min_Annotation.csv</code> &amp; <code>SumArea_stats.csv</code></a></li>
+<li><a href="12-2-outputgc-.html#mz73_data.csv"><span class="toc-section-number">12.2.4</span> <code>mz73_data.csv</code></a></li>
+</ul></li>
+<li class="has-sub"><a href="12-3-outputquant-o-quant.html#outputquant...o_quant"><span class="toc-section-number">12.3</span> <code>output/quant/...</code>{o_quant}</a><ul>
+<li><a href="12-3-outputquant-o-quant.html#calcheck_linearity.csv"><span class="toc-section-number">12.3.1</span> <code>calcheck_linearity.csv</code></a></li>
+<li><a href="12-3-outputquant-o-quant.html#calculationfiledata.csv"><span class="toc-section-number">12.3.2</span> <code>CalculationFileData.csv</code></a></li>
+<li><a href="12-3-outputquant-o-quant.html#heatmap_quant_ptop5.csv"><span class="toc-section-number">12.3.3</span> <code>HeatMap_Quant_pTop5.csv</code></a></li>
+<li><a href="12-3-outputquant-o-quant.html#ptop5_calibration_samples_lincheck.csv"><span class="toc-section-number">12.3.4</span> <code>pTop5_Calibration_Samples_lincheck.csv</code></a></li>
+<li><a href="12-3-outputquant-o-quant.html#top5_calibrationinfo_unique.csv"><span class="toc-section-number">12.3.5</span> <code>top5_CalibrationInfo_unique.csv</code></a></li>
+<li><a href="12-3-outputquant-o-quant.html#top5_qmqcurveinfo.csv"><span class="toc-section-number">12.3.6</span> <code>top5_QMQcurveInfo.csv</code></a></li>
+</ul></li>
+<li class="has-sub"><a href="12-4-outputinc-.html#outputinc..."><span class="toc-section-number">12.4</span> <code id="o_inc">output/inc/...</code></a><ul>
+<li><a href="12-4-outputinc-.html#heatmap_incorporation.csv"><span class="toc-section-number">12.4.1</span> <code>HeatMap_Incorporation.csv</code></a></li>
+<li><a href="12-4-outputinc-.html#se_calculation_nascore.csv"><span class="toc-section-number">12.4.2</span> <code>SE_calculation_NAscore.csv</code></a></li>
+<li><a href="12-4-outputinc-.html#se_classification.csv"><span class="toc-section-number">12.4.3</span> <code>SE_classification.csv</code></a></li>
+<li><a href="12-4-outputinc-.html#se_validation.csv"><span class="toc-section-number">12.4.4</span> <code>SE_validation.csv</code></a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="13-FAQ.html#FAQ"><span class="toc-section-number">13</span> Frequently Asked Questions</a><ul>
+<li><a href="13-1-what-are-additional-quantification-standards.html#what-are-additional-quantification-standards"><span class="toc-section-number">13.1</span> What are additional quantification standards</a></li>
+<li><a href="13-2-how-do-i-extend-conversion-metabolite-csv.html#how-do-i-extend-conversion_metabolite.csv"><span class="toc-section-number">13.2</span> How do I extend conversion_metabolite.csv</a></li>
+</ul></li>
+<li class="has-sub"><a href="14-gcms.html#gcms"><span class="toc-section-number">14</span> GC-MS settings</a><ul>
+<li><a href="14-gcms.html#autosampler-settings"><span class="toc-section-number">14.0.1</span> Autosampler settings</a></li>
+<li><a href="14-gcms.html#gas-chromatography"><span class="toc-section-number">14.0.2</span> Gas chromatography</a></li>
+<li><a href="14-gcms.html#mass-spectrometer-settings"><span class="toc-section-number">14.0.3</span> Mass spectrometer settings</a></li>
+</ul></li>
+<li><a href="references.html#references">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="universe" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> MTXQCvX2 Universe</h1>
+<p>Back then in 2015 I started to think about a way how to evaluate my own datasets regarding some quality parameters. From a scratch of a few quality metrices evaluated in the frame of a very, very long Rscript until now many different generations of the MTXQC existed.</p>
+<p>Out of this evolution cycle MTXQC developed to a suit of modules that can be used complimentary in order to evaluate and process GC-MS derived metabolomics data. <code>MTXQC_part1.Rmd</code> represents the heart of this little universe. Besides that there are many ways how to use MTXQCvX2. Proposed workflows are illustrated in chapter <a href="3-wf-maui.html#wf:maui">Workflow Maui</a> and chapter <a href="4-wf-metmax.html#wf:metmax">Workflow Metmax</a>. The flow diagram introduced <a href="\ref@fig:flow">here</a> might help you to decide how to get started.</p>
+<p>The following sections give a short overview about the main parameters and functions of each module, its generated graphical illustrations and tables.</p> 
+</div>
+<p style="text-align: center;">
+<a href="4-7-update-metabolite-names-in-conversion-metabolite-csv.html"><button class="btn btn-default">Previous</button></a>
+<a href="5-1-init.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

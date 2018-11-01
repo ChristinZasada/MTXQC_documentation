@@ -1,0 +1,9 @@
+Column name,Description,Value
+Metabolite,Library name of metabolite,Citric acid_(4TMS)_MP_RI:1814_IDENT:B+D
+Lettercode,Lettercode name of metabolite,Cit
+Batch_Id,Batch-Id,e18274ba
+Origin,Origin of quant1:1 value,Qstd
+adj_r_squared,Adjsuted Rsquare of calibration curve,0.996053496
+intercept,Intercept of calibration curve,564.549288
+slope,Slope of calibration curve,0.000194064
+Frac_calcurve,Fraction of peak area in linear range of calibration curve,10

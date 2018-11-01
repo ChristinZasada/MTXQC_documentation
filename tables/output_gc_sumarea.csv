@@ -1,0 +1,10 @@
+Column name,Description,Value
+File,File name,e18274ba_17.cdf
+Batch_Id,Extracted Batch-Id derived from file name,e18274ba
+n_area,Number of peak areas per file,101
+sum_area,Sum of all peak areas,44614610885
+n_total,Total number of entries (including NA),107
+mean_batch,Mean value of peak areas across the batch,34409759414
+sd_batch,Standard deviation of peak areas across the batch,12913422445
+area_fac,Normalisation factor of the file,1.296568521
+n_50,Number of annotated peak areas per file corresponding to fifty percent of maximum number of annotated peaks in the batch,53.5

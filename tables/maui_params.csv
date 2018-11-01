@@ -1,0 +1,12 @@
+Parameter,Description,Value
+spath,subfolder or project folder,psirm_glucose/
+matrix,Input file containing all peak areas,quantMassAreasMatrix.csv
+mz,Input file containing m/z intensities,MassSum-73.csv
+mid,Input file containing MIDs for each intermediate and file,pSIRM_SpectraData.csv
+inc_data,Input file containing calculated stable isotope incorporation in the format 100 percent = 1,DataMatrix.csv
+inputformat,Input format type,maui
+intstd,If MTXQC project contains an internal extraction standard,TRUE
+alkanes,If MTXQC  project contains evaluation of alkane profile,TRUE
+peakchroma,If MTXQC project contains evaluation of derivatisation efficiency,TRUE
+mqt,If MTXQC project includes absolute quantification,TRUE
+inc,If MTXQC project includes labeling with stable isotopes,TRUE

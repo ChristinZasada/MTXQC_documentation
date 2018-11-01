@@ -1,0 +1,10 @@
+Column name,Description,Value
+Lettercode,Lettercode name of metabolite,Cit
+Batch_Id,Batch-Id,e18274ba
+File,File name,e18274ba_26.cdf
+sum_spa,_expl_,4297
+sum_bpa,_expl_,1861
+low3a_ratio,_expl_,2.30897367
+rel_sb,_expl_,higher
+val_score,Validation score,confident
+count_score,MID evaluation,goodQ

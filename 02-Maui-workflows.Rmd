@@ -1,4 +1,4 @@
-# Workflow for Maui-annotation proejcts{#maui}
+# Workflow for Maui-annotation projects{#wf:maui}
 
 ## Read this in case
 

@@ -1,0 +1,6 @@
+Column name,Description,Value
+File,File name,e18274ba_17.cdf
+PeakArea,Peak area of internal extraction standard,89308492
+Batch_Id,Bacth-Id,e18274ba
+IntStd_fac,Determined normalisation factor,0.837457514
+IntStd_eval,Evaluation of normalisation factor in relation to defined range plus/minus one standard deviation,within

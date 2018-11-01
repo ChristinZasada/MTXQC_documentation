@@ -1,0 +1,48 @@
+# Configuration of MTXQCvX2 - `config_mtx/...`{#config}
+
+Herein explained are the customizable tables of the MTXQCvX2 universe.
+
+## `conversion_metabolite.csv`
+
+
+```{r con_se, echo=FALSE}
+data = read.csv("tables/config_conse.csv", TRUE)
+knitr::kable(data, bookstab = TRUE)
+```
+
+
+## `letter_pathway_complete.csv`
+
+```{r metprofile, echo=FALSE}
+
+data = read.csv("tables/config_metprofile.csv", TRUE)
+knitr::kable(data, bookstab = TRUE)
+
+```
+
+## `quant1-values.csv`
+
+```{r quant1, echo=FALSE}
+
+data = read.csv("tables/config_quant1.csv", TRUE)
+knitr::kable(data, bookstab = TRUE)
+
+```
+
+## `incorporation_calc.csv` \& `mid_backups.csv`
+
+```{r inccalc, echo=FALSE}
+
+data = read.csv("tables/config_inccalc.csv", TRUE)
+knitr::kable(data, bookstab = TRUE)
+
+```
+
+```{r backup, echo=FALSE}
+
+data = read.csv("tables/config_backup.csv", TRUE)
+knitr::kable(data, bookstab = TRUE)
+
+```
+
+

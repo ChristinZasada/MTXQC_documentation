@@ -1,3 +1,11 @@
 # Introduction {#intro}
 
 Experimental and mathematical concepts have been introduced for the pulsed stable isotope resolved metabolomics (pSIRM) approach in [@Pietzke2014].
+
+
+
+```{r flow, fig.cap="Test external figure and how to include it", fig.width=0.25, echo=TRUE}
+knitr::include_graphics("images/now.png")
+
+```
+

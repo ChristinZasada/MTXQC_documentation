@@ -1,0 +1,135 @@
+# Experimental Protocols{#protocols}
+## Metabolomics sample extraction{#extraction}
+
+### Cell culture experiments
+#### Cell extracts in MeOH{#ccextraction_meoh}
+
+Materials:
+
+* Chloroform
+* 15 ml falcon tubes
+* thermo or rotary shaker
+
+Procedure:
+
+* Add 1 ml chloroform to 5 ml methanolic cell extract
+* Incube for 60 min at 4&deg;C on rotary or thermo shaker
+* Centrifuge at max speed for 10 min at 4&deg;C
+* Collect polar and lipid phases into fresh falcons / tubes
+* Dry under vacuum
+
+In order to generate technical backups:
+
+* Resuspend dried extracts in 600 ul 20\% MeOH
+* Shake at 4&deg;C on thermo shaker for 30 min
+* Split volumes into equal parts in fresh eppendorf tubes
+* Dry under vacuum
+
+Suggested cell density: $2-3e+6$ cells / extract.
+
+#### Cell pellets{#ccextraction_susp}
+
+Materials:
+
+* [MCW suppl. cinnamic acid](#mcw)
+* 15 ml falcon tubes
+* thermo or rotary shaker
+
+Procedure:
+
+* Resuspend cell pellets in 1 ml MCW
+* Incube for 60 min at 4&deg;C on rotary or thermo shaker
+* Add 0.5 ml of H2O to induce phase separation
+* Centrifuge at max speed for 10 min, cold temperatures
+* Collect polar and lipid phases into fresh falcons / tubes
+* Dry under vacuum
+
+In order to generate technical backups:
+
+* Resuspend dried extracts in 600 ul 20\% MeOH
+* Shake at cold temperature on thermo shaker for 30 min
+* Split volumes into equal parts in fresh eppendorf tubes
+* Dry under vacuum
+
+Suggested cell density: $2-3e+6$ cells / extract.
+
+
+### Tissue samples
+
+Materials:
+
+* [MCW suppl. cinnamic acid](#mcw)
+* ddH20
+* Eppendorf tubes
+* Tissue lyzer / pulverizer
+
+Procedure:
+
+* Snap-freeze tissue samples
+* Pulverize samples
+* Aliquote 50 mg of tissue powder
+* Add 1.5 ml of MCW (suppl. with cinnamic acid final conc. 2 ug/ul)
+* Shake for 60 min on rotary shaker at 4&deg;C
+* Add 0.5 ml ddH20 for phase separation
+* Centrifuge maximum speed, 10 min at 4&deg;C
+* Collect polar and lipid phases in fresh vessels
+* Dry under vacuum
+
+
+### Blood samples
+
+Material:
+
+* Minivette for capillary blood samples
+* [MCW suppl. cinnamic acid](#mcw)
+* ddH20
+* Eppendorf tubes 
+
+Procedure:
+
+*	Give 20 ul blood / sera directly into 1 ml MCW to avoid lumps
+* In case of lumps sonicate samples
+* Shake samples at 4&deg;C for 800 rpm for 60 min
+* Add 500 ul ddH20 and vortex shortly
+* Spin down at 4&deg;C at max speed for 10 min
+* Aliquote polar phase into 2-3 times 500 ul in 1.5 ml tubes
+* Aliquote lipid phase 2 times in 100 ul lower in 1.5 ml eppi
+* Dry in SpeedVac (35&deg;C)
+
+## Sample derivatisation
+
+### Standard protocol
+
+Materials:
+
+* Methoxamine (MeOx)
+* Pyridine (open under the hood only!)
+* MSTFA
+* [Alkane mix](#alkanemix) (c10-c36) in Hexane
+* Chromacol vials and caps (big, small)
+
+Mixtures:
+
+* Solvent 1: 40 mg MeOx in 1 ml Pyridine
+* Solvent 2: 10 ul Alkane mix in 1 ml MSTFA
+
+Volumens of both solvents are shown for standard (small volumes) procedures.
+
+Procedure:
+
+* Make sure samples are completly dry (1 h speed vac)
+* Add 20 ul (10 ul) of solvent 1 / sample
+* Incubate on rotary shaker, 30&deg;C, for 60 min
+* Add 80 ul (25 ul) of solvent 2 / sample
+* Incubaate on rotary shaker, 37&deg;C, for 90 min
+* Centrifuge to spin down insoluble materials
+* Prepare aliquotes three times 28 ul or two times 15 ul (small glass vials)
+* Keep on room temperature until measurement (max. 10 days)
+
+### Specific protocols
+
+#### Andrash
+
+#### Fabian 
+
+#### Henning

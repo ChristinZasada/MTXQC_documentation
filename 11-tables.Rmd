@@ -1,0 +1,166 @@
+# Output tables{#output}
+## Project-files{#o_project}
+### `MTXQC_params.csv`
+
+```{r mtxqcparams, echo=FALSE}
+
+t = read.csv("tables/mtxqc_params.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+
+```
+
+### `Maui_params.csv`
+
+```{r mauiparams, echo=FALSE}
+
+t = read.csv("tables/maui_params.csv", TRUE)
+knitr::kable(t, booktabs=TRUE)
+
+```
+
+
+### `Metmax_params.csv`
+
+
+## `output/gc/...`{#o_gc}
+### `HM_GC_values.csv` \& `qcmetric_xy.csv`
+
+MTXQC exports a file summarising quality factors for each of the four parameter evaluating the GC performance. A summary representing the values illustrated in the heatmap are shown in table [`HM_GC_values.csv`](\@ref(tab:o_hm_gc)), individual exports for each metric in table [`qcmetric_xy.csv`](\@ref(tab:o_gc_metric)).
+
+```{r o_hm_gc, echo=FALSE}
+
+t = read.csv("tables/output_HM_gc.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+```{r o_gc_metric, echo=FALSE}
+
+t = read.csv("tables/output_HM_gc.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+
+### `IntStandard_normfactors.csv` \& `IntStandard_stats.csv`
+
+```{r o_is_normfactors, echo=FALSE}
+
+t = read.csv("tables/output_isnormfactors.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+```{r o_is_normstats, echo=FALSE}
+
+t = read.csv("tables/output_is_stats.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+
+### `Min_Annotation.csv` \& `SumArea_stats.csv`
+
+```{r o_soa, echo=FALSE}
+
+t = read.csv("tables/output_gc_sumarea.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+```{r o_minann, echo=FALSE}
+
+t = read.csv("tables/output_minann.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+
+### `mz73_data.csv`
+
+```{r o_mzz, echo=FALSE}
+
+t = read.csv("tables/output_mz72.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+## `output/quant/...`{o_quant}
+
+### `calcheck_linearity.csv`
+
+```{r o_calcheck, echo=FALSE}
+
+t = read.csv("tables/quant_calcheck.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `CalculationFileData.csv`
+
+```{r o_calcfiledata, echo=FALSE}
+
+t = read.csv("tables/output_quant_calculationfiledata.csv", TRUE)
+knitr::kable(t, longtable = TRUE, booktabs = TRUE)
+```
+
+### `HeatMap_Quant_pTop5.csv`
+
+```{r o_hm_quant, echo=FALSE}
+
+t = read.csv("tables/output_hm_quant.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `pTop5_Calibration_Samples_lincheck.csv`
+
+```{r o_quant_lincheck, echo=FALSE}
+
+t = read.csv("tables/output_quant_lincheck.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `top5_CalibrationInfo_unique.csv`
+
+```{r o_quant_info, echo=FALSE}
+t = read.csv("tables/output_quant_calibrationInfo.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `top5_QMQcurveInfo.csv`
+
+```{r o_quant_qmq, echo=FALSE}
+t = read.csv("tables/output_quant_qmq.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+## `output/inc/...`{#o_inc}
+
+### `HeatMap_Incorporation.csv`
+
+```{r o_inc_hm, echo=FALSE}
+t = read.csv("tables/output_inc_hm.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `SE_calculation_NAscore.csv`
+
+```{r o_inc_calc, echo=FALSE}
+t = read.csv("tables/output_inc_SEcalc.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `SE_classification.csv`
+
+```{r o_inc_class, echo=FALSE}
+t = read.csv("tables/output_inc_SEclass.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+### `SE_validation.csv`
+
+```{r o_inc_eval, echo=FALSE}
+t = read.csv("tables/output_inc_SEval.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+```
+
+
+
+
+
+
+
+
+

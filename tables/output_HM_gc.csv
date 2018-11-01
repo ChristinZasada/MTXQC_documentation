@@ -1,0 +1,4 @@
+Column name,Description,Value
+Batch_Id,Batch-Id,e18274ba
+qc_metric,QC metric factor corresponding with 1 - very good and 0 - very low,0.937254457
+title,Class of QC metric,alkanes

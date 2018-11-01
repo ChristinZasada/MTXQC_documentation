@@ -1,0 +1,11 @@
+Column name,Description,Value
+Metabolite_manual,Manual defined metabolite name,#Alanine (2TMS)
+Metabolite,Library name of the metabolite,Alanine_(2TMS)_BP_RI:1097_IDENT:B+C
+Metabolite_short,Short version of library name of the metabolite,Alanine_(2TMS)
+Lettercode,Lettercode version of metabolite name,Ala_2TMS
+Q1_value,Checked if quant1:1 value available,x
+Mass_Pos,m/z-value corresponding to m_inc ,118
+SE_sel,Evaluation of the MIDs,x
+Q_sel,Evaluation for absolute quantification,x
+nopsirm,Exclusively for absolute quantification,
+Standards,Defined as standard,"InternalStandard, Alk"

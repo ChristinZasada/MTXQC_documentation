@@ -1,0 +1,16 @@
+Column name,Description,Value
+Lettercode,Lettercode of metabolite name,Cit
+Letter_Derivate,Derivate name,Cit
+Quant1_v4,Quant1:1 value in (pmol),52050
+Metabolite,Library name of metabolite,Citric acid_(4TMS)_MP_RI:1814_IDENT:B+D
+Batch_Id,Batch-Id,e18274ba
+Dilution,Dilution factor,0.2
+ChromIntensities,Corresponding peak areas,45074572
+Concentration,Concentration in (pmol),10410
+Origin,Origin of quantification standard,Qstd
+Metabolite_short,Short name of metabolite,Citric acid 275_(4TMS)
+adj_r_squared,Adjusted Rsquare of calibration curve,0.996053496
+intercept,Intercept of calibration curve,564.549288
+slope,Slope of calibration curve,0.000194064
+max,Max. value of calibration curve,52050
+min,Min. value of calibration curve,260.25

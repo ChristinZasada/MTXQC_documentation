@@ -1,0 +1,70 @@
+# Solutions and Materials{#mm}
+## Solutions{#solutions}
+### Label buffer{#washingbuffer}
+
+Materials:
+
+* ddH2O (500 ml)
+* 140 mM NaCl (4.1 g)
+* 5 mM Hepes (0.569 g)
+* pH calibration 7.4
+
+Procedure:
+
+* Weigh the correct amounts of Hepes and NaCl
+* Resolve in a glas bottle with 450 ml of water
+* Stir carefully
+* Check and adjust pH
+* Adjust volumes to 500 ml
+
+### MCW{#mcw}
+
+Materials:
+
+* Methanol
+* Chloroform
+* ddH2O
+* Cinnamic acid stock in MeOH (2 mg/ml): final conc. 2 ug/ml
+
+Procedure:
+
+* Mix the solvents in the ratio of volumes - Methanol:Chlorofom:Water -- 5:2:1
+* Supplement cinnamic acid stock 1:1000
+* Store at -25&deg;C
+
+### Alkane-Mix{#alkanemix}
+
+Materials:
+
+* Hexane
+* Alkanes: c10, c12, c15, c17, c19, c22, c28, c32, c36
+* Thermo mixer
+* Glass vials and caps
+
+Procedure:
+
+* Prepare stock solutions in hexane:
+  + c10 - c17 (liquid): 25 ul/ml
+  + c19 - c32: 20 mg/ml
+  + c36: two-times 15 mg/1.5 ml
+* Warm up alkane stocks in thermo mixer 40&deg;C
+* Prepare a text mixture in equal amounts, e.g., 50 ul each, but use twice the volume of c36
+* Mix test mixture with MSTFA: 10 ul / 1 ml MSTFA
+* Check alkane profile by GC-MS
+* If required: adjust volumes and re-test or create larger volume of zour mixture for aliquots
+* Store aiquots in glass vials, close well and store at 4&deg;C
+* For usage: gently warm up glass vials at 30 C on thermo mixer for 10 min and vortex before adding it to the MSTFA
+
+Adjust the volumes of the alkane stocks in order to create a curve shaped distribution of all alkanes in the chromatogram: lower intensities for c10 and c32-36, slowly increasing intensities for the alkanes in between.
+
+
+## Materials
+
+```{r chemicals,echo=FALSE}
+
+chem = read.csv("tables/chemicals.csv", TRUE)
+
+knitr::kable(chem, bookstab = TRUE, caption = "List of chemicals including company names and catalog number.")
+```
+
+

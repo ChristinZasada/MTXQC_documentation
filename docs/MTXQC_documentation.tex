@@ -125,7 +125,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-10-26}
+    \date{2018-11-01}
 
 \usepackage{booktabs}
 
@@ -174,8 +174,8 @@ extracting required information and creating corresponding files
 (MTXQCvX2\_part4).
 
 Both workflows are introduced in the distinct chapters including their
-required input parameter (chapter \ref{workflows}). Technical relevant
-information are summarised in chapter \ref{tables}.
+required input parameter (chapter \protect\hyperlink{wf:maui}{Workflow
+Maui} and \protect\hyperlink{wf:metmax}{Workflow Metmax}).
 
 \chapter{Introduction}\label{intro}
 
@@ -183,7 +183,20 @@ Experimental and mathematical concepts have been introduced for the
 pulsed stable isotope resolved metabolomics (pSIRM) approach in
 \citep{Pietzke2014}.
 
-\chapter{Workflow for Maui-annotation proejcts}\label{maui}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{"images/now.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\includegraphics{images/now.png}
+\caption{\label{fig:flow}Test external figure and how to include it}
+\end{figure}
+
+\hypertarget{wf:maui}{\chapter{Workflow for Maui-annotation
+projects}\label{wf:maui}}
 
 \section{Read this in case}\label{read-this-in-case}
 
@@ -364,7 +377,8 @@ respectively. Prerequisite - you have annotated the compound in Maui.
 The report of \texttt{MTXQCvX2\_part1.Rmd} includes the defined internal
 standard for each project in a message.
 
-\chapter{Workflow for Metmax-extracted projects}\label{metmax}
+\hypertarget{wf:metmax}{\chapter{Workflow for Metmax-extracted
+projects}\label{wf:metmax}}
 
 \section{You want to follow this
 \ldots{}}\label{you-want-to-follow-this}
@@ -560,211 +574,551 @@ The in-lab protocol considers nine alkanes from c10 to c36. Standard
 annotation includes an hashtag, e.g., \#c10. If you use this annotation
 even Metmax would be able to determine the retention index.
 
-\chapter{MTXQCvX2\_init}\label{init}
+\chapter{MTXQCvX2 Universe}\label{universe}
 
-MTXQCvX2\_init.Rmd - why and how to use it. Advantages of the project
-folder.
+Back then in 2015 I started to think about a way how to evaluate my own
+datasets regarding some quality parameters. From a scratch of a few
+quality metrices evaluated in the frame of a very, very long Rscript
+until now many different generations of the MTXQC existed.
 
-\chapter{MTXQCvX\_experimentalSetup.Rmd}\label{ExpSetup}
+Out of this evolution cycle MTXQC developed to a suit of modules that
+can be used complimentary in order to evaluate and process GC-MS derived
+metabolomics data. \texttt{MTXQC\_part1.Rmd} represents the heart of
+this little universe. Besides that there are many ways how to use
+MTXQCvX2. Proposed workflows are illustrated in chapter
+\protect\hyperlink{wf:maui}{Workflow Maui} and chapter
+\protect\hyperlink{wf:metmax}{Workflow Metmax}. The flow diagram
+introduced \href{/ref@fig:flow}{here} might help you to decide how to
+get started.
 
-\chapter{MTXQCvX\_part1.Rmd}\label{part1}
+The following sections give a short overview about the main parameters
+and functions of each module, its generated graphical illustrations and
+tables.
 
-\chapter{MTXQCvX\_part2.Rmd}\label{part2}
+\section{MTXQC\_init.Rmd}\label{init}
 
-\chapter{MTXQCvX\_part3.Rmd}\label{mtxqcvx_part3.rmd}
+\section{MTXQC\_ExperimentalSetup}\label{expsetup}
 
-\chapter{MTXQCvX\_part4.Rmd - Metmax
-parser}\label{mtxqcvx_part4.rmd---metmax-parser}
+\section{MTXQC\_part 1}\label{heart}
 
-\section{This section explains \ldots{}}\label{this-section-explains}
+\section{MTXQC\_part 2 - Post-Processing}\label{postproc}
 
-\begin{itemize}
-\tightlist
-\item
-  what MTXQCvX\_part4.Rmd does
-\item
-  how do input files need to look like
-\item
-  which files are generated
-\item
-  what the distinct checkboxes mean
-\end{itemize}
+\section{MTXQC\_part 3 - Manual Validation}\label{manval}
 
-This module provides the generation of suitable input files for MTXQCvX2
-based on spreadsheet exported information by tools like metmax.
+\section{MTXQC\_part 4 - Metmax integration}\label{metmax}
 
-M
-
-\section{Input files}\label{input-files-2}
-
-\subsection[Quantification -
-PeakAreas.csv]{\texorpdfstring{Quantification - PeakAreas.csv\footnote{Required
-  for: all parameter, just not
-  \texttt{calculation\ stable\ isotope\ incorporation}}}{Quantification - PeakAreas.csv}}\label{quantification---peakareas.csv}
-
-In order to perform absolute quantification of
-
-You need a file containing all extracted peak areas for each metabolite
-and file\footnote{Tools/Options/Retention analysis, Parameter: Area}.
-The header of metmax-extracted files looks like shown below (see table
-1). Please, remember to delete the second header row, representing the
-column loads for each file before saving as csv-file. Otherwise you end
-up with weird imported dataframes in R. Quantification masses have to be
-updated while processing in ChromaToF prior the export of the data e.g.,
-with a reference search\footnote{See \texttt{vignette/ReferenceSearch}}
-or using statistical compare. pSIRM experiments require the definition
-of pTop5 masses\footnote{Extended list of quant masses considering
-  isotope incorporation} instead of top5 masses in the reference in
-order to take into account the shift of intensities induced by the
-application of stable isotopes\footnote{Mandatory columns: name, mass,
-  files}
-
-\begin{tabular}{l|r|r|r|r|r|r}
-\hline
-name & mass & ri & row.load & file\_1 & file\_2 & file\_x\\
-\hline
-Lac & 219 & 1051 & 0.76 & 15423 & 135444 & 465486\\
-\hline
-Pyr & 174 & 1042 & 0.65 & 56978 & 46888 & 4354544\\
-\hline
-Cit & 273 & 1805 & 0.99 & 1326 & 23321 & 132121\\
-\hline
-\end{tabular}
-
-MTXQCvX\_part4 takes care of the formatting and correct column names of
-the peak areas file and saves it\footnote{\texttt{input/quant/quantMassAreasMatrix.csv}}.
-MTXQCvX\_part4 generates also the file
-PeakDensities-Chroma.csv\footnote{\texttt{input/gc/PeakDensities-Chroma.csv}},
-in case you have selected the option to include sum of area
-normalisation while knitting this module.
-
-\subsection[Isotope incorporation - MIDs.csv]{\texorpdfstring{Isotope
-incorporation - MIDs.csv\footnote{Required for
-  \texttt{calculation\ isotope\ incorporation}}}{Isotope incorporation - MIDs.csv}}\label{isotope-incorporation---mids.csv}
-
-In order to determine the incorporation of stable isotopes MTXQCvX2
-requires as an input the mass isotopomer distributions (MIDs) for each
-intermediate and measurement\footnote{Tools/Options/Isotope
-  concentrator; Parameter: IntensityOfMass}. Fragments for each
-intermediate have to be pre-defined in metmax at
-Tools/Options/metabolite masses. They can be imported\footnote{\texttt{inst/template\_files/MetMax\_MIDs.txt}}
-or manually specified each by each. An example of the metmax output is
-shown in table 2. The output has to be saved as csv-file, including the
-deletion of the partial row \texttt{column.load}, respectively\footnote{Mandatory
-  columns: name, mass, files}.
-
-\begin{tabular}{l|r|r|r|r|r|r}
-\hline
-name & mass & ri & row.load & file\_1 & file\_2 & file\_x\\
-\hline
-Lac & 219 & 1051 & 0.85 & 31026 & 5165829 & 5829\\
-\hline
-Lac & 220 & 1051 & 0.85 & 3607 & 662277 & 277\\
-\hline
-Lac & 221 & 1051 & 0.85 & 1222 & 111481 & 81\\
-\hline
-Lac & 222 & 1051 & 0.85 & 188 & 1003494 & 10023\\
-\hline
-Lac & 223 & 1051 & 0.85 & 0 & 33542 & 342\\
-\hline
-\end{tabular}
-
-MTXQCvX\_part4 calculates the stable isotope incorporation and exports
-DataMatrix.csv as well as pSIRM\_SpectraData.csv\footnote{\texttt{input/inc/DataMatrix}
-  \& \texttt{pSIRM\_SpectraData.csv}}. The mathematics behind are
-outlined in \citep{Pietzke2014}
-
-\textbf{Important}: Extracted MIDs have to match with defined mass
-couples for each metabolite in MTXQCvX2\footnote{\texttt{config\_mtx/incorpo\_calc\_masses.csv}}.
-Please refer for more details to \texttt{vignettes/config\_mtx-files}.
-
-\subsection[Derivatisation efficiency -
-mz73.csv]{\texorpdfstring{Derivatisation efficiency - mz73.csv\footnote{Required
-  for: \texttt{sum\ of\ area\ normalisation}}}{Derivatisation efficiency - mz73.csv}}\label{derivatisation-efficiency---mz73.csv}
-
-The extraction of intensities for the ion \(m/z\) 73 works analogous to
-the extraction of MIDs\footnote{Tools/Options/Isotope concentrator;
-  Parameter: IntensityOfMass}. Mass ranges have to be defined for each
-intermediate for the mass 73 by defining starting and end mass with 73.
-MTXQCvX\_part4 generates the file MassSum-73.csv\footnote{\texttt{input/gc/MassSum-73.csv}}.
-Check \texttt{inst\textbackslash{}template\_files\textbackslash{}} for
-reference. Hopefully soon a new metmax button extracting specific
-intensities across the batch.
-
-\chapter{Configuration of MTXQCvX2}\label{config}
+\chapter{\texorpdfstring{Configuration of MTXQCvX2 -
+\texttt{config\_mtx/...}}{Configuration of MTXQCvX2 - config\_mtx/...}}\label{configuration-of-mtxqcvx2---config_mtx...}
 
 Herein explained are the customizable tables of the MTXQCvX2 universe.
 
-\section{\texorpdfstring{File:
-\texttt{conversion\_metabolite.csv}}{File: conversion\_metabolite.csv}}\label{file-conversion_metabolite.csv}
+\section{\texorpdfstring{\texttt{conversion\_metabolite.csv}}{conversion\_metabolite.csv}}\label{conversion_metabolite.csv}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{data =}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"config_mtx/conversion_metabolite.csv"}\NormalTok{, }\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
-\KeywordTok{colnames}\NormalTok{(data)}
-\end{Highlighting}
-\end{Shaded}
+Column.name
 
-\begin{verbatim}
-##  [1] "Metabolite_manual" "Metabolite"        "Metabolite_short" 
-##  [4] "Lettercode"        "Q1_value"          "Mass_Pos"         
-##  [7] "SE_sel"            "Q_sel"             "nopsirm"          
-## [10] "Standards"
-\end{verbatim}
+Description
 
-\subsection{Definition of standards}\label{definition-of-standards}
+Value
 
-\subsection{Adding further
-intermediates}\label{adding-further-intermediates}
+Metabolite\_manual
 
-\section{File: Metabolic profile}\label{file-metabolic-profile}
+Manual defined metabolite name
 
-\section{\texorpdfstring{File:
-\texttt{quant1-values.csv}}{File: quant1-values.csv}}\label{file-quant1-values.csv}
+\#Alanine (2TMS)
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{data =}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"config_mtx/quant1_values.csv"}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)}
-\KeywordTok{head}\NormalTok{(data)}
-\end{Highlighting}
-\end{Shaded}
+Metabolite
 
-\begin{verbatim}
-##   Letter_Derivate Quant1_v4 Quant1_v3
-## 1             2HG     57270     57270
-## 2             2OG     34220     34220
-## 3            3PGA     43480     43480
-## 4               A      7400      7400
-## 5       Adenosine     18710     18710
-## 6             Ala    134700    134700
-\end{verbatim}
+Library name of the metabolite
 
-\section{\texorpdfstring{File:
-\texttt{incorporation\_calc.csv}}{File: incorporation\_calc.csv}}\label{file-incorporation_calc.csv}
+Alanine\_(2TMS)\_BP\_RI:1097\_IDENT:B+C
 
-\chapter{Protocols - Sample
-extraction}\label{protocols---sample-extraction}
+Metabolite\_short
 
-\section{Cell extracts}\label{cell-extracts}
+Short version of library name of the metabolite
+
+Alanine\_(2TMS)
+
+Lettercode
+
+Lettercode version of metabolite name
+
+Ala\_2TMS
+
+Q1\_value
+
+Checked if quant1:1 value available
+
+x
+
+Mass\_Pos
+
+m/z-value corresponding to m\_inc
+
+118
+
+SE\_sel
+
+Evaluation of the MIDs
+
+x
+
+Q\_sel
+
+Evaluation for absolute quantification
+
+x
+
+nopsirm
+
+Exclusively for absolute quantification
+
+Standards
+
+Defined as standard
+
+InternalStandard, Alk
+
+\section{\texorpdfstring{\texttt{letter\_pathway\_complete.csv}}{letter\_pathway\_complete.csv}}\label{letter_pathway_complete.csv}
+
+Column.name
+
+Description
+
+Value
+
+Letter\_Derivate
+
+Derivate definition
+
+Ala
+
+Lettercode
+
+Lettercode name of metabolite
+
+Ala\_3TMS
+
+Pathway
+
+Ass.pathway
+
+aa
+
+Pathway.1
+
+Ass. pathway - ordered for heatmap
+
+5-aa
+
+Met\_pathway
+
+Ass. pathway - ordered for heatmap incl. Lettercode
+
+5-aa\_Ala\_3TMS
+
+Subs\_class
+
+Substance class
+
+aa
+
+Met\_class
+
+Substance class incl. Lettercode
+
+aa\_Ala\_3TMS
+
+\section{\texorpdfstring{\texttt{quant1-values.csv}}{quant1-values.csv}}\label{quant1-values.csv}
+
+Column.name
+
+Description
+
+Value
+
+Letter\_Derivate
+
+Derivate name of metabolite
+
+3PGA
+
+Quant1\_v4
+
+Quantity in (pmol)
+
+43480
+
+Quant1\_v3
+
+Quantity in (pmol)
+
+43480
+
+\section{\texorpdfstring{\texttt{incorporation\_calc.csv} \&
+\texttt{mid\_backups.csv}}{incorporation\_calc.csv \& mid\_backups.csv}}\label{incorporation_calc.csv-mid_backups.csv}
+
+Column.name
+
+Description
+
+Value
+
+Metabolite
+
+Library name of metabolite
+
+Alanine\_(2TMS)\_BP\_RI:1097\_IDENT:B+C
+
+Mass\_mz
+
+m/z-value
+
+116, 118
+
+LI\_MID
+
+Definition of mass level
+
+m0, minc
+
+Column.name
+
+Description
+
+Value
+
+Metabolite
+
+Library name of metabolite
+
+Alanine\_ beta-\_(3TMS)\_MP\_RI:1435\_IDENT:A+D
+
+Mass.m.z.
+
+m/z value
+
+188
+
+BackupPeakArea
+
+Peak area of Backup MID
+
+4960
+
+BackupMID
+
+MID value for corresponding Mass.m.z.
+
+0.8005
+
+\chapter{pSIRM experiments}\label{psirm}
+
+The application of stable isotopes provides a powerful tool to track the
+activity of metabolic pathways. the time-dependent and atom-specific
+routing along a metabolic pathway resolved how substrates like glucose
+or glutamine are used in order to maintain a certain phenotype and
+energetic homeostatsis.
+
+We developed an approach called pulsed stable isotope resolved
+metabolomics (pSIRM) enabling the quantitative evaluation of metabolite
+pool sizes and incorporation of stable isotopes, e.g.,
+\(^{13}C_6\)-glucose. A thoughtful setup of the experimental design
+including the applied substrates and carefull experimental handling are
+prerequisites for a successful pSIRM experiment. Essential aspects are
+collected in the below paragraphs along with a number of usefull tweaks.
+
+\section{Experimental design}\label{experimental-design}
+
+An \emph{in vitro} pSIRM experiment lasts in total up to three days
+starting from the cell seeding at day zero. Further along the way up to
+two media changes should be included until the application of stable
+isotopes and harvesting the cells maintaining the continouse
+availability of nutrients and avoiding the accumulation of waste
+products (Figure \ref(fig:psirm)). The media change four hours prior the
+harvest is set up in order to give cells time to recover from the
+mechanical stress of the media change. At the time point of harvest
+cells should be in a perfect happily state regarding metabolic
+environment and stress.
+
+Choose carefully the \emph{seeding density of you cells} in the first
+place. High confluency inducing contact inhibition of cell growth has a
+strong impact on several cellular processes including the uptake of
+nutrients. Try to aim for petri dishes with a maximum confluency of
+75-80 \%. A pre-experiment including different cell densities for
+seeding at a number of experimental conditions helps you to get a
+feeling for the cell growth in general and an expected output of cells
+at the time point of the harvest. Later one is useful to plan sample
+extraction and measurement subsequently.
+
+\begin{figure}
+\centering
+\includegraphics{images/psirm_harvest.png}
+\caption{\label{fig:psirmexp}Experimental design of a pSIRM experiment
+distuingishing short and long labeling with stable isotopes.}
+\end{figure}
+
+For adherent cell cultures only: Include for each experimental condition
+an additional petri dish that is solely used to determine the cell count
+at the time point of your harvest. This additional plate ensures a
+correct determination of absolute quantities and might reduce variation
+of pool sizes in the statistical analysis\footnote{Pelleting these cells
+  and snap-freezing might give usefull additional samples for western
+  blotting.}. Think carefully about control conditions and include cell
+culture dishes that are not labeled. These dishes function as a control
+for your labeling procedure and the natural abundance of isotopes.
+
+\section{Experimental procedures}\label{experimental-procedures}
+
+There is a slight difference in the protocols for
+\protect\hyperlink{psirm:adherent}{adherent} and
+\protect\hyperlink{psirm:suspension}{suspension} cells. Please read
+instructions and footnotes carefully.
+
+Short\footnote{I would rather recommend this up to 2 min of labeling}
+and long term labeling procured differ only in the applied solvents
+during the labeling - either label buffer
+(\protect\hyperlink{washingbuffer}{LB}) only or a combination of full
+label medium (LM) and label buffer (LB). Latter one is applied in order
+to remove extracellular metabolites of the media. Both label buffer and
+media contain the major nutrients / stable isotopes to keep the main
+substrates at constant supply at all times (Table \ref{tab:solvent}).
+During the application of stable isotopes longer than a few minutes
+cells might sense the absence of further intermediates provided during
+standard cell culture procedure and and adjust their metabolic program
+accordingly.
+
+\label{tab:solvent}Solvent composition of Full label medium (LM) and label
+buffer (BF) for a pSIRM experiment labeling with 13C-glucose.
+
+Solvent
+
+Base
+
+Carbon.source
+
+Supplements
+
+Full label medium (LM)
+
+DMEM, without glucose, glutamine, pyruvate
+
+13C-Glc (2.5 g/L) 12C-Gln (2 mM)
+
+small molecules (inhibitor, antibiotics)
+
+Label buffer (LB)
+
+HEPES (5 mM), NaCl (140 mM), pH 7.4
+
+13C-Glc (2.5 g/L) 12C-Gln (2 mM)
+
+The quality of your data later heavily relies on the exact handling of
+the cells and a \emph{consistent timing} throughout the pSIRM
+experiment. Especially the step removing the LB and quenching the cells
+should be a matter of a tenth of seconds rather than seconds. It is of
+great value to perform the cell harvest with a second person.
+
+\section{Protocol pSIRM}\label{protocol-psirm}
+
+\hypertarget{psirm:adherent}{\subsection{Adherent cell
+cultures}\label{psirm:adherent}}
+
+The herein described protocols are detailed explanations how to perform
+a pSIRM cell harvest for long term label application. If you want to
+label for less than 2 minutes omit solely \emph{omit steps 6-8}.
 
 Materials:
 
 \begin{itemize}
 \tightlist
 \item
-  cell culture dishes (10 cm), max. confluency 75\%
+  Cell culture dishes, max. confluency 80 \%
 \item
-  washing buffer (Hepes, NaCl, ph 7.4)
+  Labeling media (LM) supplemented with substrates (5 ml /
+  dish)\footnote{Not required for short term labeling}
 \item
-  50\% MeOH, ice-cold
+  Label buffer (LB) supplemented with substrates (5 ml / dish)
 \item
-  2 mg/ml cinnamic acid
+  Ice-cold 50 \% MeOH supplemented with 2 ug/ul cinnamic acid
 \item
-  chloroform
+  2x 5 ml pipette and tips\footnote{Highly recommended, makes labeling
+    and harvest super quick}
+\item
+  Beaker
+\item
+  Ice
+\item
+  15 ml falcons (chloroform resistant)
+\item
+  Cell lifter
+\item
+  Biological waste bin next to your bench
+\end{itemize}
+
+Procedure:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Pre-warm LB and LM in the water bath
+\item
+  Take a number of petri dishes (condition-wise including all biol.
+  replicates)
+\item
+  Discard cell culture media
+\item
+  Carefully add \emph{long term labeling} LM OR \emph{short term
+  labeling}: LB
+\item
+  Incubate cells on the bench or in an incubator
+\item
+  Discard LM (beaker)
+\item
+  Add immediatly 5 ml of LB
+\item
+  Rotate dish once in order to cover complete surface
+\item
+  Meanwhile 2nd person get prepared with 5 ml ice-cold MeOH
+\item
+  Discard LB into beaker and \emph{immediatly} 2nd person quenches with
+  ice-cold MeOH
+\item
+  Collect cell extracts using cell lifter
+\item
+  Transfer cell extracts into 15 ml falcons
+\item
+  Store falcons on ice until further processing
+\end{enumerate}
+
+Repeat this procedure (step 6-10) for all dishes of a single condition
+first. Once MeOH is added metabolic processes are interrupted and cell
+extracts can be collected with the help of cell lifter without rush and
+subsequently transfered to 15 ml falcon and stored on ice until further
+processing (see chapter \protect\hyperlink{ccextraction_meoh}{Cell
+extraction methanolic extracts}).
+
+Determine the cell count using your additional petri dishes for each
+condition.
+
+\hypertarget{psirm:suspension}{\subsection{Supension cell
+cultures}\label{psirm:suspension}}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  Cell culture flasks
+\item
+  Labeling media (LM) supplemented with substrates
+\item
+  5 ml pipette and tips\footnote{Highly recommended, makes labeling and
+    harvest super quick}
+\item
+  1 ml pipette
+\item
+  Beaker
+\item
+  paper tissues
+\item
+  Liquid nitrogen
+\item
+  15 ml falcons
+\item
+  1.5 ml eppendorf tubes
+\item
+  Biological waste bin next to your bench
+\end{itemize}
+
+Procedure:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Pre-warm LM in the water bath
+\item
+  Determine the cell count of your cell suspension(s)
+\item
+  Take aliquots of \(10-15e+6\) cells and transfer into 15 ml falcon
+\item
+  Spin down cells very gently 300 g, 2 min at room temperature
+\item
+  Discard media into beaker
+\item
+  Resuspend cells gently in three-times 1 ml\footnote{To generate three
+    replicates}
+\item
+  Incubate and keep warm
+\item
+  Fractionate cell supension in three eppendorf tubes (3x 1 ml each)
+\item
+  Spin down quickly in top-bench centrifuge\footnote{Most of the times
+    30 s are already enough}
+\item
+  Discard media blandtly on paper tissues
+\item
+  Snap-freeze immediatly in liquid nitrogen
+\item
+  Store cells until further processing (see chapter
+  \protect\hyperlink{ccextraction_susp}{Cell extraction suspension
+  cells})
+\end{enumerate}
+
+The important step here to be quick is the alquotation of the cell
+suspension and subsequent spin down in the table centrifuge. Suspension
+cells are rather small, nevertheless \(3e+6\) cells per extract are a
+good starting point for GC-MS measurements.
+
+\section{Hints \& notes}\label{hints-notes}
+
+\begin{itemize}
+\tightlist
+\item
+  The only way to be reproducible and fast is to team up with a second
+  person.
+\item
+  Keep timing consistently through the experiment.
+\item
+  Keep substrate concentrations constant throughout the experiment in
+  all solutions.
+\item
+  Supplement one stable isotopic labeled substrate with all remaining
+  substrates in non-labeled form.
+\item
+  Think about nutrient levels in your cell culture and your experimental
+  conditions. Maybe you want to change things to physiological levels.
+\item
+  Add additional plate to each condition in order to have material for
+  western blotting and others.
+\item
+  Check carefully the confluency of your dishes and determine seeding
+  densities for different conditions.
+\item
+  In case of small molecule inhibitors: Try to avoid to solve them in
+  DMSO - strong impact on chromatography.
+\end{itemize}
+
+\chapter{Experimental Protocols}\label{protocols}
+
+\section{Metabolomics sample extraction}\label{extraction}
+
+\subsection{Cell culture experiments}\label{cell-culture-experiments}
+
+\hypertarget{ccextraction_meoh}{\subsubsection{Cell extracts in
+MeOH}\label{ccextraction_meoh}}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  Chloroform
 \item
   15 ml falcon tubes
 \item
-  cell lifter
+  thermo or rotary shaker
 \end{itemize}
 
 Procedure:
@@ -772,32 +1126,15 @@ Procedure:
 \begin{itemize}
 \tightlist
 \item
-  prepare cell culture dishes accordingly to your experimental
-  conditions
+  Add 1 ml chloroform to 5 ml methanolic cell extract
 \item
-  discard cell culture media
+  Incube for 60 min at 4°C on rotary or thermo shaker
 \item
-  add quickly 5 ml of washing buffer, discard it
+  Centrifuge at max speed for 10 min at 4°C
 \item
-  add very immediately 5 ml ice-cold 50\% MeOH suppl. 2 ug/ul cinnamic
-  acid
+  Collect polar and lipid phases into fresh falcons / tubes
 \item
-  detach cells using cell lifter
-\item
-  collect and transfer cell extract into 15 ml falcon
-\item
-  store falcons until further processing on ice
-\item
-  add 1 ml chloroform
-\item
-  incube for 60 min at cold temperatures (4 C) on rotary or thermo
-  shaker
-\item
-  centrifuge at max speed for 10 min, cold temperatures
-\item
-  collect polar and lipid phases into fresh falcons / tubes
-\item
-  dry under vacuum
+  Dry under vacuum
 \end{itemize}
 
 In order to generate technical backups:
@@ -805,33 +1142,30 @@ In order to generate technical backups:
 \begin{itemize}
 \tightlist
 \item
-  resuspend dried extracts in 600 ul 20\% MeOH
+  Resuspend dried extracts in 600 ul 20\% MeOH
 \item
-  shake at cold temperature on thermo shaker for 30 min
+  Shake at 4°C on thermo shaker for 30 min
 \item
-  split volumes into equal parts in fresh eppendorf tubes
+  Split volumes into equal parts in fresh eppendorf tubes
 \item
-  dry under vacuum
+  Dry under vacuum
 \end{itemize}
 
 Suggested cell density: \(2-3e+6\) cells / extract.
 
-\section{Tissue samples}\label{tissue-samples}
+\hypertarget{ccextraction_susp}{\subsubsection{Cell
+pellets}\label{ccextraction_susp}}
 
 Materials:
 
 \begin{itemize}
 \tightlist
 \item
-  Methanol:Chloroform:Water (MCW) in ratio 5:2:1
+  \protect\hyperlink{mcw}{MCW suppl. cinnamic acid}
 \item
-  2 mg/mg cinnamic acid in MeOH
+  15 ml falcon tubes
 \item
-  ddH20
-\item
-  eppendorf tubes
-\item
-  tissue lyzer / pulverizer
+  thermo or rotary shaker
 \end{itemize}
 
 Procedure:
@@ -839,39 +1173,89 @@ Procedure:
 \begin{itemize}
 \tightlist
 \item
-  snap-freeze tissue samples
+  Resuspend cell pellets in 1 ml MCW
 \item
-  pulverize samples
+  Incube for 60 min at 4°C on rotary or thermo shaker
 \item
-  aliquote 50 mg of tissue powder
+  Add 0.5 ml of H2O to induce phase separation
 \item
-  add 1.5 ml of MCW (suppl. with cinnamic acid final conc. 2 ug/ul)
+  Centrifuge at max speed for 10 min, cold temperatures
 \item
-  shake for 60 min on rotary shaker at cold temperature (4 C)
+  Collect polar and lipid phases into fresh falcons / tubes
 \item
-  add 0.5 ml ddH20 for phase separation
-\item
-  centrifuge maximum speed, 10 min, cold temperatures
-\item
-  collect polar and lipid phases in fresh vessels
-\item
-  dry under vacuum
+  Dry under vacuum
 \end{itemize}
 
-\section{Blood samples}\label{blood-samples}
+In order to generate technical backups:
+
+\begin{itemize}
+\tightlist
+\item
+  Resuspend dried extracts in 600 ul 20\% MeOH
+\item
+  Shake at cold temperature on thermo shaker for 30 min
+\item
+  Split volumes into equal parts in fresh eppendorf tubes
+\item
+  Dry under vacuum
+\end{itemize}
+
+Suggested cell density: \(2-3e+6\) cells / extract.
+
+\subsection{Tissue samples}\label{tissue-samples}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{mcw}{MCW suppl. cinnamic acid}
+\item
+  ddH20
+\item
+  Eppendorf tubes
+\item
+  Tissue lyzer / pulverizer
+\end{itemize}
+
+Procedure:
+
+\begin{itemize}
+\tightlist
+\item
+  Snap-freeze tissue samples
+\item
+  Pulverize samples
+\item
+  Aliquote 50 mg of tissue powder
+\item
+  Add 1.5 ml of MCW (suppl. with cinnamic acid final conc. 2 ug/ul)
+\item
+  Shake for 60 min on rotary shaker at 4°C
+\item
+  Add 0.5 ml ddH20 for phase separation
+\item
+  Centrifuge maximum speed, 10 min at 4°C
+\item
+  Collect polar and lipid phases in fresh vessels
+\item
+  Dry under vacuum
+\end{itemize}
+
+\subsection{Blood samples}\label{blood-samples}
 
 Material:
 
 \begin{itemize}
 \tightlist
 \item
-  Methanol:Chloroform:Water (MCW) in ratio 5:2:1
+  Minivette for capillary blood samples
 \item
-  2 mg/mg cinnamic acid in MeOH
+  \protect\hyperlink{mcw}{MCW suppl. cinnamic acid}
 \item
   ddH20
 \item
-  eppendorf tubes
+  Eppendorf tubes
 \end{itemize}
 
 Procedure:
@@ -879,27 +1263,26 @@ Procedure:
 \begin{itemize}
 \tightlist
 \item
-  give 20 ul blood / sera directly into 1 ml MCW to avoid lumps
+  Give 20 ul blood / sera directly into 1 ml MCW to avoid lumps
 \item
-  in case of lumps sonicate samples
+  In case of lumps sonicate samples
 \item
-  shake samples at 4 C for 800 rpm for 60 min
+  Shake samples at 4°C for 800 rpm for 60 min
 \item
-  add 500 ul ddH20 and vortex shortly
+  Add 500 ul ddH20 and vortex shortly
 \item
-  spin down at 4 C at max speed for 10 min
+  Spin down at 4°C at max speed for 10 min
 \item
-  aliquote polar phase into 2-3 times 500 ul in 1.5 ml tubes
+  Aliquote polar phase into 2-3 times 500 ul in 1.5 ml tubes
 \item
-  aliquote lipid phase 2 times in 100 ul lower in 1.5 ml eppi
+  Aliquote lipid phase 2 times in 100 ul lower in 1.5 ml eppi
 \item
-  dry in SpeedVac (35 C)
+  Dry in SpeedVac (35°C)
 \end{itemize}
 
-\chapter{Protocols - GC-ToF-MS
-measurement}\label{protocols---gc-tof-ms-measurement}
-
 \section{Sample derivatisation}\label{sample-derivatisation}
+
+\subsection{Standard protocol}\label{standard-protocol}
 
 Materials:
 
@@ -912,9 +1295,9 @@ Materials:
 \item
   MSTFA
 \item
-  Alkane mix (c10-c36) in Hexane
+  \protect\hyperlink{alkanemix}{Alkane mix} (c10-c36) in Hexane
 \item
-  chromacol vials and caps (big, small)
+  Chromacol vials and caps (big, small)
 \end{itemize}
 
 Mixtures:
@@ -927,7 +1310,7 @@ Mixtures:
   Solvent 2: 10 ul Alkane mix in 1 ml MSTFA
 \end{itemize}
 
-Volumens of both solvents are shown for standard (small vol.)
+Volumens of both solvents are shown for standard (small volumes)
 procedures.
 
 Procedure:
@@ -935,29 +1318,33 @@ Procedure:
 \begin{itemize}
 \tightlist
 \item
-  make sure samples are completly dry (1 h speed vac)
+  Make sure samples are completly dry (1 h speed vac)
 \item
-  add 20 ul (10 ul) of solvent 1 / sample
+  Add 20 ul (10 ul) of solvent 1 / sample
 \item
-  incubate on rotary shaker, 30 C, for 60 min
+  Incubate on rotary shaker, 30°C, for 60 min
 \item
-  add 80 ul (25 ul) of solvent 2 / sample
+  Add 80 ul (25 ul) of solvent 2 / sample
 \item
-  incubaate on rotary shaker, 37 C, for 90 min
+  Incubaate on rotary shaker, 37°C, for 90 min
 \item
-  centrifuge to spin down insoluble materials
+  Centrifuge to spin down insoluble materials
 \item
-  prepare aliquotes three times 28 ul or two times 15 ul (small glass
+  Prepare aliquotes three times 28 ul or two times 15 ul (small glass
   vials)
 \item
-  keep on room temperature until measurement (max. 10 days)
+  Keep on room temperature until measurement (max. 10 days)
 \end{itemize}
 
-\section{GC-MS measurement}\label{gc-ms-measurement}
+\subsection{Specific protocols}\label{specific-protocols}
 
-needs to be written
+\subsubsection{Andrash}\label{andrash}
 
-\chapter{Data processing - MAUI}\label{mauiproc}
+\subsubsection{Fabian}\label{fabian}
+
+\subsubsection{Henning}\label{henning}
+
+\chapter{Data processing - MAUI}\label{proc:maui}
 
 \section{Processing In ChromaToF}\label{processing-in-chromatof}
 
@@ -1102,7 +1489,7 @@ Exported Files:
     Natural\_MIDs.txt}
 \end{itemize}
 
-\chapter{Data Processing - Metmax}\label{metmaxexport}
+\chapter{Data Processing - Metmax}\label{proc:metmax}
 
 \section{Resampling}\label{resampling-1}
 
@@ -1118,6 +1505,1558 @@ Exported Files:
 
 \subsection{MIDs}\label{mids}
 
+\chapter{Solutions and Materials}\label{mm}
+
+\section{Solutions}\label{solutions}
+
+\hypertarget{washingbuffer}{\subsection{Label
+buffer}\label{washingbuffer}}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  ddH2O (500 ml)
+\item
+  140 mM NaCl (4.1 g)
+\item
+  5 mM Hepes (0.569 g)
+\item
+  pH calibration 7.4
+\end{itemize}
+
+Procedure:
+
+\begin{itemize}
+\tightlist
+\item
+  Weigh the correct amounts of Hepes and NaCl
+\item
+  Resolve in a glas bottle with 450 ml of water
+\item
+  Stir carefully
+\item
+  Check and adjust pH
+\item
+  Adjust volumes to 500 ml
+\end{itemize}
+
+\hypertarget{mcw}{\subsection{MCW}\label{mcw}}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  Methanol
+\item
+  Chloroform
+\item
+  ddH2O
+\item
+  Cinnamic acid stock in MeOH (2 mg/ml): final conc. 2 ug/ml
+\end{itemize}
+
+Procedure:
+
+\begin{itemize}
+\tightlist
+\item
+  Mix the solvents in the ratio of volumes - Methanol:Chlorofom:Water --
+  5:2:1
+\item
+  Supplement cinnamic acid stock 1:1000
+\item
+  Store at -25°C
+\end{itemize}
+
+\hypertarget{alkanemix}{\subsection{Alkane-Mix}\label{alkanemix}}
+
+Materials:
+
+\begin{itemize}
+\tightlist
+\item
+  Hexane
+\item
+  Alkanes: c10, c12, c15, c17, c19, c22, c28, c32, c36
+\item
+  Thermo mixer
+\item
+  Glass vials and caps
+\end{itemize}
+
+Procedure:
+
+\begin{itemize}
+\tightlist
+\item
+  Prepare stock solutions in hexane:
+\item
+  c10 - c17 (liquid): 25 ul/ml
+\item
+  c19 - c32: 20 mg/ml
+\item
+  c36: two-times 15 mg/1.5 ml
+\item
+  Warm up alkane stocks in thermo mixer 40°C
+\item
+  Prepare a text mixture in equal amounts, e.g., 50 ul each, but use
+  twice the volume of c36
+\item
+  Mix test mixture with MSTFA: 10 ul / 1 ml MSTFA
+\item
+  Check alkane profile by GC-MS
+\item
+  If required: adjust volumes and re-test or create larger volume of
+  zour mixture for aliquots
+\item
+  Store aiquots in glass vials, close well and store at 4°C
+\item
+  For usage: gently warm up glass vials at 30 C on thermo mixer for 10
+  min and vortex before adding it to the MSTFA
+\end{itemize}
+
+Adjust the volumes of the alkane stocks in order to create a curve
+shaped distribution of all alkanes in the chromatogram: lower
+intensities for c10 and c32-36, slowly increasing intensities for the
+alkanes in between.
+
+\section{Materials}\label{materials}
+
+\label{tab:chemicals}List of chemicals including company names and catalog
+number.
+
+Chemical
+
+Catalog.Nb
+
+Company
+
+Storage
+
+Chloroform
+
+132950-1L
+
+Sigma
+
+RT
+
+Cinnamic acid
+
+C80857 5g
+
+Aldrich
+
+RT
+
+Hexane for HPLC \textgreater{} 97\% (GC)
+
+34859-1L
+
+Sigma
+
+RT
+
+Methanol
+
+1060351000
+
+Merck
+
+RT
+
+Methoxyamine hydrochloride
+
+226904-5G
+
+Aldrich
+
+RT
+
+MSTFA - Methyltrimethylsilyltrifluoracetamide
+
+701270201
+
+Macherey-Nagel
+
+4°C
+
+Pyridine
+
+270970-100ML
+
+Sigma
+
+RT
+
+\chapter{Output tables}\label{output}
+
+\section{Project-files}\label{o_project}
+
+\subsection{\texorpdfstring{\texttt{MTXQC\_params.csv}}{MTXQC\_params.csv}}\label{mtxqc_params.csv}
+
+Parameter
+
+Description
+
+Value
+
+inputformat
+
+Format of input files
+
+maui
+
+ann
+
+File name of the annotation file
+
+annotation.csv
+
+sample\_ext
+
+File name of the file containing cell counts or extracted tissue weight,
+volumes of blood
+
+Sample\_extracts.csv
+
+instd
+
+Internal extraction standard present
+
+TRUE
+
+addQ
+
+Additional quantification standards measured?
+
+no
+
+addQ\_Int
+
+Integration of additional quantification standards in all batches of the
+MTXQC project
+
+no
+
+substr
+
+Applied stable isotopes
+
+glc
+
+quant\_vol
+
+Dried volume of polar phase of quantification standards in uL
+
+500
+
+backups
+
+Preparation of technical aliquots
+
+2
+
+samples
+
+Origin of samples
+
+cell extracts
+
+subf
+
+subfolder or project folder
+
+psirm\_glucose/
+
+data
+
+Nature of the experiment
+
+pSIRM
+
+quant
+
+Version of quantification standards
+
+Quant1\_v4
+
+\subsection{\texorpdfstring{\texttt{Maui\_params.csv}}{Maui\_params.csv}}\label{maui_params.csv}
+
+Parameter
+
+Description
+
+Value
+
+spath
+
+subfolder or project folder
+
+psirm\_glucose/
+
+matrix
+
+Input file containing all peak areas
+
+quantMassAreasMatrix.csv
+
+mz
+
+Input file containing m/z intensities
+
+MassSum-73.csv
+
+mid
+
+Input file containing MIDs for each intermediate and file
+
+pSIRM\_SpectraData.csv
+
+inc\_data
+
+Input file containing calculated stable isotope incorporation in the
+format 100 percent = 1
+
+DataMatrix.csv
+
+inputformat
+
+Input format type
+
+maui
+
+intstd
+
+If MTXQC project contains an internal extraction standard
+
+TRUE
+
+alkanes
+
+If MTXQC project contains evaluation of alkane profile
+
+TRUE
+
+peakchroma
+
+If MTXQC project contains evaluation of derivatisation efficiency
+
+TRUE
+
+mqt
+
+If MTXQC project includes absolute quantification
+
+TRUE
+
+inc
+
+If MTXQC project includes labeling with stable isotopes
+
+TRUE
+
+\subsection{\texorpdfstring{\texttt{Metmax\_params.csv}}{Metmax\_params.csv}}\label{metmax_params.csv}
+
+\section{\texorpdfstring{\texttt{output/gc/...}}{output/gc/...}}\label{outputgc...}
+
+\subsection{\texorpdfstring{\texttt{HM\_GC\_values.csv} \&
+\texttt{qcmetric\_xy.csv}}{HM\_GC\_values.csv \& qcmetric\_xy.csv}}\label{hm_gc_values.csv-qcmetric_xy.csv}
+
+MTXQC exports a file summarising quality factors for each of the four
+parameter evaluating the GC performance. A summary representing the
+values illustrated in the heatmap are shown in table
+\href{@ref(tab:o_hm_gc)}{\texttt{HM\_GC\_values.csv}}, individual
+exports for each metric in table
+\href{@ref(tab:o_gc_metric)}{\texttt{qcmetric\_xy.csv}}.
+
+Column.name
+
+Description
+
+Value
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+qc\_metric
+
+QC metric factor corresponding with 1 - very good and 0 - very low
+
+0.937254457
+
+title
+
+Class of QC metric
+
+alkanes
+
+Column.name
+
+Description
+
+Value
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+qc\_metric
+
+QC metric factor corresponding with 1 - very good and 0 - very low
+
+0.937254457
+
+title
+
+Class of QC metric
+
+alkanes
+
+\subsection{\texorpdfstring{\texttt{IntStandard\_normfactors.csv} \&
+\texttt{IntStandard\_stats.csv}}{IntStandard\_normfactors.csv \& IntStandard\_stats.csv}}\label{intstandard_normfactors.csv-intstandard_stats.csv}
+
+Column.name
+
+Description
+
+Value
+
+File
+
+File name
+
+e18274ba\_17.cdf
+
+PeakArea
+
+Peak area of internal extraction standard
+
+89308492
+
+Batch\_Id
+
+Bacth-Id
+
+e18274ba
+
+IntStd\_fac
+
+Determined normalisation factor
+
+0.837457514
+
+IntStd\_eval
+
+Evaluation of normalisation factor in relation to defined range
+plus/minus one standard deviation
+
+within
+
+Column.name
+
+Description
+
+Value
+
+File
+
+File name
+
+e18274ba\_17.cdf
+
+PeakArea
+
+Peak area of internal extraction standard
+
+89308492
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+IntStd\_fac
+
+Normalisation factor
+
+0.837457514
+
+IntStd\_eval
+
+Evaluation regarding QC
+
+within
+
+n\_batch
+
+Number of annotated intermediates
+
+54
+
+mean\_batch
+
+Mean value of internal standard peak area across the batch
+
+106642415.3
+
+sd\_batch
+
+Standard deviation of the peak area across the batch of the internal
+extraction standard
+
+36710894.86
+
+\subsection{\texorpdfstring{\texttt{Min\_Annotation.csv} \&
+\texttt{SumArea\_stats.csv}}{Min\_Annotation.csv \& SumArea\_stats.csv}}\label{min_annotation.csv-sumarea_stats.csv}
+
+Column.name
+
+Description
+
+Value
+
+File
+
+File name
+
+e18274ba\_17.cdf
+
+Batch\_Id
+
+Extracted Batch-Id derived from file name
+
+e18274ba
+
+n\_area
+
+Number of peak areas per file
+
+101
+
+sum\_area
+
+Sum of all peak areas
+
+44614610885
+
+n\_total
+
+Total number of entries (including NA)
+
+107
+
+mean\_batch
+
+Mean value of peak areas across the batch
+
+34409759414
+
+sd\_batch
+
+Standard deviation of peak areas across the batch
+
+12913422445
+
+area\_fac
+
+Normalisation factor of the file
+
+1.296568521
+
+n\_50
+
+Number of annotated peak areas per file corresponding to fifty percent
+of maximum number of annotated peaks in the batch
+
+53.5
+
+Column.name
+
+Description
+
+Value
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+n\_50
+
+Number corresponding to fifty percent of the maximum number of annotated
+peaks per file
+
+53.5
+
+\subsection{\texorpdfstring{\texttt{mz73\_data.csv}}{mz73\_data.csv}}\label{mz73_data.csv}
+
+Column.name
+
+Description
+
+Value
+
+File
+
+File name
+
+e18274ba\_17.cdf
+
+Batch\_Id
+
+Batch-ID
+
+e18274ba
+
+mean\_73
+
+Mean value of the sum of m/z 73 intensities per file
+
+16314646.1
+
+sd\_73
+
+Standard deviation of the mean of the sum of m/z 73 intensities per file
+
+143890119.5
+
+n\_peaks
+
+Number of intensities used for statistics
+
+600
+
+sum\_area
+
+Sum of all m/z intensities
+
+6777312761
+
+ratio\_total
+
+Ratio of sum\_area in relation to the sum of all annotated peak areas
+
+0.002407244
+
+\section{\texorpdfstring{\texttt{output/quant/...}\{o\_quant\}}{output/quant/...\{o\_quant\}}}\label{outputquant...o_quant}
+
+\subsection{\texorpdfstring{\texttt{calcheck\_linearity.csv}}{calcheck\_linearity.csv}}\label{calcheck_linearity.csv}
+
+Column.name
+
+Description
+
+Value
+
+Metabolite
+
+Full library name of the metabolite
+
+Alanine\_(3TMS)\_MP\_RI:1367\_IDENT:B+C
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+File
+
+File name
+
+e18274ba\_53.cdf
+
+QuantMasses
+
+Defined quantification masses
+
+110.0 133.0 114.0 100.0 188.0 190.0
+
+PeakArea
+
+Sum of peak areas based on defined QuantMasses
+
+12710956
+
+Type
+
+Kind of sample
+
+sample
+
+Metabolite\_manual
+
+Manual defined metabolite name
+
+\#Alanine (3TMS)
+
+Metabolite\_short
+
+Short version of metabolite name
+
+Alanine\_(3TMS)
+
+Lettercode
+
+Lettercode version of metabolite name
+
+Ala\_3TMS
+
+Q1\_value
+
+Quantity in the quantification standard Q1:1 if included in pmol
+
+x
+
+Mass\_Pos
+
+m/z value that should be evaluated in case of the application of
+isotopes
+
+190
+
+SE\_sel
+
+Intermediate used for evaluation of MIDs if present
+
+x
+
+Q\_sel
+
+Intermediate used for absolute quantification if Q1:1 present
+
+x
+
+nopsirm
+
+If exclusivly used for quantification purposes only
+
+Standards
+
+Origin
+
+Quantification standard
+
+Qstd
+
+adj\_r\_squared
+
+Adjusted Rsquare value of linear regression of the calibration curve
+
+0.997002799
+
+slope
+
+Slope of the calibration curve determined by linear regression
+
+0.000578604
+
+intercept
+
+Intercept of the calibration curve determined by linear regression
+
+-898.3400476
+
+calc\_curve
+
+Calibration curve available for absolute quantification
+
+yes\_cal
+
+islinear
+
+Evaluation of peak area in relation to linear range of the calibration
+curve
+
+linear
+
+\subsection{\texorpdfstring{\texttt{CalculationFileData.csv}}{CalculationFileData.csv}}\label{calculationfiledata.csv}
+
+Column.name
+
+Class
+
+Description
+
+Value
+
+Batch\_Id
+
+AnnExp
+
+Batch-Id extracted from file name
+
+e18274ba
+
+CL
+
+AnnExp
+
+Experimental parameter
+
+BE(2)-C
+
+Cond
+
+AnnExp
+
+Experimental parameter
+
+Control
+
+File
+
+AnnExp
+
+File name
+
+e18274ba\_25.cdf
+
+Standards
+
+AnnExp
+
+Defined as standard (InternalStandard, Alk)
+
+Time
+
+AnnExp
+
+Experimental parameter
+
+0
+
+Type
+
+AnnExp
+
+Type of measurement
+
+sample
+
+Extract\_vol
+
+AnnExtract
+
+Defined extractes in count, mg or uL defined in Unit
+
+3290000
+
+Unit
+
+AnnExtract
+
+Defined unit for corresponding Extract\_vol
+
+count
+
+Lettercode
+
+AnnMet
+
+Lettercode version of metabolite name
+
+Glyc3P
+
+Metabolite
+
+AnnMet
+
+Library name
+
+Glycerol-3-phosphate\_(4TMS)\_MP\_RI:1756\_IDENT:B+C
+
+Metabolite\_manual
+
+AnnMet
+
+Manual defined metabolite name
+
+\#Glycerol-3-phosphate (4TMS)
+
+Metabolite\_short
+
+AnnMet
+
+Short version of library name
+
+Glycerol-3-phosphate\_(4TMS)
+
+absconc
+
+CalCurve
+
+Absolute quantity in pmol
+
+24061.77157
+
+adj\_r\_squared
+
+CalCurve
+
+Adjusted Rsquare value of calibration curve
+
+0.999667641
+
+calc\_curve
+
+CalCurve
+
+Relation of peak area to calibration curve
+
+yes\_cal
+
+intercept
+
+CalCurve
+
+Intercept of calibration curve
+
+234.0083706
+
+islinear
+
+CalCurve
+
+Classification of peak area
+
+linear
+
+Origin
+
+CalCurve
+
+Source of Quant1:1 value
+
+Qstd
+
+Q1\_value
+
+CalCurve
+
+Quantity defined in Q1:1 standard
+
+x
+
+slope
+
+CalCurve
+
+Slope of calibration curve
+
+0.000821689
+
+corr\_absconc
+
+ExtrFactor
+
+Corrected absolute quantities by extraction factor
+
+16041.18105
+
+extr\_fac
+
+ExtrFactor
+
+Extraction factor derived from MTXQC\_params
+
+0.666666667
+
+Mass\_Pos
+
+MTXQCsettings
+
+m/z-value (m\_inc) used for determination of stable isotope
+incorporation
+
+359
+
+nopsirm
+
+MTXQCsettings
+
+Exclusivly used for absolute quantification
+
+Q\_sel
+
+MTXQCsettings
+
+Used for absolute quantification
+
+x
+
+QuantMasses
+
+MTXQCsettings
+
+Defined quantification masses
+
+101.0 299.0 133.0 357.0 103.0 359.0
+
+SE\_sel
+
+MTXQCsettings
+
+Evaluation of MIDs if available
+
+x
+
+IntStd\_eval
+
+Norm\_InternalStd
+
+Evaluation of internal extraction standard
+
+within
+
+IntStd\_fac
+
+Norm\_InternalStd
+
+Normalisation factor based on internal extraction standard
+
+1.090830836
+
+area\_fac
+
+Norm\_SumOfArea
+
+Normalisation factor for sum of area normalisation
+
+0.507591279
+
+sum\_area
+
+Norm\_SumOfArea
+
+Sum of all peak areas of the file
+
+17466093782
+
+Conc\_microM
+
+Quantities
+
+Quantities in (micromolar) only determined for extracted volumes
+
+NA
+
+Conc\_pmio
+
+Quantities
+
+Quantities in (pmol)
+
+4875.73892
+
+IntStd\_Conc
+
+Quantities
+
+Quantities in (pmol) after normalisation with internal standard factor
+
+14705.47084
+
+IntStd\_Conc\_microM
+
+Quantities
+
+Quantities in (micromolar) after normalisation with internal standard
+factor: only for volumes
+
+NA
+
+IntStd\_Conc\_pmio
+
+Quantities
+
+Quantities in (pmol/unit) after normalisation with internal standard
+factor
+
+4469.747976
+
+IntStd\_sumA\_Conc
+
+Quantities
+
+Quantities in (pmol) after normalisation with internal standard factor
+and sum of area normalisation
+
+28971.0865
+
+IntStd\_sumA\_Conc\_pmio
+
+Quantities
+
+Quantities in (pmol/per unit) after normalisation with internal standard
+factor and sum of area normalisation
+
+8805.801367
+
+PeakArea
+
+Quantities
+
+Determined peak area based on QuantMasses
+
+28998527
+
+sumA\_Conc
+
+Quantities
+
+Quantities in (pmol) after sum of area normalisation
+
+31602.5545
+
+sumA\_Conc\_microM
+
+Quantities
+
+Quantities in (micromolar) after sum of area normalisation
+
+NA
+
+sumA\_Conc\_pmio
+
+Quantities
+
+Quantities in (pmol/per unit) after sum of area normalisation
+
+9605.639664
+
+\subsection{\texorpdfstring{\texttt{HeatMap\_Quant\_pTop5.csv}}{HeatMap\_Quant\_pTop5.csv}}\label{heatmap_quant_ptop5.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Short name of metabolite
+
+Cit
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+Metabolite
+
+Library name of metabolite
+
+Citric acid\_(4TMS)\_MP\_RI:1814\_IDENT:B+D
+
+Par
+
+Parameter
+
+R2\_cal
+
+Val
+
+Value of the parameter for corresponding metabolite
+
+0.996053496
+
+\subsection{\texorpdfstring{\texttt{pTop5\_Calibration\_Samples\_lincheck.csv}}{pTop5\_Calibration\_Samples\_lincheck.csv}}\label{ptop5_calibration_samples_lincheck.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Short name of metabolite
+
+3PGA
+
+islinear
+
+Evaluation of peak area in relation to calibration curve if available
+
+NaCal
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+Origin
+
+Origin of Quant1:1-value
+
+NA
+
+count
+
+Number of peak areas
+
+51
+
+sum\_lin
+
+Sum of peak area per islinear level
+
+51
+
+prop
+
+Fraction of count to sum\_lin
+
+1
+
+\subsection{\texorpdfstring{\texttt{top5\_CalibrationInfo\_unique.csv}}{top5\_CalibrationInfo\_unique.csv}}\label{top5_calibrationinfo_unique.csv}
+
+Column.name
+
+Description
+
+Value
+
+Metabolite
+
+Library name of metabolite
+
+Citric acid\_(4TMS)\_MP\_RI:1814\_IDENT:B+D
+
+Lettercode
+
+Lettercode name of metabolite
+
+Cit
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+Origin
+
+Origin of quant1:1 value
+
+Qstd
+
+adj\_r\_squared
+
+Adjsuted Rsquare of calibration curve
+
+0.996053496
+
+intercept
+
+Intercept of calibration curve
+
+564.549288
+
+slope
+
+Slope of calibration curve
+
+0.000194064
+
+Frac\_calcurve
+
+Fraction of peak area in linear range of calibration curve
+
+10
+
+\subsection{\texorpdfstring{\texttt{top5\_QMQcurveInfo.csv}}{top5\_QMQcurveInfo.csv}}\label{top5_qmqcurveinfo.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Lettercode of metabolite name
+
+Cit
+
+Letter\_Derivate
+
+Derivate name
+
+Cit
+
+Quant1\_v4
+
+Quant1:1 value in (pmol)
+
+52050
+
+Metabolite
+
+Library name of metabolite
+
+Citric acid\_(4TMS)\_MP\_RI:1814\_IDENT:B+D
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+Dilution
+
+Dilution factor
+
+0.2
+
+ChromIntensities
+
+Corresponding peak areas
+
+45074572
+
+Concentration
+
+Concentration in (pmol)
+
+10410
+
+Origin
+
+Origin of quantification standard
+
+Qstd
+
+Metabolite\_short
+
+Short name of metabolite
+
+Citric acid 275\_(4TMS)
+
+adj\_r\_squared
+
+Adjusted Rsquare of calibration curve
+
+0.996053496
+
+intercept
+
+Intercept of calibration curve
+
+564.549288
+
+slope
+
+Slope of calibration curve
+
+0.000194064
+
+max
+
+Max. value of calibration curve
+
+52050
+
+min
+
+Min. value of calibration curve
+
+260.25
+
+\section{\texorpdfstring{\texttt{output/inc/...}}{output/inc/...}}\label{outputinc...}
+
+\subsection{\texorpdfstring{\texttt{HeatMap\_Incorporation.csv}}{HeatMap\_Incorporation.csv}}\label{heatmap_incorporation.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Lettercode name of metabolite
+
+3PGA
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+Par
+
+Parameter
+
+NA\_count
+
+Val
+
+Value of the parameter shown in heatmap
+
+0.740740741
+
+\subsection{\texorpdfstring{\texttt{SE\_calculation\_NAscore.csv}}{SE\_calculation\_NAscore.csv}}\label{se_calculation_nascore.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Lettercode name of metabolite
+
+Cit
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+na\_frac\_r
+
+Class of NA-value
+
+0
+
+N
+
+Number of MIDs
+
+46
+
+fracr\_prop
+
+Fraction of MIDs with x NA-values in relation to total number of
+evaluated MIDs
+
+0.851851852
+
+\subsection{\texorpdfstring{\texttt{SE\_classification.csv}}{SE\_classification.csv}}\label{se_classification.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Lettercode name of metabolite
+
+Cit
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+File
+
+File name
+
+e18274ba\_26.cdf
+
+sum\_spa
+
+\emph{expl}
+
+4297
+
+sum\_bpa
+
+\emph{expl}
+
+1861
+
+low3a\_ratio
+
+\emph{expl}
+
+2.30897367
+
+rel\_sb
+
+\emph{expl}
+
+higher
+
+val\_score
+
+Validation score
+
+confident
+
+count\_score
+
+MID evaluation
+
+goodQ
+
+\subsection{\texorpdfstring{\texttt{SE\_validation.csv}}{SE\_validation.csv}}\label{se_validation.csv}
+
+Column.name
+
+Description
+
+Value
+
+Lettercode
+
+Lettercode name of metabolite
+
+Cit
+
+Batch\_Id
+
+Batch-Id
+
+e18274ba
+
+count\_score
+
+Evaluation of MID
+
+goodQ
+
+N\_count
+
+Number of evaluated MIDs
+
+54
+
+sum\_files
+
+Number of detected MIDs
+
+54
+
+prop
+
+Proportion of MIDs for count\_score level
+
+1
+
 \chapter{Frequently Asked Questions}\label{FAQ}
 
 \section{What are additional quantification
@@ -1125,6 +3064,294 @@ standards}\label{what-are-additional-quantification-standards}
 
 \section{How do I extend
 conversion\_metabolite.csv}\label{how-do-i-extend-conversion_metabolite.csv}
+
+\chapter{GC-MS settings}\label{gcms}
+
+In the following paragraphs details of GC-MS settings are described in
+detail. The herein described settings have been optimized for cell
+extracts measured in split-mode 1:5 on the instrument Pegasus 4D-C
+GC-ToF-MS in 1D mode equiped with an autosampler Gerstel MPS.
+
+\subsection{Autosampler settings}\label{autosampler-settings}
+
+The table \ref{tab:gerstel} summarises the defined parameter for method
+settings of the Gerstel MPS.
+
+\label{tab:gerstel}Parameter of Gerstel MPS settings
+
+Part
+
+Parameter
+
+Value
+
+System
+
+Runtime
+
+40 min
+
+System
+
+GC Cool down time
+
+3 min
+
+System
+
+Cryo Timeout
+
+15 min
+
+MPS - Liquid Injection
+
+Syringe
+
+10ulALX
+
+MPS - Liquid Injection
+
+Sandwhich
+
+No Sandwhich
+
+MPS - Liquid Injection
+
+Inj. Volume (uL)
+
+0.8
+
+MPS - Liquid Injection
+
+Air Volume below (uL)
+
+1
+
+MPS - Liquid Injection
+
+Inj. Speed (uL/s)
+
+20
+
+MPS - Liquid Injection
+
+Fill Volume (uL)
+
+4
+
+MPS - Liquid Injection
+
+Fill Strokes for Sample
+
+6
+
+MPS - Liquid Injection
+
+Fill Speed (uL/s)
+
+1
+
+MPS - Liquid Injection
+
+Eject Speed (uL/s)
+
+20
+
+MPS - Liquid Injection
+
+Viscosity Delay (s)
+
+1
+
+MPS - Liquid Injection
+
+Pre Inj. Delay (s)
+
+0
+
+MPS - Liquid Injection
+
+Post Inj. Delay (s)
+
+0
+
+MPS - Liquid Injection
+
+Inj. Penetration (mm)
+
+30
+
+MPS - Liquid Injection
+
+Sample Tray Type
+
+VT98
+
+MPS - Liquid Injection
+
+Vial Penetration (mm)
+
+32
+
+MPS - Rinse
+
+Wash1 Preclean
+
+2
+
+MPS - Rinse
+
+Wash1 Postclean
+
+3
+
+MPS - Rinse
+
+Wash1 Preclean
+
+2
+
+MPS - Rinse
+
+Wash1 Postclean
+
+3
+
+MPS - Rinse
+
+Sample (4.0 uL)
+
+0
+
+MPS - Rinse
+
+Rinse Fill speed (uL/s)
+
+1
+
+MPS - Rinse
+
+Viscosity Delay (s)
+
+1
+
+MPS - Rinse
+
+Eject Speed (uL/s)
+
+20
+
+The injector itself is a temperature-regulated system providing the
+advantage of a focused injection of the sample. Gradient
+
+\begin{figure}
+\centering
+\includegraphics{images/cis.PNG}
+\caption{\label{fig:cis}Settings temperature-regulated injection for Gerstel
+MPS}
+\end{figure}
+
+\subsection{Gas chromatography}\label{gas-chromatography}
+
+The most important settings of the GC method are listed below. A
+graphical representation of the gradient in the oven is shown in figure
+\ref{fig:gradient} and corresponding values in table
+\ref{tab:gradient2}.
+
+Flow path:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Inlet: Front
+\item
+  Capillary: GC Oven 50 m, 250 u int. diameter, 0.25 u film thickness,
+  RTX-5 phase
+\item
+  Capillarty: Detector 0.21 m, 250 u int. diameter, 0.25 u film
+  thickness, RTX-5 phase
+\item
+  Detector: TOF
+\end{enumerate}
+
+Additional parameter:
+
+\begin{itemize}
+\tightlist
+\item
+  Carrier Gas: Helium
+\item
+  Transfer line Temperature (°C): 250
+\end{itemize}
+
+Front Inlet:
+
+\begin{itemize}
+\tightlist
+\item
+  Mode: split / splitless
+\item
+  Flow: 1.2 mL/min, entire run
+\item
+  Septum Purge Flow: 0 mL/min
+\item
+  Temperature: Initial - 200°C; duration 0 min
+\end{itemize}
+
+Oven:
+
+\begin{itemize}
+\tightlist
+\item
+  Equilibration time (s): 60
+\item
+  Modulator enabled: yes
+\item
+  Modulator offset (°C): 5
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/gradient.PNG}
+\caption{\label{fig:gradient}GC gradient - graphical representation. Rate in
+(°C/min), Target temperature in (°C), Duratin in (min).}
+\end{figure}
+
+\label{tab:gradient2}GC gradient profile in numbers.
+
+Rate
+
+Target\_Temp
+
+Duration
+
+Initial
+
+68
+
+2
+
+5
+
+120
+
+0
+
+7
+
+200
+
+0
+
+12
+
+320
+
+6
+
+\subsection{Mass spectrometer
+settings}\label{mass-spectrometer-settings}
 
 \bibliography{book.bib,packages.bib}
 

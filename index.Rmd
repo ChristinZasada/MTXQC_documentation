@@ -21,7 +21,7 @@ The tool has been set up to support the in-lab developed workflow for quantitati
 
 Nevertheless MTXQCvX2 includes a module in order to integrate all kind of data provided in spreadsheet-format, e.g., derived from metmax, extracting required information and creating corresponding files (MTXQCvX2_part4).
 
-Both workflows are introduced in the distinct chapters including their required input parameter (chapter \@ref(workflows)). Technical relevant information are summarised in chapter \@ref(tables).
+Both workflows are introduced in the distinct chapters including their required input parameter (chapter [Workflow Maui](#wf:maui) and [Workflow Metmax](#wf:metmax)). 
 
 
 ```{r include=FALSE}

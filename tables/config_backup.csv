@@ -1,0 +1,5 @@
+Column name,Description,Value
+Metabolite,Library name of metabolite,Alanine_ beta-_(3TMS)_MP_RI:1435_IDENT:A+D
+Mass.m.z.,m/z value ,188
+BackupPeakArea,Peak area of Backup MID,4960
+BackupMID,MID value for corresponding Mass.m.z.,0.8005

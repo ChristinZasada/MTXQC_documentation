@@ -1,0 +1,6 @@
+Column name,Description,Value
+Lettercode,Lettercode name of metabolite,Cit
+Batch_Id,Batch-Id,e18274ba
+na_frac_r,Class of NA-value,0
+N,Number of MIDs,46
+fracr_prop,Fraction of MIDs with x NA-values in relation to total number of evaluated MIDs,0.851851852

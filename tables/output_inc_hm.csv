@@ -1,0 +1,5 @@
+Column name,Description,Value
+Lettercode,Lettercode name of metabolite,3PGA
+Batch_Id,Batch-Id,e18274ba
+Par,Parameter,NA_count
+Val,Value of the parameter shown in heatmap,0.740740741
