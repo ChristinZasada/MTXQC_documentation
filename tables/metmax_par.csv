@@ -1,0 +1,12 @@
+Parameter,Description,Value
+spath,name of project folder,psirm_glucose/
+matrix,File name containing peak areas for each metabolite in each file,peakarea_samples.csv
+mz,File name containing intensities for m/z 73 for each intermediate of each file,mz73_metmax.csv
+mid,File name containing MIDs of metabolites and measurements,mid_metmax.csv
+inc_data,File name used to save determined 13C-incorporation,DataMatrix.csv
+inputformat,Input format ,metmax
+intstd,Evaluation of an internal extraction standard and generation of corresponding files; requires definition of an internal standard in conversion_metabolites.csv; requires peak areas in the file defined as matrix,FALSE
+alkanes,"Evaluation of alkane profile and generation of files, requires definition of alkanes in conversion_metabolite.csv; requires peak areas in the file defined as matrix",TRUE
+peakchroma,Generation of files required for sum of area normalisation; requires a defined file in mz,TRUE
+mqt,Generation of ManualQuantTable.tsv - file required for the absolute quantification; requires annotation of quant standards in annotation file,TRUE
+inc,Evaluation of stable isotope incorporation and generation of files; requires the definition of a file containing MIDs,FALSE

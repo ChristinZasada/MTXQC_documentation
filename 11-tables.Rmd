@@ -21,6 +21,17 @@ knitr::kable(t, booktabs=TRUE)
 
 ### `Metmax_params.csv`
 
+This table is create while running `MTXQCvX2_part4.Rmd` and summarises the input parameter you defined for knitting the document.
+
+
+
+```{r metmaxparams, echo=FALSE}
+
+t = read.csv("tables/metmax_par.csv", TRUE)
+knitr::kable(t, booktabs = TRUE)
+
+```
+
 
 ## `output/gc/...`{#o_gc}
 ### `HM_GC_values.csv` \& `qcmetric_xy.csv`
