@@ -1,0 +1,15 @@
+Parameter,Value
+GC method time equals MS method total time,yes
+Acquisition delay (s),340
+Off,Start of run - 340 s
+On,340s - End of run
+Start Mass (u),60
+End Mass (u),600
+Acquisition rate (spectra/second),20
+Detector voltage - specify relative detector voltage,yes
+Optimized Voltage Offset,230
+Electron Energy (V),-70
+Mass Defect (mu/100 u),0
+Temperature Ion source ©,250
+Wait for Ion source tempetures to reach set point,yes
+Source Temperature Equilibration Time (s),0

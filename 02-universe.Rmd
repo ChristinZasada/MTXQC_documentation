@@ -1,27 +1,77 @@
 # MTXQCvX2 Universe{#universe}
 
-Back then in 2015 I started to think about a way how to evaluate my own datasets regarding some quality parameters. From a scratch of a few quality metrices evaluated in the frame of a very, very long Rscript until now many different generations of the MTXQC existed. 
+Back then in 2015 I started to think about a way how to evaluate my own datasets regarding some quality parameters. Many different generations of the MTXQC existed on the way grom a scratch of a few quality metrices evaluated in the frame of a very, very long Rscript until the state nowadays. 
 
-Out of this evolution cycle MTXQC developed to a suit of modules that can be used complimentary in order to evaluate and process GC-MS derived metabolomics data. `MTXQC_part1.Rmd` represents the heart of this little universe. Besides that there are many ways how to use MTXQCvX2. Proposed workflows are illustrated in chapter [Workflow Maui](#wf:maui) and chapter [Workflow Metmax](#wf:metmax). The flow diagram introduced [here](\ref@fig:flow) might help you to decide how to get started.
+Out of this evolution cycle MTXQC developed to a suit of modules that can be used complimentary in order to evaluate and process GC-MS derived metabolomics data. `MTXQC_part1.Rmd` represents the heart of this little universe. Besides that there are many ways how to use and combine the individual modules of MTXQCvX2. Proposed workflows are illustrated for two input formats in chapter [Workflow Maui](#wf:maui) and chapter [Workflow Metmax](#wf:metmax). The flow diagram introduced [here](\ref@fig:flow) might help you to decide how to get started and how to combine modules.
 
-The following sections give a short overview about the main parameters and functions of each module, its generated graphical illustrations and tables.
+The following sections give a short overview about the main parameters and functions, graphical and tabular outputs of each individual module. You are invited to use one of the provided datasets to play around and discover the different functionalities of MTXQCvX2. Follow the instructions in the [FAQ section](#wheretostart) and have a glimpse.
 
-## MTXQC_init.Rmd{#init}
+Keep in mind - any of MTXQCvX2 modules should be executed using `knit with parameters`. Check out the little ball of yarn in RStudio editor task bar, click the little black triangle next to it and choose this option. 
+
+## `MTXQCvX2_init.Rmd`{#init}
+
+### Input parameter
+
+`1. Create MTXQCproject subfolder: psirm_glucose`
+
+### Description
+Here we go - this module represents the starting point of the processing of any GC-MS derived metabolomics dataset. `MTXQCvX2_init.Rmd` creates for you the internal folder structure in order to run smoothly and checks the installation of all required packages. In the case of missing packages those ones are automatically installed and ready to be used. 
+
+The only parameter you are going to be asked is to define a name for a folder, the so-called `subfolder`, e.g., `psirm_glucose`. I highly recommend to create for each project a project folder. It provides a convinient way to keep input and output files into a single folder and even more you can work on a number of projects within the same MTXQCvX2 project without changing Rprojects.
+
+For the following the project folder or subfolder is always refered as `psirm_glucose`. Inside this folder `MTXQCvX2_init.Rmd` generated three folders: `figure`, `input` and `output`. The last two folders contain three subfolders (`gc`, `inc`, `quant`) where you are going to save your input files or MTXQCvX2 stores generated outputs. The folder `input` contains furthermore the subfolder `metmax` and `add_quant`.
+
+### Notes
+
+ * Follow the instructions in the chapter desribing the MTXQCvX2 workflows for [Maui](#wf:maui) and [Metmax](#wf:metmax). There you are going to find detailed instructions where to put your input files.
+ 
+ * The file containing the annotation of your files and experimental conditions as well as for the definition of your cell extracts should be saved on the level of the folders `input`, `quant` \& `figure`.
+ 
+ * If you want to combine GC-MS batches in one project you need to combine the input files beforehand. Please read the instructions at [this place](#combinebatches).
+
+
+## `MTXQCvX2_ExperimentalSetup.Rmd`{#expsetup}
+### Input parameter
+
+1. `Run MTXQC based on data in subfolder: *psirm_glucose*`
+2. `Select the input format of your data: maui, metmax`
+3. `File name of your project annotation file (.csv): *annotation.csv*`
+4. `File name of your project sample extracts (.csv): *Sample_extracts.csv*`
+5. `Type of performed experiment: qMTX, pSIRM, pSIRM timeseries`
+6. `Specify applied stable isotopes: *selection of isotopes*`
+7. `Internal extraction standard applied: check, uncheck`
+8. `Specify the origin of samples: cell extracts, tissue, ...`
+9. `Include additional calibration curves for the absolute quantification: no, yes`
+10. `Integrate additional calibration curves into all batches of the project: yes, no`
+11. `Quantification standards: Quant1_v3, Quant1_v4`
+12. `Quant: Volume (uL) of dried polar phase after extraction: *500*`
+13. `Technical replicates per sample: *2*`
+
+
+### Description
+
+
+### Notes
 
 
 
+## `MTXQCvX2_part1.Rmd`{#heart}
+
+### Input parameter
 
 
-## MTXQC_ExperimentalSetup{#expsetup}
+
+### Description
 
 
-## MTXQC_part 1{#heart}
+### Notes
 
 
-## MTXQC_part 2 - Post-Processing{#postproc}
+
+## `MTXQCvX2_part2.Rmd` - Post-Processing{#postproc}
 
 
-## MTXQC_part 3 - Manual Validation{#manval}
+## `MTXQCvX2_part3.Rmd` - Manual Validation{#manval}
 
 
-## MTXQC_part 4 - Metmax integration{#metmax}
+## `MTXQCvX2_part4.Rmd` - Metmax integration{#metmax}

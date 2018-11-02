@@ -1,0 +1,11 @@
+Parameter,Value
+Carrier Gas,Helium
+Transfer Line Temperature (C),250
+Mode,split
+Flow (mL/min),"1.2, entire run"
+Septum Purge Flow (mL/min),0
+Temperature Initial (C),200
+Temperature Initial duration (min),0
+Equilibration Time (s),60
+Modulator enabled,yes
+Modulator offset (C),5

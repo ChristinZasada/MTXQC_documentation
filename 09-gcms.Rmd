@@ -8,15 +8,15 @@ The table \@ref(tab:gerstel) summarises the defined parameter for method setting
 
 ```{r gerstel, echo=FALSE}
 
-mps = read.csv("tables/mps_settings_long.csv", TRUE)
+mps = read.csv("tables/mps_settings.csv", TRUE)
 
-knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings")
-
-# knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings") %>%
-#   kable_styling() %>%
-#   group_rows(index = c("System" = 3, 
-#                        "MPS Liq. Inj." = 15,
-#                        "MPS Rinse" = 8))
+#knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings")
+# 
+knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings") %>%
+   kable_styling() %>%
+   group_rows(index = c("System" = 3, 
+                       "MPS Liq. Inj." = 15,
+                        "MPS Rinse" = 8))
   
 
 ```
@@ -41,26 +41,24 @@ Flow path:
 3. Capillarty: Detector 0.21 m, 250 u int. diameter, 0.25 u film thickness, RTX-5 phase
 4. Detector: TOF
 
-Additional parameter:
 
-* Carrier Gas: Helium
-* Transfer line Temperature (&deg;C): 250
+```{r gc, echo=FALSE}
 
-Front Inlet:
+mps = read.csv("tables/gc_settings.csv", TRUE)
 
-* Mode: split / splitless
-* Flow: 1.2 mL/min, entire run
-* Septum Purge Flow: 0 mL/min
-* Temperature: Initial - 200&deg;C; duration 0 min
+#knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings")
+# 
+knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings") %>%
+   kable_styling() %>%
+   group_rows(index = c("System" = 2, 
+                       "Front Inlet" = 5,
+                        "Oven" = 3))
+  
 
-Oven:
-
-* Equilibration time (s): 60
-* Modulator enabled: yes
-* Modulator offset (&deg;C): 5
+```
 
 
-```{r gradient, echo=FALSE, fig.cap="GC gradient - graphical representation. Rate in (&deg;C/min), Target temperature in (&deg;C), Duratin in (min).", fig.width=5}
+```{r gradient, echo=FALSE, fig.cap="GC gradient - graphical representation. Rate in (&deg;C/min), Target temperature in (&deg;C), Duratin in (min)."}
 knitr::include_graphics("images/gradient.PNG")
 
 ```
@@ -71,12 +69,26 @@ grad = data.frame(Rate = c("Initial", 5, 7, 12),
                   Target_Temp = c(68, 120, 200, 320),
                   Duration = c( 2, 0, 0, 6))
 
-kable(grad, booktabs = TRUE, caption = "GC gradient profile in numbers.")
+kable(grad, booktabs = TRUE, caption = "GC gradient profile - Rate shown in (K/min), Target Temp in (&deg;C), Duration in (min)")
 
 ```
 
 ### Mass spectrometer settings
 
+```{r ms, echo=FALSE}
+
+mps = read.csv("tables/ms_setting.csv", TRUE)
+
+#knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings")
+# 
+knitr::kable(mps, booktabs = TRUE, caption = "Parameter of Gerstel MPS settings") %>%
+   kable_styling() %>%
+   group_rows(index = c("Filament" = 4, 
+                       "Mass detection" = 7,
+                        "Ion source" = 3))
+  
+
+```
 
 
 
