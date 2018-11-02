@@ -106,22 +106,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="universe.html"><a href="universe.html"><i class="fa fa-check"></i><b>3</b> MTXQCvX2 Universe</a><ul>
-<li class="chapter" data-level="3.1" data-path="universe.html"><a href="universe.html#mtxqcvx2_init.rmd"><i class="fa fa-check"></i><b>3.1</b> <code id="init">MTXQCvX2_init.Rmd</code></a><ul>
-<li class="chapter" data-level="3.1.1" data-path="universe.html"><a href="universe.html#input-parameter"><i class="fa fa-check"></i><b>3.1.1</b> Input parameter</a></li>
-<li class="chapter" data-level="3.1.2" data-path="universe.html"><a href="universe.html#description"><i class="fa fa-check"></i><b>3.1.2</b> Description</a></li>
-<li class="chapter" data-level="3.1.3" data-path="universe.html"><a href="universe.html#notes"><i class="fa fa-check"></i><b>3.1.3</b> Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="universe.html"><a href="universe.html#mtxqcvx2_experimentalsetup.rmd"><i class="fa fa-check"></i><b>3.2</b> <code id="expsetup">MTXQCvX2_ExperimentalSetup.Rmd</code></a><ul>
-<li class="chapter" data-level="3.2.1" data-path="universe.html"><a href="universe.html#input-parameter-1"><i class="fa fa-check"></i><b>3.2.1</b> Input parameter</a></li>
-<li class="chapter" data-level="3.2.2" data-path="universe.html"><a href="universe.html#description-1"><i class="fa fa-check"></i><b>3.2.2</b> Description</a></li>
-<li class="chapter" data-level="3.2.3" data-path="universe.html"><a href="universe.html#notes-1"><i class="fa fa-check"></i><b>3.2.3</b> Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="universe.html"><a href="universe.html#mtxqcvx2_part1.rmd"><i class="fa fa-check"></i><b>3.3</b> <code id="heart">MTXQCvX2_part1.Rmd</code></a><ul>
-<li class="chapter" data-level="3.3.1" data-path="universe.html"><a href="universe.html#input-parameter-2"><i class="fa fa-check"></i><b>3.3.1</b> Input parameter</a></li>
-<li class="chapter" data-level="3.3.2" data-path="universe.html"><a href="universe.html#description-2"><i class="fa fa-check"></i><b>3.3.2</b> Description</a></li>
-<li class="chapter" data-level="3.3.3" data-path="universe.html"><a href="universe.html#notes-2"><i class="fa fa-check"></i><b>3.3.3</b> Notes</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="universe.html"><a href="universe.html"><i class="fa fa-check"></i><b>3</b> MTXQCvX2 modules</a><ul>
+<li class="chapter" data-level="3.1" data-path="universe.html"><a href="universe.html#mtxqcvx2_init.rmd"><i class="fa fa-check"></i><b>3.1</b> <code id="init">MTXQCvX2_init.Rmd</code></a></li>
+<li class="chapter" data-level="3.2" data-path="universe.html"><a href="universe.html#mtxqcvx2_experimentalsetup.rmd"><i class="fa fa-check"></i><b>3.2</b> <code id="expsetup">MTXQCvX2_ExperimentalSetup.Rmd</code></a></li>
+<li class="chapter" data-level="3.3" data-path="universe.html"><a href="universe.html#mtxqcvx2_part1.rmd"><i class="fa fa-check"></i><b>3.3</b> <code id="heart">MTXQCvX2_part1.Rmd</code></a></li>
 <li class="chapter" data-level="3.4" data-path="universe.html"><a href="universe.html#postproc"><i class="fa fa-check"></i><b>3.4</b> <code>MTXQCvX2_part2.Rmd</code> - Post-Processing</a></li>
 <li class="chapter" data-level="3.5" data-path="universe.html"><a href="universe.html#manval"><i class="fa fa-check"></i><b>3.5</b> <code>MTXQCvX2_part3.Rmd</code> - Manual Validation</a></li>
 <li class="chapter" data-level="3.6" data-path="universe.html"><a href="universe.html#metmax"><i class="fa fa-check"></i><b>3.6</b> <code>MTXQCvX2_part4.Rmd</code> - Metmax integration</a></li>
@@ -269,36 +257,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="universe" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> MTXQCvX2 Universe</h1>
+<h1><span class="header-section-number">Chapter 3</span> MTXQCvX2 modules</h1>
 <p>Back then in 2015 I started to think about a way how to evaluate my own datasets regarding some quality parameters. Many different generations of the MTXQC existed on the way grom a scratch of a few quality metrices evaluated in the frame of a very, very long Rscript until the state nowadays.</p>
 <p>Out of this evolution cycle MTXQC developed to a suit of modules that can be used complimentary in order to evaluate and process GC-MS derived metabolomics data. <code>MTXQC_part1.Rmd</code> represents the heart of this little universe. Besides that there are many ways how to use and combine the individual modules of MTXQCvX2. Proposed workflows are illustrated for two input formats in chapter <a href="wf-maui.html#wf:maui">Workflow Maui</a> and chapter <a href="wf-metmax.html#wf:metmax">Workflow Metmax</a>. The flow diagram introduced <a href="\ref@fig:flow">here</a> might help you to decide how to get started and how to combine modules.</p>
 <p>The following sections give a short overview about the main parameters and functions, graphical and tabular outputs of each individual module. You are invited to use one of the provided datasets to play around and discover the different functionalities of MTXQCvX2. Follow the instructions in the <a href="FAQ.html#wheretostart">FAQ section</a> and have a glimpse.</p>
 <p>Keep in mind - any of MTXQCvX2 modules should be executed using <code>knit with parameters</code>. Check out the little ball of yarn in RStudio editor task bar, click the little black triangle next to it and choose this option.</p>
+<p>Examples of input values are given for each knitting parameter. Values shown in <em>italic</em> are free text variables; non-italic values are selectable from the list that is provided knitting the <code>.Rmd</code> document. A few parameter are self-explanatory and do not require a detailed description. Parameters, that are related to a specific processing of the data within the MTXQCvX2 are highlightes and introduced in each section.</p>
 <div id="mtxqcvx2_init.rmd" class="section level2">
 <h2><span class="header-section-number">3.1</span> <code id="init">MTXQCvX2_init.Rmd</code></h2>
-<div id="input-parameter" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Input parameter</h3>
 <p><code>1. Create MTXQCproject subfolder: psirm_glucose</code></p>
-</div>
-<div id="description" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Description</h3>
 <p>Here we go - this module represents the starting point of the processing of any GC-MS derived metabolomics dataset. <code>MTXQCvX2_init.Rmd</code> creates for you the internal folder structure in order to run smoothly and checks the installation of all required packages. In the case of missing packages those ones are automatically installed and ready to be used.</p>
 <p>The only parameter you are going to be asked is to define a name for a folder, the so-called <code>subfolder</code>, e.g., <code>psirm_glucose</code>. I highly recommend to create for each project a project folder. It provides a convinient way to keep input and output files into a single folder and even more you can work on a number of projects within the same MTXQCvX2 project without changing Rprojects.</p>
 <p>For the following the project folder or subfolder is always refered as <code>psirm_glucose</code>. Inside this folder <code>MTXQCvX2_init.Rmd</code> generated three folders: <code>figure</code>, <code>input</code> and <code>output</code>. The last two folders contain three subfolders (<code>gc</code>, <code>inc</code>, <code>quant</code>) where you are going to save your input files or MTXQCvX2 stores generated outputs. The folder <code>input</code> contains furthermore the subfolder <code>metmax</code> and <code>add_quant</code>.</p>
-</div>
-<div id="notes" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Notes</h3>
+<p>Notes:</p>
 <ul>
 <li><p>Follow the instructions in the chapter desribing the MTXQCvX2 workflows for <a href="wf-maui.html#wf:maui">Maui</a> and <a href="wf-metmax.html#wf:metmax">Metmax</a>. There you are going to find detailed instructions where to put your input files.</p></li>
 <li><p>The file containing the annotation of your files and experimental conditions as well as for the definition of your cell extracts should be saved on the level of the folders <code>input</code>, <code>quant</code> &amp; <code>figure</code>.</p></li>
 <li><p>If you want to combine GC-MS batches in one project you need to combine the input files beforehand. Please read the instructions at <a href="FAQ.html#combinebatches">this place</a>.</p></li>
 </ul>
 </div>
-</div>
 <div id="mtxqcvx2_experimentalsetup.rmd" class="section level2">
 <h2><span class="header-section-number">3.2</span> <code id="expsetup">MTXQCvX2_ExperimentalSetup.Rmd</code></h2>
-<div id="input-parameter-1" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Input parameter</h3>
 <ol style="list-style-type: decimal">
 <li><code>Run MTXQC based on data in subfolder: *psirm_glucose*</code></li>
 <li><code>Select the input format of your data: maui, metmax</code></li>
@@ -314,25 +293,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><code>Quant: Volume (uL) of dried polar phase after extraction: *500*</code></li>
 <li><code>Technical replicates per sample: *2*</code></li>
 </ol>
-</div>
-<div id="description-1" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Description</h3>
-</div>
-<div id="notes-1" class="section level3">
-<h3><span class="header-section-number">3.2.3</span> Notes</h3>
-</div>
+<p>This module aims to define the experimental parameters related to the project folder in order to maintain an automated processing of the input data.</p>
+<p>Notes:</p>
 </div>
 <div id="mtxqcvx2_part1.rmd" class="section level2">
 <h2><span class="header-section-number">3.3</span> <code id="heart">MTXQCvX2_part1.Rmd</code></h2>
-<div id="input-parameter-2" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Input parameter</h3>
-</div>
-<div id="description-2" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Description</h3>
-</div>
-<div id="notes-2" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> Notes</h3>
-</div>
 </div>
 <div id="postproc" class="section level2">
 <h2><span class="header-section-number">3.4</span> <code>MTXQCvX2_part2.Rmd</code> - Post-Processing</h2>
